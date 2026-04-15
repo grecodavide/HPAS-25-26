@@ -1330,8 +1330,206 @@
             },
             "vertices": [
               {
-                "x": 1240,
-                "y": 440
+                "x": 1250,
+                "y": 430
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "CAD retrieval",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "CAD retrieval"
+            ],
+            "id": "00f0f2e4-aea1-4011-9207-b43ffc6e3ddc",
+            "source": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "ec1627d8-055f-4570-8fa6-b8f54e91840f"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store CAD blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Store CAD blueprint"
+            ],
+            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+            "source": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "vertices": [
+              {
+                "x": 1000,
+                "y": 520
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store generated G-code blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Store generated G-code blueprint"
+            ],
+            "id": "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
+            "source": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "ad1fbdc5-c0ab-4ce2-a849-2926ad3c2a5b",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Notify new job",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Notify new job"
+            ],
+            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
+            "source": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "target": {
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 2170,
+                "y": 490
               }
             ]
           },
@@ -2189,7 +2387,7 @@
           },
           {
             "position": {
-              "x": 1430,
+              "x": 1380,
               "y": 560
             },
             "size": {
@@ -2313,12 +2511,12 @@
           },
           {
             "position": {
-              "x": 1730,
-              "y": 545
+              "x": 1740,
+              "y": 535
             },
             "size": {
-              "width": 100,
-              "height": 90
+              "width": 120,
+              "height": 110
             },
             "attrs": {
               "text": {
@@ -2433,7 +2631,7 @@
           },
           {
             "position": {
-              "x": 2022,
+              "x": 2142,
               "y": 560
             },
             "size": {
@@ -2557,7 +2755,7 @@
           },
           {
             "position": {
-              "x": 2317,
+              "x": 2487,
               "y": 535
             },
             "size": {
@@ -2677,7 +2875,7 @@
           },
           {
             "position": {
-              "x": 2578,
+              "x": 2758,
               "y": 535
             },
             "size": {
@@ -2797,7 +2995,7 @@
           },
           {
             "position": {
-              "x": 2460,
+              "x": 2640,
               "y": 340
             },
             "size": {
@@ -2917,7 +3115,7 @@
           },
           {
             "position": {
-              "x": 2697,
+              "x": 2877,
               "y": 340
             },
             "size": {
@@ -3037,7 +3235,7 @@
           },
           {
             "position": {
-              "x": 2941,
+              "x": 3121,
               "y": 545
             },
             "size": {
@@ -3157,7 +3355,7 @@
           },
           {
             "position": {
-              "x": 3188,
+              "x": 3288,
               "y": 560
             },
             "size": {
@@ -3277,6 +3475,63 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 27,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Retrieve G-code\nof the project",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Retrieve G-code\nof the project"
+            ],
+            "id": "20f2461b-ca03-45b8-a314-39cca8f8a047",
+            "source": {
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "target": {
+              "cell": "ad1fbdc5-c0ab-4ce2-a849-2926ad3c2a5b",
+              "port": "ec1627d8-055f-4570-8fa6-b8f54e91840f"
+            },
+            "vertices": [],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           }
         ]
