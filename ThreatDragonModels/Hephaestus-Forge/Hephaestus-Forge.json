@@ -583,7 +583,12 @@
               "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
               "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 680,
+                "y": 190
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1058,7 +1063,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Add user if\nnot already existing",
+              "name": "Check user existence",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1072,7 +1077,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Add user if\nnot already existing"
+              "Check user existence"
             ],
             "id": "4408c70c-5e7c-4071-9445-d40e4fbbfe99",
             "source": {
@@ -1292,7 +1297,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -1309,7 +1314,7 @@
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
@@ -1391,7 +1396,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -1402,13 +1407,13 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Store generated G-code blueprint",
+              "name": "Retrieve/Store\ngenerated G-code blueprint",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
@@ -1416,7 +1421,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Store generated G-code blueprint"
+              "Retrieve/Store\ngenerated G-code blueprint"
             ],
             "id": "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
             "source": {
@@ -1746,58 +1751,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Retrieve original project\nfor comparison",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Retrieve original project\nfor comparison"
-            ],
-            "id": "8f08010e-3b05-41d7-ab45-702f2b2cff3e",
-            "source": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
-              "port": "3bf0323c-534c-4b1b-908e-cd6d7841a14d"
-            },
-            "vertices": [
-              {
-                "x": 2110,
-                "y": 720
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Cookie redirect",
               "description": "",
               "outOfScope": false,
@@ -1879,6 +1832,110 @@
               {
                 "x": 1150,
                 "y": 470
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request new print",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Request new print"
+            ],
+            "id": "53eaab29-0f43-44b3-97d2-e90eb724ff02",
+            "source": {
+              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": [
+              {
+                "x": 670,
+                "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Retrieve original project\nfor comparison",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Retrieve original project\nfor comparison"
+            ],
+            "id": "9b4173ef-8f5d-4e9c-a91d-957233410e64",
+            "source": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "3bf0323c-534c-4b1b-908e-cd6d7841a14d"
+            },
+            "vertices": [
+              {
+                "x": 2130,
+                "y": 700
               }
             ]
           },
@@ -3835,7 +3892,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -3852,7 +3909,7 @@
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
