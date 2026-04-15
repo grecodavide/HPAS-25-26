@@ -19,6 +19,178 @@
         "cells": [
           {
             "position": {
+              "x": 42.9999999999971,
+              "y": -209.99999999999696
+            },
+            "size": {
+              "width": 530,
+              "height": 740
+            },
+            "attrs": {
+              "label": {
+                "text": "Untrusted"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "8e70c9de-660f-434e-80a9-0463edaf37e8",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Untrusted",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "6a95922e-068a-4996-a9d1-4d0492c7449a",
+                "e3dfe961-ab5d-4133-9318-2ac967304d87",
+                "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
+                "171d4fb3-00ea-419b-a0fc-b89366651bf2",
+                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
+                "ecf614ad-c12d-4d76-b610-f269004fc800",
+                "53eaab29-0f43-44b3-97d2-e90eb724ff02"
+              ],
+              "containedElements": [
+                "afd351e5-10a4-4047-b1a8-19f43ad56a17",
+                "5773080e-f752-4393-97dd-3bfa7471ebfc",
+                "3d92a373-689c-425b-9518-d73efc07e570"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 962.9999999999941,
+              "y": -209.99999999997823
+            },
+            "size": {
+              "width": 1170,
+              "height": 1100
+            },
+            "attrs": {
+              "label": {
+                "text": "Trusted (IT section)"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "07764144-78e3-48d5-b02c-e714d9a193df",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trusted (IT section)",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "f92786cc-7b45-4415-917c-bd07d8183cc5",
+                "10bd880e-6606-4a71-822f-895ae991603a",
+                "f9a065ca-160b-453d-a93e-6420f6916c21",
+                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
+                "d11b1d0c-062a-446b-be88-b9fb42c3767d",
+                "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+                "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
+                "858bd404-c078-4628-8050-0ffc626bd5cd",
+                "56901286-8548-4c48-9f18-f3186cddca02",
+                "9b4173ef-8f5d-4e9c-a91d-957233410e64"
+              ],
+              "containedElements": [
+                "36477c30-516b-4532-93b2-46e257af9c86",
+                "886f6ab7-af18-44b2-9ac5-c06902bfea90",
+                "355df31d-8e50-4808-ba07-018aa1c26cb4",
+                "228251b2-fde0-4529-9689-77c2351d79bd",
+                "d773119f-03d8-409b-b2ac-179b03a25308",
+                "93549b34-6949-41d1-9a26-9ad85aeba9a2",
+                "4e80676c-1e57-4d18-bb2f-136d3d231a6e",
+                "1600005d-f985-43f8-9594-878fc2f588ad",
+                "92a46ff8-403f-4576-ba88-4bd9ecd95321"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 811.9999999999932,
+              "y": -209.9999999999984
+            },
+            "size": {
+              "width": 130,
+              "height": 1100
+            },
+            "attrs": {
+              "label": {
+                "text": "Semi-trusted"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "787facce-af58-4b84-a130-ed55f1059062",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Semi-trusted",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "6a95922e-068a-4996-a9d1-4d0492c7449a",
+                "e3dfe961-ab5d-4133-9318-2ac967304d87",
+                "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
+                "171d4fb3-00ea-419b-a0fc-b89366651bf2",
+                "f92786cc-7b45-4415-917c-bd07d8183cc5",
+                "10bd880e-6606-4a71-822f-895ae991603a",
+                "f9a065ca-160b-453d-a93e-6420f6916c21",
+                "d11b1d0c-062a-446b-be88-b9fb42c3767d",
+                "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+                "ecf614ad-c12d-4d76-b610-f269004fc800",
+                "56901286-8548-4c48-9f18-f3186cddca02",
+                "53eaab29-0f43-44b3-97d2-e90eb724ff02"
+              ],
+              "containedElements": [
+                "339778d6-5a04-419c-b43c-d54724d667cc"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 2190,
+              "y": 420.00000000000773
+            },
+            "size": {
+              "width": 1550,
+              "height": 470
+            },
+            "attrs": {
+              "label": {
+                "text": "Trusted (OT section)"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trusted (OT section)",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
+                "858bd404-c078-4628-8050-0ffc626bd5cd",
+                "9b4173ef-8f5d-4e9c-a91d-957233410e64"
+              ],
+              "containedElements": [
+                "ad1fbdc5-c0ab-4ce2-a849-2926ad3c2a5b",
+                "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+                "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+                "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
+                "05861e45-985c-4c6a-9ae6-b8259b937bfd",
+                "0d407ae3-8852-4630-9e25-97e75b73a817",
+                "e9e03959-2841-4411-98ee-080d7671011f"
+              ]
+            }
+          },
+          {
+            "position": {
               "x": 80,
               "y": 180
             },
@@ -569,7 +741,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Upload 3D CAD blueprint"
@@ -621,7 +796,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Login request"
@@ -673,7 +851,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Request OTP insertion"
@@ -725,7 +906,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Send OTP"
@@ -777,7 +961,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Username and\npassword"
@@ -829,7 +1016,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "OTP"
@@ -881,7 +1071,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Check result"
@@ -980,7 +1173,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "07764144-78e3-48d5-b02c-e714d9a193df"
+              ]
             },
             "labels": [
               "Send valid OTP"
@@ -1267,7 +1463,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "User session data"
@@ -1366,7 +1565,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Store CAD blueprint"
@@ -1382,8 +1584,8 @@
             },
             "vertices": [
               {
-                "x": 1000,
-                "y": 520
+                "x": 885,
+                "y": 600
               }
             ]
           },
@@ -1418,7 +1620,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+              ]
             },
             "labels": [
               "Retrieve/Store\ngenerated G-code blueprint"
@@ -1465,7 +1670,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+              ]
             },
             "labels": [
               "Notify new job"
@@ -1481,8 +1689,8 @@
             },
             "vertices": [
               {
-                "x": 2170,
-                "y": 490
+                "x": 2260,
+                "y": 640
               }
             ]
           },
@@ -1580,8 +1788,8 @@
             },
             "vertices": [
               {
-                "x": 2760,
-                "y": 490
+                "x": 2830,
+                "y": 660
               }
             ]
           },
@@ -1632,8 +1840,12 @@
             },
             "vertices": [
               {
-                "x": 2890,
-                "y": 500
+                "x": 3010,
+                "y": 630
+              },
+              {
+                "x": 2990,
+                "y": 660
               }
             ]
           },
@@ -1762,7 +1974,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Cookie redirect"
@@ -1814,7 +2029,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Notify new job request"
@@ -1830,8 +2048,8 @@
             },
             "vertices": [
               {
-                "x": 1150,
-                "y": 470
+                "x": 1060,
+                "y": 600
               }
             ]
           },
@@ -1866,7 +2084,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Request new print"
@@ -1918,7 +2139,10 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+              ]
             },
             "labels": [
               "Retrieve original project\nfor comparison"
@@ -1934,8 +2158,8 @@
             },
             "vertices": [
               {
-                "x": 2130,
-                "y": 700
+                "x": 2220,
+                "y": 850
               }
             ]
           },
@@ -2793,8 +3017,8 @@
           },
           {
             "position": {
-              "x": 1380,
-              "y": 560
+              "x": 1130,
+              "y": 710
             },
             "size": {
               "width": 120,
@@ -2917,8 +3141,8 @@
           },
           {
             "position": {
-              "x": 1740,
-              "y": 535
+              "x": 1490,
+              "y": 685
             },
             "size": {
               "width": 120,
@@ -3037,8 +3261,8 @@
           },
           {
             "position": {
-              "x": 2142,
-              "y": 560
+              "x": 2232,
+              "y": 710
             },
             "size": {
               "width": 140,
@@ -3161,8 +3385,8 @@
           },
           {
             "position": {
-              "x": 2487,
-              "y": 535
+              "x": 2577,
+              "y": 685
             },
             "size": {
               "width": 110,
@@ -3281,8 +3505,8 @@
           },
           {
             "position": {
-              "x": 2788,
-              "y": 535
+              "x": 2878,
+              "y": 685
             },
             "size": {
               "width": 100,
@@ -3401,8 +3625,8 @@
           },
           {
             "position": {
-              "x": 2640,
-              "y": 320
+              "x": 2690,
+              "y": 520
             },
             "size": {
               "width": 100,
@@ -3521,8 +3745,8 @@
           },
           {
             "position": {
-              "x": 2907,
-              "y": 305
+              "x": 2950,
+              "y": 490.00000000000307
             },
             "size": {
               "width": 120,
@@ -3641,8 +3865,8 @@
           },
           {
             "position": {
-              "x": 3121,
-              "y": 545
+              "x": 3211,
+              "y": 695
             },
             "size": {
               "width": 90,
@@ -3761,8 +3985,8 @@
           },
           {
             "position": {
-              "x": 3428,
-              "y": 560
+              "x": 3518,
+              "y": 710
             },
             "size": {
               "width": 160,
