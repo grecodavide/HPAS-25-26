@@ -104,15 +104,6 @@
                 "1600005d-f985-43f8-9594-878fc2f588ad",
                 "92a46ff8-403f-4576-ba88-4bd9ecd95321"
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -570,19 +561,6 @@
               "privilegeLevel": "",
               "threats": [
                 {
-                  "id": "7dbcb365-f000-4617-928e-77d04c4b6cc4",
-                  "title": "Account Spoofing",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Spoofing",
-                  "description": "An attacker may manage to hijack user sessions (may schedule unwanted / incorrect prints).",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 7,
-                  "score": ""
-                },
-                {
                   "id": "a6f8a781-ef13-4c0d-a081-9ef44a561f64",
                   "title": "Contractor Info Leakage",
                   "status": "Open",
@@ -597,7 +575,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 1,
                 "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 0,
@@ -608,7 +586,7 @@
           },
           {
             "position": {
-              "x": 830,
+              "x": 821.9999999999932,
               "y": 160
             },
             "size": {
@@ -620,8 +598,8 @@
                 "text": "Olympus\nportal"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -718,12 +696,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b8d022ca-a4aa-4be5-a734-dd341aacf4f2",
+                  "title": "Account Spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker may manage to hijack user sessions (may schedule unwanted / incorrect prints).",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "24a42f83-5407-4d45-879c-8560c0373eb8",
+                  "title": "Path traversal",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "If web portal not well implemented, may expose some information to non authorised actors",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -807,7 +820,7 @@
               "threats": [
                 {
                   "id": "e5e53409-7a01-4c1a-802d-3fc9d632d465",
-                  "title": "New STRIDE threat",
+                  "title": "CAD Tamparing ",
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Tampering",
@@ -824,7 +837,7 @@
                 "787facce-af58-4b84-a130-ed55f1059062"
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -1574,7 +1587,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1595,16 +1609,35 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
+                  "title": "API-key Leakage",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "View unencrypted communication and steal key",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "07764144-78e3-48d5-b02c-e714d9a193df",
                 "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Notify new job"
@@ -1619,6 +1652,10 @@
               "port": "fdb69952-a84f-4178-8784-086ff71a361b"
             },
             "vertices": [
+              {
+                "x": 2030,
+                "y": 650
+              },
               {
                 "x": 2260,
                 "y": 640
@@ -2153,7 +2190,7 @@
               "threats": [
                 {
                   "id": "273fddc0-153c-4b17-b4e1-5b9cc4f4ceea",
-                  "title": "New STRIDE threat",
+                  "title": "CAD Tampering",
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Tampering",
@@ -2163,6 +2200,19 @@
                   "new": false,
                   "number": 14,
                   "score": ""
+                },
+                {
+                  "id": "541cb1ab-5b05-464b-b215-701373fcf59c",
+                  "title": "CAD Leakage",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
                 }
               ],
               "trustBoundaryIds": [
@@ -2170,8 +2220,8 @@
                 "787facce-af58-4b84-a130-ed55f1059062"
               ],
               "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
+                "tampering": 2,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -2228,7 +2278,7 @@
               "threats": [
                 {
                   "id": "59657b94-e017-4bcb-b2e8-2e92af6acb5f",
-                  "title": "New STRIDE threat",
+                  "title": "CAD Tampering",
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Tampering",
@@ -2238,6 +2288,19 @@
                   "new": false,
                   "number": 17,
                   "score": ""
+                },
+                {
+                  "id": "2ee2f5ac-842b-434f-b948-b3f7fe907f5f",
+                  "title": "CAD Leakage",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
                 }
               ],
               "trustBoundaryIds": [
@@ -2245,8 +2308,8 @@
                 "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
               ],
               "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
+                "tampering": 2,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
@@ -2263,6 +2326,10 @@
               "port": "3bf0323c-534c-4b1b-908e-cd6d7841a14d"
             },
             "vertices": [
+              {
+                "x": 2770,
+                "y": 820
+              },
               {
                 "x": 2220,
                 "y": 850
@@ -4291,7 +4358,7 @@
               "threats": [
                 {
                   "id": "d05a3127-f452-48a8-b4f5-6ad2901919e8",
-                  "title": "G-Code Alteration",
+                  "title": "G-Code Tampering",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
@@ -4301,12 +4368,25 @@
                   "new": false,
                   "number": 8,
                   "score": ""
+                },
+                {
+                  "id": "31022b84-bc0d-491f-99c5-0e7ebf6c6e58",
+                  "title": "G-Code Leakage",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
                 }
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
+                "tampering": 2,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
@@ -4435,7 +4515,7 @@
               "threats": [
                 {
                   "id": "22e67af6-5424-474c-9108-7617e77b6734",
-                  "title": "New STRIDE threat",
+                  "title": "G-Code Tampering",
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Tampering",
@@ -4445,6 +4525,19 @@
                   "new": false,
                   "number": 16,
                   "score": ""
+                },
+                {
+                  "id": "1fd89f4b-fd7d-4ca3-b690-4a12e62506ed",
+                  "title": "G-Code Leakage",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
                 }
               ],
               "trustBoundaryIds": [
@@ -4452,8 +4545,8 @@
                 "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
               ],
               "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
+                "tampering": 2,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
@@ -4476,6 +4569,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 19
+    "threatTop": 26
   }
 }
