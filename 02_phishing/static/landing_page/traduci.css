@@ -1,0 +1,30 @@
+.traduci-div{
+	opacity: 0.88;
+	border-radius: 10px;
+	padding: 0px 10px;
+	margin-top: 5px;
+	font-size: 16px;
+	background-color: #e1f3e4;
+}
+
+#translatePage{
+	background: initial;
+	color: #2D793B !important;
+	font-weight: bold;
+}
+
+.traduci-flag-en, .traduci-flag-it{
+	width: 15px;
+	margin-left: 6px;
+	opacity: 0.90;
+}
+
+ .traduci-mobile{
+	   border: 1px solid #757575 !important;
+	   background-color: #fff !important;
+	   font-weight: 600 !important;
+   }
+
+.traduci-mobile{
+		  border: 1px solid gray; padding: 0px 8px;
+}

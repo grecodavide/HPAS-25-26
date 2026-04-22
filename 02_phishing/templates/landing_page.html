@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="it" class=" js ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Servizio di autenticazione IDPC - Regione Lombardia">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <!-- [if IE 8]>
+   <link href="/staticResources/css/bootstrap_ie8.css" rel="stylesheet">
+   <![endif]-->
+    <link type="text/css" href="{{ url_for('static', filename='landing_page/bootstrap-italia.min.css') }}"
+        rel="stylesheet">
+    <!--[if lt IE 8]>
+      <link href="styles/ie7.css" rel="stylesheet">
+    <![endif]-->
+    <!--[if (gt IE 7) & (lt IE 10)]> 
+      <link href="styles/ie8.css" rel="stylesheet">
+    <![endif]-->
+
+    <script src="{{ url_for('static', filename='landing_page/modernizr.custom.js') }}"></script>
+    <!--[if lt IE 9]>                                                      
+    	<script src="/staticResources/scripts/respond.min.js"></script> 
+    <![endif]-->
+    <script src="{{ url_for('static', filename='landing_page/jquery.js') }}"></script>
+
+
+
+    <script src="{{ url_for('static', filename='landing_page/bootstrap-italia.min.js') }}"></script>
+    <style>
+        /* Titillium+Web:300,400,600,700 */
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Light.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Light.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Light.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Light.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Regular.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Regular.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Regular.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Regular.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Regular.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Regular.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 600;
+            src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 600;
+            src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Bold.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Bold.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Bold.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Bold.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Bold.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Titillium_Web/TitilliumWeb-Bold.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* Lora:400,700 */
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lora Regular'), local('Lora-Regular'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Regular.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Regular.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Regular.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lora Regular'), local('Lora-Regular'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Regular.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Regular.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Regular.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lora Bold'), local('Lora-Bold'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Bold.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Bold.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Bold.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lora Bold'), local('Lora-Bold'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Bold.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Bold.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Lora/Lora-Bold.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* Roboto+Mono:400,700 */
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto Mono'), local('RobotoMono-Regular'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Regular.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Regular.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Regular.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto Mono'), local('RobotoMono-Regular'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Regular.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Regular.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Regular.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Bold.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Bold.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Bold.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Bold.woff2) format('woff2'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Bold.woff) format('woff'),
+                url(/staticResources/bootstrap-italia/fonts/Roboto_Mono/RobotoMono-Bold.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet"
+        href="{{ url_for('static', filename='landing_page/spid-sp-access-button.min.css') }}">
+
+    <script src="{{ url_for('static', filename='landing_page/spid-sp-access-button.js') }}"></script>
+
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='landing_page/selectAuth.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='landing_page/tema.css') }}">
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='landing_page/generale.css') }}">
+
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static', filename='landing_page/cookieconsent.min.css') }}">
+    <script src="{{ url_for('static', filename='landing_page/cookieconsent.min.js') }}"></script>
+    <script defer="defer" src="{{ url_for('static', filename='landing_page/tema.js') }}"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing_page/fontawesome.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing_page/all.css') }}">
+
+    <script src="{{ url_for('static', filename='landing_page/jquery.mask.js') }}"></script>
+
+    <!--[if IE 8]>
+      <link href="/staticResources/css/ie_8.css" rel="stylesheet">
+    <![endif]-->
+
+    <!--[if IE 7]>
+	
+	 <link href="/staticResources/css/ie_7.css" rel="stylesheet">
+	<![endif]-->
+
+    <!--[if IE 9]>
+	 <link href="/staticResources/css/ie_9.css" rel="stylesheet">
+	<![endif]-->
+
+
+    <!--[if lt IE 8]>
+	
+	 <script src="/staticResources/scripts/ie_old.js" defer></script>
+	<![endif]-->
+
+    <!--[if lt IE 8]>
+    <div class="modal bs-error-modal-md">    
+      <div class="modal-dialog modal-md">      
+        <div class="modal-content">        
+          <div class="modal-header">          
+            <button type="button" class="close" data-dismiss="modal">&times;
+            </button>          
+            <h4 class="modal-title text-danger" id="modalLabelError">Attenzione</h4>        
+          </div>        
+          <div class="modal-body">          
+            <p class="text-danger">
+              La versione di Internet Explorer che stai utilizzando e' obsoleta. Il Sistema di Autenticazione di Regione Lombardia e' progettato in modo da garantire la migliore esperienza utente e le necessarie funzionalita' di sicurezza per le versioni piu' aggiornate di Internet Explorer. Ti suggeriamo quindi di aggiornare il browser alla piu' recente versione disponibile per il tuo sistema operativo.
+            </p>        
+          </div>        
+          <div class="modal-footer">          
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Chiudi
+            </button>        
+          </div>      
+        </div>    
+      </div>  
+    </div>
+    <![endif]-->
+
+
+    <link rel="icon" type="image/png" href="https://idpcwrapper.crs.lombardia.it/staticResources/images/new/favicon.png"
+        sizes="32x32">
+
+    <link type="text/css" href="{{ url_for('static', filename='landing_page/traduci.css') }}" rel="stylesheet">
+    <script>
+
+        if ($("body").hasClass("english_page")) {
+            document.cookie = "language=en";
+        };
+    </script>
+    <!-- <script src="{{ url_for('static', filename='landing_page/traduci.js') }}"></script> -->
+
+
+    <script src="{{ url_for('static', filename='landing_page/i18next-no-AMD.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='landing_page/i18nextXHRBackend-no-AMD.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='landing_page/jquery-i18next-no-AMD.min.js') }}"></script>
+
+
+
+
+    <title> IdPC Regione Lombardia - Selezione modalita' di autenticazione </title>
+
+    <style></style>
+
+</head>
+
+<body class="home home-select" id="globalbody">
+    <div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc"
+        class="cc-window cc-banner cc-type-info cc-theme-block cc-bottom cc-color-override-166016224 " style="">
+        <!--googleoff: all--><span id="cookieconsent:desc" class="cc-message"><span class="cookie_info_1"><strong>Questo
+                    sito utilizza <em>cookie</em> tecnici. Proseguendo nella navigazione accetti l'utilizzo dei
+                    cookie.</strong> <br></span> <span class="cookie-info-2">Per maggiori informazioni, <a
+                    data-toggle="modal" data-target="#modal-id-cookie"><u> leggi l'informativa completa.</u></a></span>
+            <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link"
+                href="https://www.cookiesandyou.com/" rel="noopener noreferrer nofollow" target="_blank"></a></span>
+        <div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0"
+                class="cc-btn cc-dismiss"><span style="text-decoration: none;">X</span></a></div><!--googleon: all-->
+    </div>
+
+    <div id="modal-spid" class="it-example-modal" aria-hidden="true" style="display: none;">
+        <div class="modal modalsiss" tabindex="-1" role="dialog" id="modal-id">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+
+                    </div>
+                    <div class="modal-body pt-0 px-5">
+                        <p class="modal-title std-titolo text-center d-table mx-auto col-12 pt-2">Informazioni su SPID
+                        </p>
+
+
+                        <p></p>
+                        <p class="std-sottotitolo text-center pt-3">SPID è il
+                            sistema di accesso che consente di utilizzare, con un'identità digitale
+                            unica, i servizi online della Pubblica Amministrazione e dei privati
+                            accreditati. Se sei già in possesso di un'identità digitale, accedi con
+                            le credenziali del tuo gestore. Se non hai ancora un'identità digitale,
+                            richiedila ad uno dei gestori.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="modal-close"
+                            class="btn btn-prosegui btn-primary btn-sm std-button-active d-table mx-auto" type="button"
+                            data-dismiss="modal">Chiudi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="modal-eidup" class="it-example-modal" aria-hidden="true" style="display: none;">
+        <div class="modal modalsiss" tabindex="-1" role="dialog" id="modal-id">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+
+                    </div>
+                    <div class="modal-body pt-0 px-5">
+                        <p class="modal-title std-titolo text-center d-table mx-auto col-12 pt-2">Informazioni su Eidup
+                        </p>
+
+                        <p></p>
+                        <p class="std-sottotitolo text-center pt-3">
+                            Lo eIDup (Identità Digitale ad uso professionale) o SPID (Sistema
+                            Pubblico di Identità Digitale) per uso professionale è una modalità che
+                            permette ai professionisti e agli individui che operano per conto di
+                            un'organizzazione di accedere a servizi pubblici e privati. Queste
+                            credenziali digitali facilitano l'interazione con la pubblica
+                            amministrazione, oltre ai rapporti tra professionisti e imprese.
+                            L'identità SPID professionale fornisce un'autenticazione univoca e
+                            sicura, grazie alle informazioni sulla persona fisica che la utilizza
+                            per scopi professionali. Consulta il sito ufficiale di AgID per maggiori
+                            informazioni (<a target="_blank"
+                                href="https://www.agid.gov.it/it/piattaforme/spid">piattaforme SPID, AGID</a>)</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="modal-close"
+                            class="btn btn-prosegui btn-primary btn-sm std-button-active d-table mx-auto" type="button"
+                            data-dismiss="modal">Chiudi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="modal" role="dialog" id="dissuasore-wrap" style="display:none;">
+        <div class="modal-dialog modal-md" id="dissuasore" role="document">
+            <div class="modal-content">
+                <div class="col-md-12 titolo-verde-box wrapper-testo-titolo">
+
+                    <div class="testo-box-verde std-titolo-sezione">
+                        <h1 data-i18n="common.browser_version_error">Browser non aggiornato</h1>
+                    </div>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="icona-dissuasore text-center pb-2">
+                    </div>
+                    <p class="std-titolo pb-4 text-center" data-i18n="common.auth_service">Servizio di autenticazione
+                    </p>
+                    <p class="std-sottotitolo pb-2 col-md-12 text-center mx-auto">
+
+                        Per proteggere l'utente nella navigazione, Regione Lombardia adotta per i propri siti specifiche
+                        misure di sicurezza.<br>A tutela dei tuoi dati è quindi importante che tu utilizzi browser
+                        sempre aggiornati.<br><br>A breve sarà inibita la possibilità di navigare con browser
+                        considerati vulnerabili.<br>Scarica
+                        quindi gli aggiornamenti del browser che utilizzi dal sito del
+                        produttore per poter proseguire nell'uso dei servizi on-line.<br><br> Evita l'uso di Sistemi
+                        Operativi per i quali il produttore non fornisce pià¹ supporto.
+
+                    </p>
+                </div>
+                <div class="modal-footer mb-4">
+                    <button type="button" onclick="$('.modal').hide();" class="btn std-button-active d-table mx-auto"
+                        data-dismiss="modal" data-i18n="common.continue">Prosegui</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="wrapper">
+
+        <style>
+            #modal-id-cookie * {
+                font-size: 16px !important;
+            }
+
+            @media only screen and (max-width: 600px) {
+                #barra_istituzionale {
+                    padding-top: 0px;
+                }
+            }
+        </style>
+        <div class="wrapper-fixed-header" style="display:grid;">
+            <div class="col-md-12 barra-verde-superiore d-none d-md-block">
+
+                <div class="traduci-div float-right">
+                    <a class="text-white float-right" id="translatePage">
+
+                        <span class="english" style="text-decoration: none;">EN</span>
+                        <span>
+                            <img src="{{ url_for('static', filename='landing_page/gb.svg') }}" alt="bandiera inglese"
+                                class="traduci-flag-en">
+                        </span>
+
+                        <span>&nbsp; | &nbsp;</span>
+
+                        <span class="italiano" style="text-decoration:underline;">IT </span>
+                        <img src="{{ url_for('static', filename='landing_page/it.svg') }}" alt="bandiera italiana"
+                            class="traduci-flag-it">
+                    </a>
+                </div>
+
+
+
+            </div>
+
+            <div id="barra_istituzionale" class="navbar navbar-default navbar-static-top bg-white">
+                <div class="wrapperdiv-traduci-mobile">
+                    <div class="traduci-div traduci-mobile float-right d-sm-block d-md-none d-xs-block">
+                        <div class="text-white float-right animationIta" id="translatePageMobile">
+
+                            <a class="english" style="text-decoration: none;color:black; font-weight: 500;">EN <img
+                                    src="{{ url_for('static', filename='landing_page/gb.svg') }}" alt="bandiera inglese"
+                                    class="traduci-flag-en"></a>
+
+
+                            <span style="color:black;">&nbsp; | &nbsp;</span>
+
+                            <a class="italiano" style="text-decoration: underline; color: black; font-weight: 500;">IT
+                                <img src="{{ url_for('static', filename='landing_page/it.svg') }}"
+                                    alt="bandiera italiana" class="traduci-flag-it"></a>
+
+
+                        </div>
+                    </div>
+                    <div class="navbar-header float-left">
+                        <div class="navbar-brand">
+                            <a class="d-block" href="{{ url_for('home') }}">
+                                <img class="img-rl-logo float-left"
+                                    src="{{ url_for('static', filename='landing_page/logo-rl.png') }}"
+                                    alt="Regione Lombardia">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="titolo_servizio_autenticazione"
+                        class="col-md-7 float-left text-md-right text-center font-weight-bold d-none d-md-block"
+                        data-i18n="common.auth_service">Servizio di autenticazione</div>
+                    <div class="versione-software text-right col-md-5 float-right mb-2 d-none d-md-block ml-0 pt-0"
+                        style="font-size: 16px;line-height:12px;">
+                        V. 26.0.07
+                        - SERV. nodo6pro
+
+                    </div>
+                </div>
+            </div>
+
+
+            <nav class="navbar d-flex d-md-none bg-white pt-0">
+
+                <a class="navbar-brand std-titolo" href="#" data-i18n="common.auth_service">Servizio di
+                    autenticazione</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#contenutoNavbar"
+                    aria-controls="contenutoNavbar" aria-expanded="false">
+                    <span class="sr-only" data-i18n="common.auth_service">Servizio di autenticazione</span>
+
+
+                </button>
+
+                <span style="font-size:14px;">V. 26.0.07
+                    - SERV. nodo6pro</span>
+
+            </nav>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="it-example-modal">
+            <div class="modal mt-1" id="modal-id-cookie" tabindex="-1" role="dialog" style="display:none;">
+                <div class="modal-dialog mt-1" role="document" style="display:contents;">
+                    <div class="modal-content mx-auto w-75">
+                        <div class="modal-header">
+                            <p class="modal-title std-titolo text-center d-table mx-auto col-12 pb-3">Cookie Policy
+
+                            </p>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <svg class="icon">
+                                    <use xlink:href="#it-close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>I</strong><strong>NFORMATIVA ESTESA SULLâUTILIZZO DEI COOKIE</strong></p>
+                            <p>&nbsp;</p>
+                            <p>Ai sensi del Regolamento Europeo 2016/679 (di seguito, anche
+                                âRegolamentoâ) e della normativa nazionale, Regione Lombardia (di
+                                seguito, anche âTitolareâ), in qualità di Titolare del trattamento,
+                                riporta qui di seguito lâinformativa estesa relativa ai cookie
+                                installati sul sito IdPC (di seguito anche âSitoâ) con lo scopo di
+                                illustrare i tipi, le modalità di utilizzo nonchà© di fornire indicazioni
+                                circa le azioni per rifiutare o eliminare i cookie presenti.</p>
+                            <p>&nbsp;</p>
+                            <p><strong>Cosa sono i cookie</strong></p>
+
+                            <p>I cookie sono piccoli file di testo che le applicazioni web inviano ai visitatori per
+                                diverse finalità.</p>
+                            <p>Questi possono essere classificati a seconda di vari criteri:</p>
+                            <ul>
+                                <li>Sito che li genera: <strong>cookie di prima parte</strong>, installati direttamente
+                                    dal gestore del sito che si sta visitando, e <strong>cookie di terze parti</strong>,
+                                    impostati da un sito web diverso da quello che lâutente sta visitando.</li>
+                                <li>Finalità dâuso: <strong>cookie tecnic</strong><strong>i</strong>,
+                                    volti a gestire gli aspetti tecnici necessari a erogare un servizio
+                                    richiesto dallâutente, come ad esempio la navigazione di un sito
+                                    internet, la gestione della sessione di un utente o il riconoscimento
+                                    automatico della lingua preferita.</li>
+                                <p><strong>Cookie di profilazione</strong>, utilizzati per analizzare le
+                                    caratteristiche della navigazione dellâutente e creare profili in base
+                                    al suo comportamento sul sito.</p>
+                                <p><strong>Cookie analytics</strong>, utilizzati per raccogliere
+                                    informazioni sul numero degli utenti e su come questi visitano il sito
+                                    internet e quindi elaborare statistiche generali sul servizio e sul suo
+                                    utilizzo.</p>
+
+                                <li>Durata: <strong>cookie permanenti</strong>, memorizzati nel dispositivo in modo
+                                    permanente, <strong>cookie temporanei</strong>, aventi durata variabile e limitata,
+                                    <strong>cookie di sessione</strong>, che scompaiano alla chiusura del browser o al
+                                    momento del log-out.
+                                </li>
+                            </ul>
+                            <p><strong>&nbsp;</strong></p>
+
+                            <p><strong>Quali cookie vengono utilizzati in questo Sito e per quali finalità</strong></p>
+                            <p>Cookie tecnici (non richiedono il consenso dellâinteressato)</p>
+                            <p>&nbsp;</p>
+                            <p>Questo Sito utilizza cookie tecnici indispensabili per il corretto
+                                funzionamento del Sito, consentire una navigazione efficiente sullo
+                                stesso e garantire la sicurezza nella navigazione dei visitatori. Tali
+                                cookie sono strettamente necessari per le finalità di cui sopra e per
+                                consentire la fruizione dei contenuti e dei servizi richiesti
+                                dallâutente.</p>
+                            <p>&nbsp;</p>
+                            <p>Di seguito è riportato un elenco con descrizione/utilizzo e durata
+                                dei cookie utilizzati e link alla privacy policy della eventuale terza
+                                parte coinvolta:</p>
+                            <p>&nbsp;</p>
+
+                            <p><em><strong>Cookie di sessione dellâapplication server.</strong></em></p>
+                            <p><em>Durata del cookie: Cookie di sessione</em></p>
+                            <p><em>Cookie di prima o terza parte: Cookie di prima parte</em></p>
+
+                            <p><em><strong>Cookie che consente la navigazione di un utente
+                                        autenticato tra diversi servizi senza richiedere nuovamente le
+                                        credenziali dâautenticazione.</strong></em></p>
+                            <p><em>Durata del cookie: Cookie temporaneo (15 minuti)</em></p>
+                            <p><em>Cookie di prima o terza parte: Cookie di prima parte</em></p>
+                            <p><em><strong>Cookie che consente</strong></em><strong> <em>la
+                                        navigazione di un utente autenticato tra diversi servizi senza
+                                        richiedere nuovamente le credenziali dâautenticazione in versione
+                                        estesa.</em></strong></p>
+                            <p><em>Durata del cookie: Cookie di sessione</em></p>
+                            <p><em>Cookie di prima o terza parte: Cookie di prima parte</em></p>
+                            <p><em><strong>Cookie per la visualizzazione del banner cookie limitatamente al primo
+                                        accesso.</strong></em></p>
+                            <p><em>Durata del cookie: Cookie temporaneo (1 anno)</em></p>
+                            <p><em>Cookie di prima o terza parte: Cookie di prima parte</em></p>
+                            <p>&nbsp;</p>
+
+                            <p><strong>Indicazioni sulla gestione dei cookie da parte dellâutente</strong></p>
+
+                            <p>Disabilitare lâutilizzo dei cookie</p>
+
+                            <p><strong>&nbsp;</strong></p>
+                            <p>à possibile disabilitare tutti i cookie memorizzati sul proprio hard
+                                disk accedendo alla sezione apposita allâinterno del browser. Di seguito
+                                sono riportati i link dove è possibile consultare le specifiche
+                                istruzioni per i principali browser in uso:</p>
+                            <ul>
+                                <li>Internet Explorer: <a
+                                        href="https://support.microsoft.com/it-it/help/17442/windows-internet-explorer-delete-manage-cookie">IE</a>
+                                </li>
+                                <li>Chrome: <a href="https://support.google.com/chrome/answer/95647?hl=it">Chrome</a>
+                                </li>
+                                <li>Firefox: <a
+                                        href="https://support.mozilla.org/it/kb/Attivare%20e%20disattivare%20i%20cookie">Firefox</a>
+                                </li>
+                                <li>Safari: <a
+                                        href="https://support.apple.com/it-it/guide/safari/sfri11471/mac">Safari</a>
+                                </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p><strong>Attivare la modalità di navigazione anonima</strong></p>
+
+                            <p>&nbsp;</p>
+                            <p>Mediante questa funzione disponibile ormai in tutti i browser, è
+                                possibile navigare in internet senza salvare alcuna informazione sui
+                                siti e sulle pagine visitate.</p>
+                            <p>Tuttavia, si precisa che i dati di navigazione, anche quando viene
+                                attivata tale funzionalità, sono registrati e conservati dai gestori dei
+                                siti web e dai provider di connettività.</p>
+                            <p>&nbsp;</p>
+
+                            <p><strong>Eliminare direttamente i cookie</strong></p>
+                            <p>&nbsp;</p>
+
+                            <p>Attualmente quasi tutti i browser consentono di eliminare i cookie installati.</p>
+                            <p>Per maggiori istruzioni, consultare la guida del proprio browser o visitare uno dei
+                                seguenti link:</p>
+                            <ul>
+                                <li>Internet Explorer: <a
+                                        href="http://windows.microsoft.com/it-IT/internet-explorer/delete-manage-cookies#ie=ie-9">Informazioni
+                                        IE</a></li>
+                                <li>Firefox: <a
+                                        href="https://support.mozilla.org/it/kb/Eliminare%20i%20cookie">Informazioni
+                                        Firefox</a></li>
+                                <li>Chrome: <a
+                                        href="https://support.google.com/chrome/answer/95647?hl=it&amp;ref_topic=3421433">Informazioni
+                                        Chrome</a></li>
+                                <li>Safari: <a
+                                        href="http://support.apple.com/kb/HT1677">http://support.apple.com/kb/HT1677</a>
+                                </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p>Tuttavia, ad ogni nuova sessione i cookie saranno reinstallati; in
+                                ragione di ciò si invita ad eseguire tale operazione periodicamente o
+                                utilizzare funzioni automatizzate per la cancellazione periodica.</p>
+                            <p>&nbsp;</p>
+                            <p><strong>Titolare del trattamento</strong></p>
+                            <p>Il Titolare del trattamento è Regione Lombardia con sede in Piazza Città di Lombardia
+                                1,
+                                20124 Milano.</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+
+                            <p><strong>Responsabile della Protezione dei Dati (RPD)</strong></p>
+
+                            <p>Il Responsabile della Protezione dei Dati (RPD) o <em>Data Protection Officer</em> (DPO)
+                                può essere contattato al seguente indirizzo di posta elettronica: <a
+                                    href="mailto:rpd@regione.lombardia.it">rpd@regione.lombardia.it</a>.</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+
+                            <p><strong>Ambito di conoscibilità e diffusione dei dati</strong></p>
+
+                            <p>I dati raccolti utilizzando i cookie saranno trattati esclusivamente
+                                dal Titolare del trattamento, dai responsabili nominati, e da eventuali
+                                ulteriori fornitori appositamente nominati nonchà© dal relativo personale
+                                appositamente istruito al trattamento e alla protezione dei dati al
+                                fine di assicurare il medesimo livello di sicurezza offerto dal
+                                titolare.</p>
+                            <p>&nbsp;</p>
+                            <p>I dati personali non saranno in alcun modo diffusi.</p>
+                            <p>&nbsp;</p>
+                            <p><strong>Diritti dell'interessato</strong></p>
+
+                            <p>&nbsp;</p>
+                            <p>Ai sensi degli artt. 15-22 del Regolamento, è possibile far valere i seguenti diritti,
+                                ove applicabili:</p>
+                            <ul>
+                                <li>Diritto di accesso ai dati, formulando opportuna richiesta delle
+                                    seguenti informazioni: finalità e modalità del trattamento; categorie di
+                                    dati personali in questione; destinatari o categorie di destinatari a
+                                    cui i dati personali sono stati o saranno comunicati; periodo di
+                                    conservazione dei dati; logica applicata al trattamento; estremi
+                                    identificativi del titolare e dei responsabili;</li>
+                                <li>Diritto di rettifica, la richiesta dellâintegrazione/modifica dei dati;</li>
+                                <li>Diritto di cancellazione, la richiesta dellâeliminazione dei dati
+                                    senza ingiustificato ritardo, fatti salvi tutti gli obblighi di
+                                    conservazione imposti dalla legge.</li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p>Le richieste per lâesercizio dei diritti dovranno essere inviate
+                                allâindirizzo di posta elettronica
+                                fabrizio_de_vecchi@regione.lombardia.it oppure a mezzo posta
+                                raccomandata all'indirizzo Piazza Città di Lombardia 1, 20124 Milano,
+                                all'attenzione della Direzione Generale: Presidenza - Direzione
+                                Centrale: Affari Istituzionali.</p>
+                            <p>&nbsp;</p>
+                            <p>à inoltre previsto il diritto di proporre reclamo allâAutorità di Controllo secondo
+                                lâart. 77 del Regolamento.</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+
+
+
+                        </div>
+                        <div class="modal-footer pt-3">
+                            <button id="modal-close"
+                                class="btn btn-prosegui btn-primary btn-sm std-button-active d-table mx-auto"
+                                type="button" data-dismiss="modal" data-i18n="common.close">Chiudi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div style="z-index: 0;
+    position: relative;">
+            <div>
+                <div class="flex col-lg-12 col-md-12 col-sm-12 col-xs-12 containerIE">
+                    <div id="wrapper-form-idpc-new" class="col-lg-9 col-md-12 col-sm-12 col-xs-12 vcol9 mx-auto">
+                        <div class="jumbotron text-left box-color">
+                            <div class="titolo-home-idpc h-auto mx-auto pt-4 pb-3">
+
+                                <div role="heading" aria-level="1" class="title-box text-center"
+                                    data-i18n="common.digital_identity">Accedi con la tua identita' digitale</div>
+
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+                            <!-- AGID - SPID IDP BUTTON MEDIUM "ENTRA CON SPID" * begin * -->
+                            <form method="post" id="SPIDform" name="SPIDform" action="AuthRequestSPIDService"
+                                class="mx-auto d-table">
+                                <input type="hidden" name="sceltaSpidEffettuata" id="sceltaSpidHidden">
+                                <input type="hidden" name="indexIdp" id="indexIdp">
+                                <div>
+                                    <a href="#" class="italia-it-button italia-it-button-size-m button-spid"
+                                        spid-idp-button="#spid-idp-button-medium-get" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <span class="italia-it-button-icon"><img
+                                                src="{{ url_for('static', filename='landing_page/spid-ico-circle-bb.png') }}"
+                                                onerror="this.src='img/spid-ico-circle-bb.png'; this.onerror=null;"
+                                                alt=""></span>
+                                        <span class="italia-it-button-text" style="    padding-left: 20px;
+    padding-top: 15px;" data-i18n="common.enter_spid">Entra con SPID</span>
+
+
+                                    </a>
+
+
+
+
+                                    <span style="position:absolute;filter: hue-rotate(70deg);" data-toggle="modal"
+                                        data-target="#modal-spid" class="info-icon float-left" title="informazioni"><img
+                                            src="{{ url_for('static', filename='landing_page/info@2x.png') }}"
+                                            alt="informazione"></span>
+                                </div>
+
+                                <div id="spid-idp-button-medium-get"
+                                    class="spid-idp-button spid-idp-button-tip spid-idp-button-relative">
+                                    <ul id="spid-idp-list-medium-root-get" class="spid-idp-button-menu"
+                                        aria-labelledby="spid-idp" style="left: 0px;">
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">Sielte</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-sielteid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="Sielte" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">EtnaID</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-etnaid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="EtnaID" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">IntesiGroupSpid</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-intesigroupspid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="IntesiGroupSpid" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">Aruba</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-arubaid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="Aruba" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">Tim</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-timid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="Tim" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">Poste</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-posteid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="Poste" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">Infocert</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-infocertid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="Infocert" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">TeamSystemId</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-teamsystemid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="TeamSystemId" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">InfoCamere</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-infocamereid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="InfoCamere" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">Namirial</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-namirialid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="Namirial" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">Lepida</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-lepidaid.png') }}"
+                                                    onerror=" this.onerror=null;" alt="Lepida" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-button-link" data-idp="">
+                                            <a href="#" class="home-box-fornitore"><span
+                                                    class="spid-sr-only">Register</span><img
+                                                    src="{{ url_for('static', filename='landing_page/spid-idp-spiditalia.png') }}"
+                                                    onerror=" this.onerror=null;" alt="Register" id"=""></a>
+                                        </li>
+
+                                        <li class="spid-idp-support-link">
+                                            <a href="https://www.spid.gov.it/" target="_blank">Maggiori informazioni</a>
+                                        </li>
+                                        <li class="spid-idp-support-link">
+                                            <a href="https://www.spid.gov.it/richiedi-spid" target="_blank">Non hai
+                                                SPID?</a>
+                                        </li>
+                                        <li class="spid-idp-support-link">
+                                            <a href="https://www.spid.gov.it/serve-aiuto" target="_blank">Serve
+                                                aiuto?</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+
+
+                            <script>
+                                $(document).ready(function () {
+                                    $("body").on("click", ".home-box-fornitore", function () {
+                                        $("#indexIdp").val($(".home-box-fornitore").index($(this)));
+                                        $("#SPIDform").submit();
+                                    });
+                                });
+                            </script>
+
+
+
+
+
+                            <div class=" pulsante-cie dropdown col-md-4 text-center mx-auto mb-2">
+                                <form action="AuthRequestCieService" onclick="submit()" method="post"
+                                    class="italia-it-button button-spid spid-idp-button-open confirm-font">
+                                    <span class="italia-it-button-icon hidden-md hidden-sm hidden-xxs">
+                                        <img alt="immagine CIE" class="img-responsive center-block"
+                                            src="{{ url_for('static', filename='landing_page/CieId@2x.png') }}">
+                                    </span>
+                                    <span class="italia-it-button-text italia-it-button-text-cie login-spid"
+                                        data-i18n="common.enter_cie">Entra con CIE</span>
+                                </form>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                            <br>
+
+                            <div class="img-spid-agid mx-auto col-md-4">
+                                <img class="d-table mx-auto" alt="loghi di Spid ed Agid"
+                                    src="{{ url_for('static', filename='landing_page/spid_agid.png') }}">
+                            </div>
+
+
+                            <div class="maggioriinfo-home text-center"><span data-i18n="common.use_other_methods">Oppure
+                                    utilizza altri metodi di accesso</span></div>
+                            <div class="wrap-banner-info mx-auto col-md-11 font-weight-bold" style="display: flex;">
+
+                                <div class="col-md-3 wrapper-tondi float-left col-6">
+                                    <form method="" action="" id="">
+                                        <a class="d-block text-decoration-none std-pulsante-home"
+                                            href="https://idpcwrapper.crs.lombardia.it/PublisherMetadata/accediConTessera.jsp">
+                                            <div class="col-md-3 float-left text-center">
+                                                <img alt="icona tessera sanitaria"
+                                                    src="{{ url_for('static', filename='landing_page/cerchio-tessera.png') }}">
+                                            </div>
+                                            <div class="testo-info col-md-9 text-center text-md-left float-left"
+                                                data-i18n="common.health_card">
+                                                Tessera Sanitaria CNS
+                                            </div>
+                                        </a>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="maggioriinfo-home text-center mt-4 pb-1"></div>
+
+
+
+                            <div class="px-4 pt-1"><strong class="font-weight-normal d-table mx-auto" style="
+						    font-size: 17px;
+						"><span data-i18n="common.notice">AVVISO</span></strong>
+                                <p style="font-size: 16px;" class="mt-2"></p>
+                                <p><b>Utilizzo delle Tessere Sanitarie come CNS per l'accesso ai servizi digitali della
+                                        Pubblica Amministrazione</b></p>
+
+                                <p>Le Tessere Sanitarie che consentono l'accesso ai servizi digitali della Pubblica
+                                    Amministrazione sono quelle dotate di <b>microchip</b>.</p>
+
+
+
+                                <p>Nel corso del 2023, è stata concessa ai cittadini che hanno ricevuto
+                                    una nuova Tessera Sanitaria (TS) senza microchip la possibilità di
+                                    continuare ad accedere ai servizi
+                                    della pubblica amministrazione estendendo, fino al 31 dicembre 2023, la
+                                    validità del certificato di autenticazione della loro precedente tessera
+                                    TS-CNS scaduta.</p>
+
+
+
+                                <p><b>Non è stata prevista</b> alcuna ulteriore estensione della validità di tale
+                                    certificato. Di conseguenza,
+                                    la vecchia TS-CNS con certificato esteso potrà essere utilizzata solo fino al <b>31
+                                        dicembre 2023</b>.</p>
+
+
+
+                                I possessori di Tessere Sanitarie senza microchip che desiderano
+                                continuare ad accedere ai servizi digitali della PA, attraverso la
+                                TS-CNS, dovranno ora richiederne un duplicato. Questo può
+                                essere fatto presso gli Sportelli di Scelta e Revoca dell'ASST di
+                                competenza o online, come indicato sul sito dell'Agenzia delle Entrate: <a
+                                    href="https://www.agenziaentrate.gov.it/portale/web/guest/la-richiesta-del-duplicato-della-tessera-sanitaria">richiesta
+                                    duplicato tessera sanitaria</a>
+                                <p></p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="versione-software text-center d-none">
+            V. 26.0.07
+            - SERV. nodo6pro
+
+        </div>
+    </div>
+
+
+
+
+    <footer class="col-md-12 text-white">
+        <span class="footer-title-top" data-i18n="common.auth_service_rl">Servizio di autenticazione di Regione
+            Lombardia</span>
+        <div class="wrapper-collegamenti-footer">
+
+
+            <div class="col-md-2 col-sm-2 col-xs-6 collegamento-footer"><a title="Vai alla pagina Privacy Policy"
+                    href="https://idpcwrapper.crs.lombardia.it/PublisherMetadata/privacy.jsp">Privacy Policy</a></div>
+
+
+        </div>
+        <div class="footer-copyright col-md-12 text-white" data-i18n="[html]common.copyright"> © Copyright Regione
+            Lombardia tutti i diritti riservati - C.F. 80050050154 - Piazza Città di Lombardia 1 - 20124 Milano</div>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>

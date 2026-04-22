@@ -1,0 +1,756 @@
+
+.collegamento-footer {
+	font-size: 16px;
+	font-weight: 600;
+	float: left;
+	padding-left: 0;
+}
+
+.footer-title-top {
+	color: #fff;
+	font-size: 18px;
+	display: block;
+	font-weight: 700;
+	margin: 20px 0;
+	text-align: left;
+	padding: 15px 60px 15px 60px;
+}
+
+.footer-copyright {
+	margin-left: 45px;
+	position: relative;
+	font-size: 15px;
+	padding-top: 30px;
+	text-align: left;
+	padding-bottom: 20px;
+	display: inline-block;
+	width: 80%;
+}
+
+.italia-it-button-text-basic {
+	font-size: 1.2em;
+}
+
+.modal {
+	display: block;
+	position: relative;
+}
+
+.barra-verde-superiore {
+	height: 40px;
+	background-color: #2D793B;
+	padding-right: 25px;
+}
+
+.barra-verde-superiore .icona-aiuto {
+	float: right;
+	font-size: 22px;
+	padding-top: 10px;
+}
+
+.header-text-help {
+	font-size: 15px;
+	padding-top: 8px;
+	padding-right: 12px;
+}
+
+
+#barra_istituzionale {
+	border-color: #348D45;
+	border-width: 20px 0 0 0;
+	margin-bottom: 0;
+	min-height: 70px;
+	height: 95px;
+	border-bottom: 0 solid #ededed;
+	padding-top: 13px;
+	padding-bottom: 30px;
+	box-shadow: 0 5px 10px #ededed;
+	display: block;
+	clear: both;
+	border: none;
+}
+
+#titolo_servizio_autenticazione {
+	padding: 0 !important;
+	text-align: left !important;
+	padding-top: 20px !important;
+	padding-right: 60px;
+	padding-left: 20%;
+	font-size: 19px;
+	margin-top: 0;
+}
+
+.img-rl-logo {
+	width: 70%;
+}
+
+#barra_istituzionale .navbar-brand {
+	padding-left: 60px;
+	padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	#barra_istituzionale .navbar-brand {
+		padding-left: 0;
+	}
+}
+
+img.glyphicon.glyphicon-picture {
+	width: 40%;
+}
+
+.icona-aiuto-header {
+	float: right;
+	width: 20px;
+	padding-top: 10px;
+	margin-right: 10px;
+}
+
+.titolo-verde-box {
+	height: auto;
+}
+
+@media screen and (max-width: 768px) {
+	.box-utente {
+		width: 45% !important;
+	}
+}
+
+#wrapper {
+	background-image: url(/static/landing_page/SfondoIDPC-bianco@2x.png);
+	background-size: 100%;
+}
+
+#wrapper {
+	padding-bottom: 30px !important;
+}
+
+.jumbotron.text-left.box-color {
+	background-color: #fff;
+}
+
+img.glyphicon.glyphicon-picture[src='images/new/cie@2x.png'] {
+	width: 33% !important;
+}
+
+/* Start dimenticata carta CNS - Pagine */
+.box-fornitore.col-md-2,
+.box-fornitore.col-md-3 {
+	float: none;
+	display: inline-block;
+}
+
+.box-fornitore.col-md-2 img:hover {
+	cursor: pointer;
+}
+
+.more-info a {
+	padding: 15px;
+	text-decoration: underline;
+	font-weight: 600;
+	color: #166DCB;
+}
+
+.more-info:hover {
+	color: red;
+	cursor: pointer;
+}
+
+.box-fornitore.col-md-3.col-sm-12:hover {
+	border-color: #ababab;
+}
+
+span.btn.btn-info:hover {
+	opacity: 0.95;
+}
+
+.scopri .testo {
+	font-size: 16px;
+	text-decoration: underline !important;
+	color: #0073e6 !important;
+	font-weight: 700;
+}
+
+span.glyphicon.glyphicon-play-circle {
+	color: #0073e6;
+}
+
+.button-basic {
+	border-bottom: 91px !important;
+}
+
+.scopri {
+	margin-top: 30px;
+}
+
+.jumbotron.text-left.box-color {
+	padding-top: 10px !important;
+	padding-bottom: 15px !important;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.flex.col-lg-12.col-md-12.col-sm-12.col-xs-12.containerIE {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.italia-it-button.button-basic.regione-pulsante {
+	background-color: #297A38;
+}
+
+span.sigla.hidden-xs {
+	color: #506F86;
+}
+
+span.italia-it-button-text-basic {
+	overflow: hidden;
+	width: 75%;
+	text-align: left;
+	vertical-align: top;
+}
+
+footer {
+	background-color: #093456;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	margin-top: 0;
+}
+
+footer .wrapper-collegamenti-footer {
+	margin-left: 60px;
+	font-size: 15px;
+}
+
+.italia-it-button-text-basic {
+	font-size: 1.2em;
+}
+
+input.input-accedi {
+	border: 1px solid #e3e4e6;
+	border-radius: 3px;
+	font-size: 18px;
+	margin-bottom: 15px;
+	padding: 7px;
+	display: block;
+	width: 100%;
+}
+
+.label-input {
+	font-weight: 700 !important;
+	font-size: 18px !important;
+	margin-bottom: 5px !important;
+}
+
+input.input-accedi::placeholder {
+	color: #cccccc;
+}
+
+p.info_credenziali {
+	color: #0F68C9;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.btn-outline-primary {
+	color: #0073e6;
+	background-color: transparent;
+	background-image: none;
+	-webkit-box-shadow: inset 0 0 0 1px #0073e6;
+	-moz-box-shadow: inset 0 0 0 1px #0073e6;
+	box-shadow: inset 0 0 0 1px #0073e6;
+}
+
+.btn.btn-outline-primary {
+	padding: 12px 24px;
+	font-size: 16px;
+	white-space: initial;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.wrapper-bottoni-accedi .btn {
+	/* margin-right: 15px !important; */
+}
+
+a {
+	cursor: pointer !important;
+}
+
+.wrapper-destra .col-md-4 {
+	font-size: 18px;
+}
+
+.wrapper-destra .titolo {
+	font-weight: bold;
+	text-align: center;
+}
+
+.wrapper-destra .paragrafo {
+	text-align: center;
+	font-size: 18px;
+}
+
+.collegamento-footer a {
+	color: #fff;
+}
+
+a.link-wrap-dx {
+	display: block;
+	font-weight: 700;
+	font-size: 16px;
+	text-decoration: underline;
+}
+
+.wrapper-destra .col-md-4 {
+	bottom: 0;
+	padding-top: 3%;
+}
+
+.col-md-3.accedi-chiudi:hover {
+	color: #888888;
+}
+
+.col-md-3.accedi-chiudi:hover .avatar {
+	background-color: #2598ff;
+}
+
+.col-md-4.banner-3 {
+	padding-top: 0;
+}
+
+@media (max-width:768px) {
+	.wrapper-inputs {
+		border-right-color: white !important;
+	}
+}
+
+.banner-3 img {
+	padding-bottom: 25px;
+}
+
+.recupera-password .pallino1.active {
+	background-color: #2D793B;
+}
+
+.recupera-password .pallino1.active span {
+	color: white;
+}
+
+body {
+	min-height: 100vh !important;
+	background: #093456 !important;
+}
+
+#wrapper {
+	background-color: white !important;
+}
+
+.progress-bar-wrapper {
+	display: inline-block;
+}
+
+#validation-code{
+    width: 70%;
+	max-width: 250px;
+    text-align: center;
+    margin: auto;
+    display: table;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+#ic-action-email{
+	width: 50px;
+}
+						
+#ic-action-email>span{
+	padding-left: 15px;
+} 
+
+#iconaProfilo{
+	width: 80px;
+}
+
+.spiegazione-cifre-password{
+	font-size: 16px;
+	font-weight: 400;															
+}													 
+														  								   
+.cifre-5 .input-accedi{
+	display: inline-block !important;
+}
+	
+.wrapper-main-recupera-password{
+	padding: 0 30px;
+}
+
+
+.utentePasswordHome .wrapper-inputs{
+		padding-bottom: 125px !important;
+}
+
+.domanda-segreta .box-utente-paragrafo{
+		font-size: 15px !important;
+}
+
+.it-external-link{
+		    fill: #0050b4;
+			font-size: 10px;
+			margin-left: 3px;
+			margin-top: -5px;}
+			
+		
+		.img-accedi-con-cie{
+			width: 30%;
+		}
+		
+		
+
+
+
+.hr-scarica{
+	background-color: green;
+	height: 1px;
+}
+							
+.paragrafo-scarica{
+	color: darkgreen;
+}
+							
+.info-scarica{
+	font-size: 15px;
+	color: darkgreen;
+}							
+
+
+.contatti-numero-verde {
+    padding-top: 12%;
+    font-size: 130%;
+    font-weight: 800;
+    text-align: center;
+}
+
+.wrapper-contatti-telefono p {
+    width: 100% !important;
+}
+
+
+					
+.wrapper-scarica .img-pdf{
+	width: 21px;
+}
+
+.img-email-profilo{
+	width: 80px;
+}
+
+
+
+.img-contatti {
+    background-image: url(/staticResources/images/new/NumeroVerde.png);
+    background-repeat: no-repeat;
+    height: 120px;
+    display: block !important;
+    clear: both;
+    margin-left: 0px;
+	width: 300px;
+}
+
+
+
+
+.contatti-numero-verde-otp{
+    padding-top: 28px;
+    padding-left: 75px;
+    font-size: 32px;
+	font-weight: 800;
+	}
+
+.wrapper-policy{
+		  padding-left: 5%;
+		  padding-right: 5%;
+}
+
+
+	.wrapper-main-recupera-password{
+		padding: 0px 30px;
+	}
+	
+	.img-tessera-sanitaria-numero{
+		width: 150px;
+		max-width: 100%;
+	}
+	
+	.info-icon .d-grid{
+		display: grid !important;
+	}
+	
+    .color-gray{
+		color: #757575 !important;
+	}
+	
+	
+	
+	 @media screen and (max-width: 991px){
+	 .home-select .wrap-banner-info{
+		 
+		 display: table !important;
+	 }
+	 }
+	 
+	 .home-select .wrap-banner-info{
+		 
+		 display: table;
+	 }
+	 
+	 .home-select .std-pulsante-home *{
+		 font-size: 14px !important;
+	 }
+	 
+	 .home-select .img-ts-cns{
+		 width: 220px !important;
+	 }
+	 
+	 
+	 
+#progress-bar-primo-accesso{
+	width: 80% !important;
+}
+
+#progress-bar-primo-accesso .pallino-nr-3{
+	margin-left: 64%;
+	float:left !important;
+}
+
+#progress-bar-primo-accesso .pallino-nr-4{
+	margin-top: -15px;
+}
+
+#progress-bar-primo-accesso{
+		padding-bottom: 30px;
+}
+
+#progress-bar-primo-accesso .pallino-nr-2{
+    margin-left: 25%;
+    margin-top: -15px !important;
+    position: absolute;
+}
+
+
+#dissuasore-wrap{
+	position: fixed;
+}
+
+#dissuasore-wrap #dissuasore{
+	border: 1px solid gray;
+}
+
+#dissuasore-wrap #dissuasore .modal-content{
+	border: 1px solid gray;
+}
+
+#dissuasore-wrap #dissuasore .modal-content .titolo-verde-box{
+	background-color: darkgreen !important;
+}
+
+
+.img-email-profilo{
+  width: 80px
+}
+
+
+.img-password-policy{
+	    width: 50%;
+	    padding-top: 15px;
+	}
+	
+
+	#modal-it-policy{
+		display: none;
+	}
+	
+	.wrapper-porgress-bar{
+		padding-bottom: 30px;
+	}
+	
+
+.pallino-mobile{
+		margin-top: 15px !important;
+		margin-bottom: 15px !important;
+}
+	
+	.wrapper-bottoni-accedi{
+		 padding-top: 40px;
+	}
+	
+	.accesso-otp #modal-it{
+		display: none;
+	}
+
+	.accesso-otp .img-tessera-sanitaria-numero{
+		width: 150px;
+		max-width: 100%;
+	}
+
+
+	.tessera-otp .img-contatti p{
+		padding-top: 28px;
+		padding-left: 15px;
+		font-size: 26px;
+		margin-left: 23px !important;
+	}
+	
+	
+	
+	
+/* table css */
+.seleziona-tabella .dataTables_filter {
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+.seleziona-tabella #listaEnti_length{width: 50%;float:left;vertical-align: bottom;margin-bottom: 0px !important;margin-top: 40px;}
+
+.seleziona-tabella .dataTables_filter input {
+    border: 1px solid #757575;
+}
+
+
+.seleziona-tabella .gradeA.row_selected {
+    background-color: #dfdfdf;
+}
+
+.seleziona-tabella .dataTables_filter input{
+	border: 1px solid #757575 !important;
+	
+}
+
+.seleziona-tabella .table-responsive .highlight {
+    background-color: #ededed;
+}
+
+#modal-id-cookie .modal-body{
+	height: 40vh !important; overflow-y:scroll;
+}
+
+.welcome-label{
+	font-size: 24px !important;
+}
+
+	 #inviaNuovoId{
+		 width: auto !important;
+	 }
+	 
+
+	.progress-indeterminate{
+		z-index: 200;	
+	}
+
+	select#secretQuestionId.popoverSecretQuestion{
+	  font-size:24px !important;
+    }
+	
+	
+	
+.confirm-dato .value {
+    font-weight: 600;
+}
+
+.confirm-dato {
+    font-weight: 500;
+}
+
+.card:after{
+background-color: transparent !important;
+padding: 0px !important;
+margin:0px !important;
+}
+
+.confirm-box-radius{
+	background-color: #f5f5f5;
+	display: inline-table;
+    border-radius: 15px;
+ }
+
+  #bottone-visualizza-tutto{
+    font-size: 16px !important;
+    background-color: transparent !important;	  
+  }
+  
+  
+  .card.card-body.card-idpc{
+	background-color: transparent; 
+	padding-left: 6px;
+}
+
+
+.link-esterno-icon{
+	width: 15px;
+    vertical-align: baseline;
+}
+
+@media all and (-ms-high-contrast:none){
+select.is-invalid{
+	background-image:none !important;
+}}
+
+
+.std-input-error:focus-within + label:after{
+    outline: -webkit-focus-ring-color auto 2px;                             
+}
+
+@media screen and (max-width: 576px){
+    .wrap-button-table.d-sm-grid{
+        display: grid;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .wrap-button-table.d-sm-grid{
+        display: flex;
+    }
+}
+
+#modal-id-cookie *{
+	font-size: 16px !important;
+}
+
+.home.home-select footer{
+	z-index:0;
+	display: contents;
+}
+
+
+@media screen and (max-width: 380px) {
+	#barra_istituzionale .navbar-brand {
+		
+		width: 175px;
+	}
+}
+
+
+.home-select .footer-copyright{
+	z-index: -1;
+}
+
+form.form-swissid{
+	border: 1.3px solid black;
+	margin-bottom: 10px !important;
+	padding-top: 5px;
+	border-radius: 3px !important;
+	width: 220px;
+}
+					
+form.form-swissid .wrapper-swissid{
+	border-right: 1px solid #888;
+	display: block;
+	height: 32px;
+	margin-left: 14px !important;
+	padding-right: 20px;
+}
+	
