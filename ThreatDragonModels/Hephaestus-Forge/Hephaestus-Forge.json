@@ -33,8 +33,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "8e70c9de-660f-434e-80a9-0463edaf37e8",
             "zIndex": -1,
+            "id": "8e70c9de-660f-434e-80a9-0463edaf37e8",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Untrusted",
@@ -73,8 +73,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "07764144-78e3-48d5-b02c-e714d9a193df",
             "zIndex": -1,
+            "id": "07764144-78e3-48d5-b02c-e714d9a193df",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trusted (IT section)",
@@ -122,8 +122,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "787facce-af58-4b84-a130-ed55f1059062",
             "zIndex": -1,
+            "id": "787facce-af58-4b84-a130-ed55f1059062",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Semi-trusted",
@@ -165,8 +165,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5",
             "zIndex": -1,
+            "id": "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trusted (OT section)",
@@ -185,7 +185,8 @@
                 "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
                 "05861e45-985c-4c6a-9ae6-b8259b937bfd",
                 "0d407ae3-8852-4630-9e25-97e75b73a817",
-                "e9e03959-2841-4411-98ee-080d7671011f"
+                "e9e03959-2841-4411-98ee-080d7671011f",
+                "758a0568-9e80-4fc2-9fa5-7b2de1372860"
               ]
             }
           },
@@ -3153,8 +3154,8 @@
                 "text": "Slicer server"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3251,12 +3252,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "cc8d7ab6-fd65-48fe-a06f-7b93b0febc8c",
+                  "title": "Slicer Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "An attacker, after leaking the API key, can communicate directly with the MES (printers) impersonating the Slicer Server and scheduling non requested jobs.",
+                  "mitigation": "No longer use hardcoded API key (TODO)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3757,8 +3780,8 @@
                 "text": "Thermal\nsensors"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3855,12 +3878,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a5497563-40bf-4118-bef1-3df98a018a7d",
+                  "title": "Thermal Sensor Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Sending forged packets with wrong information about the temperature of the printers, makes the printers not stop when temperature is too high, causing production of brittle metal.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -4153,12 +4198,37 @@
               "port": "ec1627d8-055f-4570-8fa6-b8f54e91840f"
             },
             "vertices": []
+          },
+          {
+            "angle": 30,
+            "position": {
+              "x": 2390,
+              "y": 520
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Model Switch (Network of shop floor)? to add ARP spoofing..."
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "758a0568-9e80-4fc2-9fa5-7b2de1372860",
+            "zIndex": 28,
+            "data": {
+              "type": "tm.Text",
+              "name": "Model Switch (Network of shop floor)? to add ARP spoofing...\n",
+              "hasOpenThreats": false
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 3
+    "threatTop": 5
   }
 }
