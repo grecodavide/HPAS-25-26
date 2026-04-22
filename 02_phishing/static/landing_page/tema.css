@@ -451,7 +451,7 @@ body {
 
 
 .img-contatti {
-    background-image: url(/staticResources/images/new/NumeroVerde.png);
+    background-image: url(static/landing_page/NumeroVerde.png);
     background-repeat: no-repeat;
     height: 120px;
     display: block !important;

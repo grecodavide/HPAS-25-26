@@ -47,7 +47,7 @@ $("#translatePage .fa").addClass("translating");
 						"getAsync" : false,
 						"backend" : {
 							"loadPath" : function(lngs, namespaces) {
-								return "/staticResources/traduzione/idpc_lang_"+linguaCorrente+".json";
+								return "static/landing_page/idpc_lang_"+linguaCorrente+".json";
 							},
 							"allowMultiLoading" : false,
 							"parse" : function(data) {
@@ -149,7 +149,7 @@ if(linguaCorrente=="it"){
 						"getAsync" : false,
 						"backend" : {
 							"loadPath" : function(lngs, namespaces) {
-								return "/staticResources/traduzione/idpc_lang_"+linguaCorrente+".json";
+								return "static/landing_page/idpc_lang_"+linguaCorrente+".json";
 							},
 							"allowMultiLoading" : false,
 							"parse" : function(data) {
