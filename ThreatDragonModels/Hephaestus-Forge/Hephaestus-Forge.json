@@ -117,7 +117,7 @@
             },
             "attrs": {
               "label": {
-                "text": "Semi-trusted"
+                "text": "Semi-trusted (DELETE?"
               }
             },
             "visible": true,
@@ -126,7 +126,7 @@
             "id": "787facce-af58-4b84-a130-ed55f1059062",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Semi-trusted",
+              "name": "Semi-trusted (DELETE?)",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
