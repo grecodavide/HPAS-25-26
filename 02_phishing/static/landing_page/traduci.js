@@ -47,7 +47,7 @@ $("#translatePage .fa").addClass("translating");
 						"getAsync" : false,
 						"backend" : {
 							"loadPath" : function(lngs, namespaces) {
-								return "static/landing_page/idpc_lang_"+linguaCorrente+".json";
+								return "/static/landing_page/idpc_lang_"+linguaCorrente+".json";
 							},
 							"allowMultiLoading" : false,
 							"parse" : function(data) {
@@ -100,7 +100,41 @@ linguaCorrente = "en";
 $("#translatePage,#translatePageMobile a").on('click', function(){
 //translatePage("en");
 
+function applyLang() {
+  i18next
+    .use(i18nextXHRBackend)
+    .init({
+      lng: linguaCorrente,
+      fallbackLng: "it",
+      getAsync: false,
+      backend: {
+        loadPath: "/static/landing_page/idpc_lang_" + linguaCorrente + ".json",
+        allowMultiLoading: false,
+        parse: function (data) { return JSON.parse(data); }
+      }
+    }, function () {
+      jqueryI18next.init(i18next, $);
+      $('body').localize();
+    });
+}
 
+$("body").on("click", ".italiano", function (e) {
+  e.preventDefault();
+  $(".italiano").css("text-decoration","underline");
+  $(".english").css("text-decoration","none");
+  document.cookie = "language=it; path=/";
+  linguaCorrente = "it";
+  applyLang();
+});
+
+$("body").on("click", ".english", function (e) {
+  e.preventDefault();
+  $(".english").css("text-decoration","underline");
+  $(".italiano").css("text-decoration","none");
+  document.cookie = "language=en; path=/";
+  linguaCorrente = "en";
+  applyLang();
+});
 
 /*
 if(linguaCorrente=="it"){
@@ -149,7 +183,7 @@ if(linguaCorrente=="it"){
 						"getAsync" : false,
 						"backend" : {
 							"loadPath" : function(lngs, namespaces) {
-								return "static/landing_page/idpc_lang_"+linguaCorrente+".json";
+								return "/static/landing_page/idpc_lang_"+linguaCorrente+".json";
 							},
 							"allowMultiLoading" : false,
 							"parse" : function(data) {

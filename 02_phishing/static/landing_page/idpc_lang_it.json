@@ -1,0 +1,16 @@
+{
+  "common": {
+    "browser_version_error": "Browser non aggiornato",
+    "auth_service": "Servizio di autenticazione",
+    "continue": "Prosegui",
+    "close": "Chiudi",
+    "digital_identity": "Accedi con la tua identita' digitale",
+    "enter_spid": "Entra con SPID",
+    "enter_cie": "Entra con CIE",
+    "use_other_methods": "Oppure utilizza altri metodi di accesso",
+    "health_card": "Tessera Sanitaria CNS",
+    "notice": "AVVISO",
+    "auth_service_rl": "Servizio di autenticazione di Regione Lombardia",
+    "copyright": "© Copyright Regione Lombardia tutti i diritti riservati - C.F. 80050050154 - Piazza Città di Lombardia 1 - 20124 Milano"
+  }
+}
