@@ -59,8 +59,8 @@
           },
           {
             "position": {
-              "x": 962.9999999999941,
-              "y": -209.99999999997823
+              "x": 965,
+              "y": -209.99999999999693
             },
             "size": {
               "width": 1170,
@@ -87,11 +87,11 @@
                 "f9a065ca-160b-453d-a93e-6420f6916c21",
                 "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
                 "d11b1d0c-062a-446b-be88-b9fb42c3767d",
-                "db6df6ce-358a-493d-bc78-61da4b50c6a0",
-                "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
                 "858bd404-c078-4628-8050-0ffc626bd5cd",
                 "56901286-8548-4c48-9f18-f3186cddca02",
-                "9b4173ef-8f5d-4e9c-a91d-957233410e64"
+                "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+                "9b4173ef-8f5d-4e9c-a91d-957233410e64",
+                "ce83d741-fee2-4227-aaa6-cc8f936bcec1"
               ],
               "containedElements": [
                 "36477c30-516b-4532-93b2-46e257af9c86",
@@ -139,10 +139,10 @@
                 "10bd880e-6606-4a71-822f-895ae991603a",
                 "f9a065ca-160b-453d-a93e-6420f6916c21",
                 "d11b1d0c-062a-446b-be88-b9fb42c3767d",
-                "db6df6ce-358a-493d-bc78-61da4b50c6a0",
                 "ecf614ad-c12d-4d76-b610-f269004fc800",
                 "56901286-8548-4c48-9f18-f3186cddca02",
-                "53eaab29-0f43-44b3-97d2-e90eb724ff02"
+                "53eaab29-0f43-44b3-97d2-e90eb724ff02",
+                "db6df6ce-358a-493d-bc78-61da4b50c6a0"
               ],
               "containedElements": [
                 "339778d6-5a04-419c-b43c-d54724d667cc"
@@ -174,9 +174,9 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
                 "858bd404-c078-4628-8050-0ffc626bd5cd",
-                "9b4173ef-8f5d-4e9c-a91d-957233410e64"
+                "9b4173ef-8f5d-4e9c-a91d-957233410e64",
+                "ce83d741-fee2-4227-aaa6-cc8f936bcec1"
               ],
               "containedElements": [
                 "ad1fbdc5-c0ab-4ce2-a849-2926ad3c2a5b",
@@ -755,7 +755,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -776,16 +777,35 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "e5e53409-7a01-4c1a-802d-3fc9d632d465",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Modifying the sent CAD project",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
                 "787facce-af58-4b84-a130-ed55f1059062"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Upload 3D CAD blueprint"
@@ -1537,158 +1557,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "CAD retrieval",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "CAD retreival"
-            ],
-            "id": "00f0f2e4-aea1-4011-9207-b43ffc6e3ddc",
-            "source": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "target": {
-              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
-              "port": "ec1627d8-055f-4570-8fa6-b8f54e91840f"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Store CAD blueprint",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
-              ]
-            },
-            "labels": [
-              "Store CAD blueprint"
-            ],
-            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
-            "source": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
-              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
-            },
-            "vertices": [
-              {
-                "x": 885,
-                "y": 600
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Retrieve/Store\ngenerated G-code blueprint",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
-              ]
-            },
-            "labels": [
-              "Retrieve/Store\ngenerated G-code blueprint"
-            ],
-            "id": "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
-            "source": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "ad1fbdc5-c0ab-4ce2-a849-2926ad3c2a5b",
-              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": ""
                 },
                 "strokeDasharray": null
@@ -2233,7 +2101,83 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store CAD blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "273fddc0-153c-4b17-b4e1-5b9cc4f4ceea",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Modify the CAD project \n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Store CAD blueprint"
+            ],
+            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+            "source": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "vertices": [
+              {
+                "x": 885,
+                "y": 600
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -2254,16 +2198,35 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "59657b94-e017-4bcb-b2e8-2e92af6acb5f",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Modify the requested CAD project",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "07764144-78e3-48d5-b02c-e714d9a193df",
                 "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Retrieve original project\nfor comparison"
@@ -4356,19 +4319,156 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "758a0568-9e80-4fc2-9fa5-7b2de1372860",
             "zIndex": 28,
+            "id": "758a0568-9e80-4fc2-9fa5-7b2de1372860",
             "data": {
               "type": "tm.Text",
               "name": "Model Switch (Network of shop floor)? to add ARP spoofing...\n",
               "hasOpenThreats": false
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 29,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "CAD retrieval",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4916e333-7eea-4915-9b1d-e7ffb924b80b",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Modifying the CAD project ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "CAD retreival"
+            ],
+            "id": "00f0f2e4-aea1-4011-9207-b43ffc6e3ddc",
+            "source": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "ec1627d8-055f-4570-8fa6-b8f54e91840f"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 30,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Retrieve/Store\ngenerated G-code blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "22e67af6-5424-474c-9108-7617e77b6734",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Modify the stored G-Code blueprint",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Retrieve/Store\ngenerated G-code blueprint"
+            ],
+            "id": "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
+            "source": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "ad1fbdc5-c0ab-4ce2-a849-2926ad3c2a5b",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "vertices": []
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 12
+    "threatTop": 17
   }
 }
