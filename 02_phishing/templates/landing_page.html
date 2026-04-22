@@ -462,18 +462,19 @@
         <div class="wrapper-fixed-header" style="display:grid;">
             <div class="col-md-12 barra-verde-superiore d-none d-md-block">
 
+
                 <div class="traduci-div float-right">
                     <a class="text-white float-right" id="translatePage">
 
-                        <span class="english" style="text-decoration: none;">EN</span>
-                        <span>
+                        <span onclick="window.location.href='{{ url_for('home_en') }}';" style="cursor: pointer;">
+                            <span style="text-decoration: none;">EN</span>
                             <img src="{{ url_for('static', filename='landing_page/gb.svg') }}" alt="bandiera inglese"
                                 class="traduci-flag-en">
                         </span>
 
                         <span>&nbsp; | &nbsp;</span>
 
-                        <span class="italiano" style="text-decoration:underline;">IT </span>
+                        <span style="text-decoration:underline;">IT </span>
                         <img src="{{ url_for('static', filename='landing_page/it.svg') }}" alt="bandiera italiana"
                             class="traduci-flag-it">
                     </a>
@@ -504,7 +505,7 @@
                     </div>
                     <div class="navbar-header float-left">
                         <div class="navbar-brand">
-                            <a class="d-block" href="{{ url_for('home') }}">
+                            <a class="d-block" href="http://www.regione.lombardia.it/">
                                 <img class="img-rl-logo float-left"
                                     src="{{ url_for('static', filename='landing_page/logo-rl.png') }}"
                                     alt="Regione Lombardia">

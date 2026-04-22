@@ -486,7 +486,7 @@
                 <div class="traduci-div float-right">
                     <a class="text-white float-right" id="translatePage">
 
-                        <span class="english" style="text-decoration: underline;">EN</span>
+                        <span style="text-decoration: underline;">EN</span>
                         <span>
                             <img src="{{ url_for('static', filename='landing_page/gb.svg') }}" alt="bandiera inglese"
                                 class="traduci-flag-en">
@@ -494,11 +494,11 @@
 
                         <span>&nbsp; | &nbsp;</span>
 
-                        <a href="{{ url_for('home') }}" class="text-white float-right" <span class="italiano"
-                            style="text-decoration: none;">IT </span>
+                        <span onclick="window.location.href='{{ url_for('home') }}';" style="cursor: pointer;">
+                            <span style="text-decoration: none;">IT </span>
                             <img src="{{ url_for('static', filename='landing_page/it.svg') }}" alt="bandiera italiana"
                                 class="traduci-flag-it">
-                        </a>
+                        </span>
                     </a>
                 </div>
 
@@ -518,13 +518,10 @@
 
                             <span style="color:black;">&nbsp; | &nbsp;</span>
 
-                            <a class="italiano" style="text-decoration: none; color: black; font-weight: 500;">
+                            <a class="italiano" style="text-decoration: none; color: black; font-weight: 500;">IT <img
+                                    src="{{ url_for('static', filename='landing_page/it.svg') }}"
+                                    alt="bandiera italiana" class="traduci-flag-it"></a>
 
-                                <a href="{{ url_for('home') }}" class="text-white float-right"
-                                    style="cursor: pointer;">
-                                    IT <img src="{{ url_for('static', filename='landing_page/it.svg') }}"
-                                        alt="bandiera italiana" class="traduci-flag-it"></a>
-                            </a>
 
                         </div>
                     </div>
