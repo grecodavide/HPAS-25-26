@@ -4,7 +4,7 @@
     "auth_service": "Authentication Service",
     "continue": "Continue",
     "close": "Close",
-    "digital_identity": "Log in with your digital identity",
+    "digital_identity": "Log in with your digital identity.",
     "enter_spid": "Login with SPID",
     "enter_cie": "Login with CIE",
     "use_other_methods": "Or use other login methods",
@@ -14,3 +14,5 @@
     "copyright": "© Copyright Regione Lombardia, all rights reserved. - Fiscal code 80050050154 - Piazza Città di Lombardia 1 - 20124 Milan"
   }
 }
+
+

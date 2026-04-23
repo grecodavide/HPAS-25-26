@@ -429,7 +429,6 @@ body {
 	font-family: 'Titillium Web', sans-serif !important;
 }
 
-
 .pallino-mobile.clearfix {
 	clear: both;
 }
@@ -1698,7 +1697,7 @@ p.email-value {
 }
 
 select{
-background: url(static/landing_page/dropdown-freccia@2x.png);
+background: url(dropdown-freccia@2x.png);
     -webkit-appearance: none;
     background-repeat: no-repeat;
     background-position-x: 93%;
@@ -1738,7 +1737,7 @@ background-size: 15px;}
 }
 
 input#dataFullId, input.dataFullClass {
-    background: url(static/landing_page/calendario@2x.png);
+    background: url(calendario@2x.png);
     -webkit-appearance: none !important;
     background-repeat: no-repeat;
     background-position-x: 97% !important;

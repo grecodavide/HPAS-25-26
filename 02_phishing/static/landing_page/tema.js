@@ -12,22 +12,22 @@ $(".backButtonWrapper").parent().click(function(){
 
 if($("#password").attr("type")=="text"){
 	$("#password").attr("type","password");
-	$(this).attr("src","static/landing_page/occhio-chiuso@2x.png");
+	$(this).attr("src","{{ url_for('static', 'landing_page/occhio-chiuso@2x.png') }}");
 	}
 else{
 	$("#password").attr("type","text");
-	$(this).attr("src","static/landing_page/occhio-aperto@2x.png");}
+	$(this).attr("src","{{ url_for('static', 'landing_page/occhio-aperto@2x.png') }}");}
 
 });
 
  $(".psw-show-hide-ap-1").click(function(){
 	if($("#newPassId").attr("type")=="text"){ 
 $("#newPassId").attr("type","password");
-$(this).attr("src","static/landing_page/occhio-chiuso@2x.png");
+$(this).attr("src","{{ url_for('static', 'landing_page/occhio-chiuso@2x.png') }}");
 	}
 else{
 	$("#newPassId").attr("type","text");
-	$(this).attr("src","static/landing_page/occhio-aperto@2x.png");}
+	$(this).attr("src","{{ url_for('static', 'landing_page/occhio-aperto@2x.png') }}");}
 
 });
 
@@ -35,11 +35,11 @@ else{
  $(".psw-show-hide-ap-2").click(function(){
 	if($("#renewPassId").attr("type")=="text"){ 
 $("#renewPassId").attr("type","password");
-$(this).attr("src","static/landing_page/occhio-chiuso@2x.png");
+$(this).attr("src","{{ url_for('static', 'landing_page/occhio-chiuso@2x.png') }}");
 	}
 else{
 	$("#renewPassId").attr("type","text");
-	$(this).attr("src","static/landing_page/occhio-aperto@2x.png");}
+	$(this).attr("src","{{ url_for('static', 'landing_page/occhio-aperto@2x.png') }}");}
 
 });
 
@@ -48,10 +48,10 @@ else{
  $("#occhio-half-1").click(function(){
 	 if($("#input-accedi-password-half-1").attr("type")=="text"){
 	$("#input-accedi-password-half-1").attr("type","password");
-	 $(this).attr("src","static/landing_page/occhio-chiuso@2x.png");}
+	 $(this).attr("src","{{ url_for('static', 'landing_page/occhio-chiuso@2x.png') }}");}
 	 else{
 		 $("#input-accedi-password-half-1").attr("type","text");
-	 $(this).attr("src","static/landing_page/occhio-aperto@2x.png");
+	 $(this).attr("src","{{ url_for('static', 'landing_page/occhio-aperto@2x.png') }}");
 		 
 	 }
 });
@@ -60,10 +60,10 @@ else{
  $("#occhio-half-2").click(function(){
 	 if($("#input-accedi-password-half-2").attr("type")=="text"){
 	$("#input-accedi-password-half-2").attr("type","password");
-	 $(this).attr("src","static/landing_page/occhio-chiuso@2x.png");}
+	 $(this).attr("src","{{ url_for('static', 'landing_page/occhio-chiuso@2x.png') }}");}
 	 else{
 		 $("#input-accedi-password-half-2").attr("type","text");
-	 $(this).attr("src","static/landing_page/occhio-aperto@2x.png");
+	 $(this).attr("src","{{ url_for('static', 'landing_page/occhio-aperto@2x.png') }}");
 		 
 	 }
 });
