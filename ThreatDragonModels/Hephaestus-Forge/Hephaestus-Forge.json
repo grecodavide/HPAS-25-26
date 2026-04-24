@@ -110,11 +110,11 @@
           },
           {
             "position": {
-              "x": 811.9999999999936,
-              "y": -169.9999999999999
+              "x": 1001.9999999999936,
+              "y": -170.00000000000114
             },
             "size": {
-              "width": 1290,
+              "width": 1100,
               "height": 660
             },
             "attrs": {
@@ -133,18 +133,13 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "6a95922e-068a-4996-a9d1-4d0492c7449a",
-                "e3dfe961-ab5d-4133-9318-2ac967304d87",
-                "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
-                "171d4fb3-00ea-419b-a0fc-b89366651bf2",
+                "f92786cc-7b45-4415-917c-bd07d8183cc5",
+                "10bd880e-6606-4a71-822f-895ae991603a",
+                "f9a065ca-160b-453d-a93e-6420f6916c21",
                 "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
-                "ecf614ad-c12d-4d76-b610-f269004fc800",
-                "56901286-8548-4c48-9f18-f3186cddca02",
-                "53eaab29-0f43-44b3-97d2-e90eb724ff02",
-                "db6df6ce-358a-493d-bc78-61da4b50c6a0"
+                "d11b1d0c-062a-446b-be88-b9fb42c3767d"
               ],
               "containedElements": [
-                "339778d6-5a04-419c-b43c-d54724d667cc",
                 "36477c30-516b-4532-93b2-46e257af9c86",
                 "886f6ab7-af18-44b2-9ac5-c06902bfea90",
                 "355df31d-8e50-4808-ba07-018aa1c26cb4",
@@ -839,8 +834,7 @@
               ],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ],
               "threatFrequency": {
                 "tampering": 2,
@@ -900,8 +894,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ]
             },
             "labels": [
@@ -956,8 +949,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ]
             },
             "labels": [
@@ -1012,8 +1004,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ]
             },
             "labels": [
@@ -1066,7 +1057,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Username and\npassword"
@@ -1118,7 +1111,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "OTP"
@@ -1170,7 +1165,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "Check result"
@@ -1290,6 +1287,16 @@
             "vertices": [],
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
@@ -2185,7 +2192,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
             },
             "labels": [
               "User session data"
@@ -2647,8 +2656,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ]
             },
             "labels": [
@@ -2701,9 +2709,7 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "787facce-af58-4b84-a130-ed55f1059062"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
               "Notify new job request"
@@ -2757,8 +2763,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ]
             },
             "labels": [
@@ -2839,9 +2844,7 @@
                   "score": ""
                 }
               ],
-              "trustBoundaryIds": [
-                "787facce-af58-4b84-a130-ed55f1059062"
-              ],
+              "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 2,
                 "informationDisclosure": 2,
