@@ -119,7 +119,7 @@
             },
             "attrs": {
               "label": {
-                "text": "Semi-trusted (DELETE?"
+                "text": "Trusted Server (Higher ecurity)"
               }
             },
             "visible": true,
@@ -128,7 +128,7 @@
             "id": "787facce-af58-4b84-a130-ed55f1059062",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Semi-trusted (DELETE?)",
+              "name": "Trusted Server (Higher Security)",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -153,6 +153,13 @@
                 "93549b34-6949-41d1-9a26-9ad85aeba9a2",
                 "4e80676c-1e57-4d18-bb2f-136d3d231a6e"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
