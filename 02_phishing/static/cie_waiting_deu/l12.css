@@ -231,7 +231,7 @@ body,
 		}
 
 		#alternative .btn-image.btn-card:before{
-			 background-image : url(/idp/images/l12/CARD-ICON@svg.svg);
+			 background-image : url("{{url_for('static', filename='cie_waiting/CARD-ICON@svg.svg);')}}"
 		}
 		
 		#alternative .btn-image.btn-qr:before{
