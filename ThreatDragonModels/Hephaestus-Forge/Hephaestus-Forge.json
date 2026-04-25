@@ -46,9 +46,9 @@
                 "e3dfe961-ab5d-4133-9318-2ac967304d87",
                 "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
                 "171d4fb3-00ea-419b-a0fc-b89366651bf2",
-                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
                 "ecf614ad-c12d-4d76-b610-f269004fc800",
-                "53eaab29-0f43-44b3-97d2-e90eb724ff02"
+                "53eaab29-0f43-44b3-97d2-e90eb724ff02",
+                "0058a5ca-d5ef-45ca-a112-025d932e1d6b"
               ],
               "containedElements": [
                 "afd351e5-10a4-4047-b1a8-19f43ad56a17",
@@ -59,11 +59,11 @@
           },
           {
             "position": {
-              "x": 965,
-              "y": -209.99999999999693
+              "x": 755,
+              "y": -209.99999999999795
             },
             "size": {
-              "width": 1170,
+              "width": 1380,
               "height": 1100
             },
             "attrs": {
@@ -82,18 +82,20 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "f92786cc-7b45-4415-917c-bd07d8183cc5",
-                "10bd880e-6606-4a71-822f-895ae991603a",
-                "f9a065ca-160b-453d-a93e-6420f6916c21",
-                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
-                "d11b1d0c-062a-446b-be88-b9fb42c3767d",
+                "6a95922e-068a-4996-a9d1-4d0492c7449a",
+                "e3dfe961-ab5d-4133-9318-2ac967304d87",
+                "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
+                "171d4fb3-00ea-419b-a0fc-b89366651bf2",
+                "ecf614ad-c12d-4d76-b610-f269004fc800",
+                "53eaab29-0f43-44b3-97d2-e90eb724ff02",
                 "858bd404-c078-4628-8050-0ffc626bd5cd",
-                "56901286-8548-4c48-9f18-f3186cddca02",
-                "db6df6ce-358a-493d-bc78-61da4b50c6a0",
                 "9b4173ef-8f5d-4e9c-a91d-957233410e64",
+                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
                 "ce83d741-fee2-4227-aaa6-cc8f936bcec1"
               ],
               "containedElements": [
+                "787facce-af58-4b84-a130-ed55f1059062",
+                "339778d6-5a04-419c-b43c-d54724d667cc",
                 "36477c30-516b-4532-93b2-46e257af9c86",
                 "886f6ab7-af18-44b2-9ac5-c06902bfea90",
                 "355df31d-8e50-4808-ba07-018aa1c26cb4",
@@ -108,16 +110,16 @@
           },
           {
             "position": {
-              "x": 811.9999999999932,
-              "y": -209.9999999999984
+              "x": 1001.9999999999936,
+              "y": -170.00000000000114
             },
             "size": {
-              "width": 130,
-              "height": 1100
+              "width": 1100,
+              "height": 660
             },
             "attrs": {
               "label": {
-                "text": "Semi-trusted (DELETE?"
+                "text": "Authenticatio Server (Higher Security)"
               }
             },
             "visible": true,
@@ -126,26 +128,25 @@
             "id": "787facce-af58-4b84-a130-ed55f1059062",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Semi-trusted (DELETE?)",
+              "name": "Authentication Server (Higher Security)",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "6a95922e-068a-4996-a9d1-4d0492c7449a",
-                "e3dfe961-ab5d-4133-9318-2ac967304d87",
-                "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
-                "171d4fb3-00ea-419b-a0fc-b89366651bf2",
                 "f92786cc-7b45-4415-917c-bd07d8183cc5",
                 "10bd880e-6606-4a71-822f-895ae991603a",
                 "f9a065ca-160b-453d-a93e-6420f6916c21",
                 "d11b1d0c-062a-446b-be88-b9fb42c3767d",
-                "ecf614ad-c12d-4d76-b610-f269004fc800",
-                "56901286-8548-4c48-9f18-f3186cddca02",
-                "53eaab29-0f43-44b3-97d2-e90eb724ff02",
-                "db6df6ce-358a-493d-bc78-61da4b50c6a0"
+                "0058a5ca-d5ef-45ca-a112-025d932e1d6b"
               ],
               "containedElements": [
-                "339778d6-5a04-419c-b43c-d54724d667cc"
+                "36477c30-516b-4532-93b2-46e257af9c86",
+                "886f6ab7-af18-44b2-9ac5-c06902bfea90",
+                "355df31d-8e50-4808-ba07-018aa1c26cb4",
+                "228251b2-fde0-4529-9689-77c2351d79bd",
+                "d773119f-03d8-409b-b2ac-179b03a25308",
+                "93549b34-6949-41d1-9a26-9ad85aeba9a2",
+                "4e80676c-1e57-4d18-bb2f-136d3d231a6e"
               ]
             }
           },
@@ -327,8 +328,8 @@
           },
           {
             "position": {
-              "x": 98.75,
-              "y": -150
+              "x": 80,
+              "y": -125
             },
             "size": {
               "width": 112.5,
@@ -572,12 +573,38 @@
                   "new": false,
                   "number": 19,
                   "score": ""
+                },
+                {
+                  "id": "110d215c-cde0-4414-bfab-d876ef6594c8",
+                  "title": "Account Spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "An attacker may manage to hijack user sessions (may schedule unwanted / incorrect prints).",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                },
+                {
+                  "id": "3651edb7-2fd4-4bde-b757-7fc59fe99c8b",
+                  "title": "Path Traversal",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Repudiation",
+                  "description": "If web portal not well implemented, may expose some information to non authorized actors",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 3,
                 "tampering": 1,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
@@ -703,38 +730,25 @@
               "privilegeLevel": "",
               "threats": [
                 {
-                  "id": "b8d022ca-a4aa-4be5-a734-dd341aacf4f2",
-                  "title": "Account Spoofing",
+                  "id": "5e23a8d0-49d3-4490-96f8-e231f21b0acf",
+                  "title": "Portal Overload",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "An attacker may manage to hijack user sessions (may schedule unwanted / incorrect prints).",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 20,
-                  "score": ""
-                },
-                {
-                  "id": "24a42f83-5407-4d45-879c-8560c0373eb8",
-                  "title": "Path traversal",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "If web portal not well implemented, may expose some information to non authorised actors",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "By spamming automated requests to the portal, it might be overloaded with too many requests thus making the portal unreachable for legitimate users",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 21,
+                  "number": 42,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 2,
-                "denialOfService": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -834,7 +848,7 @@
               ],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ],
               "threatFrequency": {
                 "tampering": 2,
@@ -894,7 +908,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ]
             },
             "labels": [
@@ -949,7 +963,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ]
             },
             "labels": [
@@ -1004,7 +1018,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "07764144-78e3-48d5-b02c-e714d9a193df"
               ]
             },
             "labels": [
@@ -1058,7 +1072,6 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
                 "787facce-af58-4b84-a130-ed55f1059062"
               ]
             },
@@ -1113,7 +1126,6 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
                 "787facce-af58-4b84-a130-ed55f1059062"
               ]
             },
@@ -1168,7 +1180,6 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
                 "787facce-af58-4b84-a130-ed55f1059062"
               ]
             },
@@ -1234,59 +1245,9 @@
             "vertices": [
               {
                 "x": 1450,
-                "y": 60
+                "y": 80
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Send valid OTP",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df"
-              ]
-            },
-            "labels": [
-              "Send valid OTP"
-            ],
-            "id": "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
-            "source": {
-              "cell": "355df31d-8e50-4808-ba07-018aa1c26cb4",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "target": {
-              "cell": "5773080e-f752-4393-97dd-3bfa7471ebfc",
-              "port": "e0625821-c212-4b79-b4f3-96ce7e744e12"
-            },
-            "vertices": []
           },
           {
             "shape": "flow",
@@ -1429,8 +1390,8 @@
             },
             "vertices": [
               {
-                "x": 1720,
-                "y": 220
+                "x": 1730,
+                "y": 240
               }
             ]
           },
@@ -1560,7 +1521,6 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
                 "787facce-af58-4b84-a130-ed55f1059062"
               ]
             },
@@ -1580,204 +1540,6 @@
               {
                 "x": 1250,
                 "y": 430
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Notify new job",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
-                  "title": "API-key Leakage",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "View unencrypted communication and steal key",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 26,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Notify new job"
-            ],
-            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
-            "source": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "target": {
-              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 2030,
-                "y": 650
-              },
-              {
-                "x": 2260,
-                "y": 640
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Send job to an\navailable printer",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Send job to an\navailable printer"
-            ],
-            "id": "4c334d2d-adfc-4794-b3f7-efb25edeccec",
-            "source": {
-              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Refill printers",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "db8664b5-4659-4d93-ae1d-31825695660e",
-                  "title": "Powder Management Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Modify powder information and requests  ",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 12,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Refill printers"
-            ],
-            "id": "15b0cb48-e7fc-4e98-ab00-784d2a23d7a7",
-            "source": {
-              "cell": "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 2830,
-                "y": 660
               }
             ]
           },
@@ -1861,8 +1623,189 @@
             "shape": "flow",
             "attrs": {
               "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Cookie redirect",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "07764144-78e3-48d5-b02c-e714d9a193df"
+              ]
+            },
+            "labels": [
+              "Cookie redirect"
+            ],
+            "id": "ecf614ad-c12d-4d76-b610-f269004fc800",
+            "source": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 350
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request new print",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "07764144-78e3-48d5-b02c-e714d9a193df"
+              ]
+            },
+            "labels": [
+              "Request new print"
+            ],
+            "id": "53eaab29-0f43-44b3-97d2-e90eb724ff02",
+            "source": {
+              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": [
+              {
+                "x": 670,
+                "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
                 "stroke": "red",
                 "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Refill printers",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "db8664b5-4659-4d93-ae1d-31825695660e",
+                  "title": "Powder Management Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Modify powder information and requests  ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Refill printers"
+            ],
+            "id": "15b0cb48-e7fc-4e98-ab00-784d2a23d7a7",
+            "source": {
+              "cell": "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 2830,
+                "y": 660
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1883,31 +1826,17 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "1dbe610b-e0d7-49ca-95dd-11b9e6502ebe",
-                  "title": "lool",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Denial of service",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 11,
-                  "score": ""
-                }
-              ],
+              "threats": [],
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1
+                "denialOfService": 0
               }
             },
             "labels": [
@@ -1995,7 +1924,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -2011,150 +1941,64 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Cookie redirect",
+              "name": "Send job to an\navailable printer",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "787facce-af58-4b84-a130-ed55f1059062"
-              ]
+              "threats": [
+                {
+                  "id": "bc987cb0-2faa-4c1e-8a27-862bc641c5fe",
+                  "title": "Modifying Project Data",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Data of project can me modified and the print will carry the modifications",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "08722653-b520-4f4c-9e3f-18e102dd122b",
+                  "title": "Printer assigned to Project",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "It is possible to know which printer has which project assigned",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Cookie redirect"
+              "Send job to an\navailable printer"
             ],
-            "id": "ecf614ad-c12d-4d76-b610-f269004fc800",
+            "id": "4c334d2d-adfc-4794-b3f7-efb25edeccec",
             "source": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "vertices": [
-              {
-                "x": 680,
-                "y": 350
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Notify new job request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
-              ]
-            },
-            "labels": [
-              "Notify new job request"
-            ],
-            "id": "56901286-8548-4c48-9f18-f3186cddca02",
-            "source": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 1060,
-                "y": 600
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Request new print",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "787facce-af58-4b84-a130-ed55f1059062"
-              ]
-            },
-            "labels": [
-              "Request new print"
-            ],
-            "id": "53eaab29-0f43-44b3-97d2-e90eb724ff02",
-            "source": {
-              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
               "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
             },
             "target": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
               "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
             },
-            "vertices": [
-              {
-                "x": 670,
-                "y": 230
-              }
-            ]
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -2177,7 +2021,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Store CAD blueprint",
+              "name": "Notify new job",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2189,58 +2033,49 @@
               "protocol": "",
               "threats": [
                 {
-                  "id": "273fddc0-153c-4b17-b4e1-5b9cc4f4ceea",
-                  "title": "CAD Tampering",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Modify the CAD project \n",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 14,
-                  "score": ""
-                },
-                {
-                  "id": "541cb1ab-5b05-464b-b215-701373fcf59c",
-                  "title": "CAD Leakage",
+                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
+                  "title": "API-key Leakage",
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Information disclosure",
-                  "description": "View confidential project information",
+                  "description": "View unencrypted communication and steal key",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 22,
+                  "number": 26,
                   "score": ""
                 }
               ],
               "trustBoundaryIds": [
                 "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062"
+                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
               ],
               "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 2,
+                "tampering": 0,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
             "labels": [
-              "Store CAD blueprint"
+              "Notify new job"
             ],
-            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
             "source": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
             },
             "target": {
-              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
-              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
             },
             "vertices": [
               {
-                "x": 885,
-                "y": 600
+                "x": 2030,
+                "y": 650
+              },
+              {
+                "x": 2260,
+                "y": 640
               }
             ]
           },
@@ -2333,6 +2168,214 @@
               {
                 "x": 2220,
                 "y": 850
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store CAD blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "273fddc0-153c-4b17-b4e1-5b9cc4f4ceea",
+                  "title": "CAD Tampering",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Modify the CAD project \n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "541cb1ab-5b05-464b-b215-701373fcf59c",
+                  "title": "CAD Leakage",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Store CAD blueprint"
+            ],
+            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+            "source": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "vertices": [
+              {
+                "x": 885,
+                "y": 600
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send valid OTP",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "787facce-af58-4b84-a130-ed55f1059062"
+              ]
+            },
+            "labels": [
+              "Send valid OTP"
+            ],
+            "id": "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
+            "source": {
+              "cell": "355df31d-8e50-4808-ba07-018aa1c26cb4",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "target": {
+              "cell": "5773080e-f752-4393-97dd-3bfa7471ebfc",
+              "port": "e0625821-c212-4b79-b4f3-96ce7e744e12"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Notify new job request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "83f940d3-60dd-4cdd-8f6a-3f44124734a2",
+                  "title": "Forging Requests",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "It is possible to forge requests or modify the legitimate requests to affect the production line",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Notify new job request"
+            ],
+            "id": "56901286-8548-4c48-9f18-f3186cddca02",
+            "source": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 1060,
+                "y": 600
               }
             ]
           },
@@ -2579,7 +2622,7 @@
           {
             "position": {
               "x": 1420,
-              "y": -175
+              "y": -150
             },
             "size": {
               "width": 100,
@@ -2698,8 +2741,8 @@
           },
           {
             "position": {
-              "x": 1770,
-              "y": -150
+              "x": 1780,
+              "y": -125
             },
             "size": {
               "width": 170,
@@ -3314,7 +3357,7 @@
           },
           {
             "position": {
-              "x": 1490,
+              "x": 1491.9999999999936,
               "y": 685
             },
             "size": {
@@ -3442,6 +3485,19 @@
                   "new": false,
                   "number": 4,
                   "score": ""
+                },
+                {
+                  "id": "f3b23ea4-191c-4874-8040-eabe14c354a1",
+                  "title": "Slicer Server Overloading",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "The conversion process is resource-expensive, it is possible to forge requests and overload the slicer server to slow down significantly the production speed or to crash the server completely",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 36,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -3449,7 +3505,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -3592,8 +3648,8 @@
                 "text": "Manifacturing\nExecution\nSystem (MES)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3690,12 +3746,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "86c671d1-518d-40fb-b37e-6591335e9e56",
+                  "title": "MES Overload",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "An attacker connected to the ethernet network can overload the MES thus slowing down/halting production",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 38,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -3712,8 +3790,8 @@
                 "text": "Titanium-X\nprinters"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3810,12 +3888,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "bd1e9340-e3df-470e-a6e7-f80616afad82",
+                  "title": "Old OS known vulnerabilities ",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "The printers have old OS systems that have known vulnerabilities that might be exploited",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 34,
+                  "score": ""
+                },
+                {
+                  "id": "259477cf-8a74-4085-88f6-f359b70997c6",
+                  "title": "EoP via known vulnerabilities",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "due to the old windows XP OS, some known vulnerabilities can be exploited to gain root privileges and compromise the printer or other systems",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 43,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -3832,8 +3945,8 @@
                 "text": "Powder\nmanagement\nsystem"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -3930,12 +4043,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "e1c924a4-46fd-4298-92df-cc8f20e0753d",
+                  "title": "Stop Powder Resupply",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Attackers can target the resupply system and either stop the resupply or completely dump the powder stock",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 37,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -4068,14 +4203,40 @@
                   "new": false,
                   "number": 5,
                   "score": ""
+                },
+                {
+                  "id": "4dec02b0-c44a-47ae-b930-295b1f04f76b",
+                  "title": "Sensor Reading Modification",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "an attacker can modify the readings of the sensors, sending the crafted ones not making the printer realize of the high temperature",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 40,
+                  "score": ""
+                },
+                {
+                  "id": "0874ce19-1699-4a29-ad42-5abe0adcea73",
+                  "title": "Sensor activity disruption",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Disrupting the sensors by sending commands to interfere with the correct functioning, ex: turning off the sensors prematurely",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 41,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 2,
-                "tampering": 0,
+                "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -4563,12 +4724,36 @@
               "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
             },
             "vertices": []
+          },
+          {
+            "position": {
+              "x": 2350,
+              "y": 270
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Theats su DB??"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "ef9e1505-443c-46d4-a5f1-b63e8093b676",
+            "zIndex": 31,
+            "data": {
+              "type": "tm.Text",
+              "name": "Theats su DB???",
+              "hasOpenThreats": false
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 26
+    "threatTop": 43
   }
 }
