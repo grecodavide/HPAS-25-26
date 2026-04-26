@@ -599,10 +599,23 @@
                   "new": false,
                   "number": 28,
                   "score": ""
+                },
+                {
+                  "id": "1149efab-87fe-4dc3-947d-4bd98fe57e79",
+                  "title": "CSRF",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "If the contractor disables safety features or uses outdated browser versions it may be vulnerable to CSRF",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 45,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 3,
+                "spoofing": 4,
                 "tampering": 1,
                 "repudiation": 1,
                 "informationDisclosure": 0,
@@ -3498,6 +3511,19 @@
                   "new": false,
                   "number": 36,
                   "score": ""
+                },
+                {
+                  "id": "6f2aa7d2-d2d8-4e35-8dc3-5099fca964bd",
+                  "title": "Slicer Server Compromization",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "If a vulnerability or bug is unmitigated an attacker might exploit it to gain control of the slicer server and completely change the conversions from CAD to G-code making unnoticeable damages ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 44,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -3506,7 +3532,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 1,
-                "elevationOfPrivilege": 0
+                "elevationOfPrivilege": 1
               }
             }
           },
@@ -4741,8 +4767,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "ef9e1505-443c-46d4-a5f1-b63e8093b676",
             "zIndex": 31,
+            "id": "ef9e1505-443c-46d4-a5f1-b63e8093b676",
             "data": {
               "type": "tm.Text",
               "name": "Theats su DB???",
@@ -4754,6 +4780,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 43
+    "threatTop": 45
   }
 }
