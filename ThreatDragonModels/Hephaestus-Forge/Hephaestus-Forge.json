@@ -42,13 +42,13 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "6a95922e-068a-4996-a9d1-4d0492c7449a",
                 "e3dfe961-ab5d-4133-9318-2ac967304d87",
                 "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
                 "171d4fb3-00ea-419b-a0fc-b89366651bf2",
                 "ecf614ad-c12d-4d76-b610-f269004fc800",
                 "53eaab29-0f43-44b3-97d2-e90eb724ff02",
-                "0058a5ca-d5ef-45ca-a112-025d932e1d6b"
+                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
+                "6a95922e-068a-4996-a9d1-4d0492c7449a"
               ],
               "containedElements": [
                 "afd351e5-10a4-4047-b1a8-19f43ad56a17",
@@ -82,15 +82,15 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "6a95922e-068a-4996-a9d1-4d0492c7449a",
                 "e3dfe961-ab5d-4133-9318-2ac967304d87",
                 "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
                 "171d4fb3-00ea-419b-a0fc-b89366651bf2",
                 "ecf614ad-c12d-4d76-b610-f269004fc800",
                 "53eaab29-0f43-44b3-97d2-e90eb724ff02",
+                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
+                "6a95922e-068a-4996-a9d1-4d0492c7449a",
                 "858bd404-c078-4628-8050-0ffc626bd5cd",
                 "9b4173ef-8f5d-4e9c-a91d-957233410e64",
-                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
                 "ce83d741-fee2-4227-aaa6-cc8f936bcec1"
               ],
               "containedElements": [
@@ -565,7 +565,7 @@
                   "id": "a6f8a781-ef13-4c0d-a081-9ef44a561f64",
                   "title": "Contractor Info Leakage",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Tampering",
                   "description": "Compromised device may be exploited by attacker for info gathering",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -578,7 +578,7 @@
                   "id": "110d215c-cde0-4414-bfab-d876ef6594c8",
                   "title": "Account Spoofing",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker may manage to hijack user sessions (may schedule unwanted / incorrect prints).",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -615,8 +615,8 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 4,
-                "tampering": 1,
+                "spoofing": 5,
+                "tampering": 2,
                 "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
@@ -812,81 +812,6 @@
               "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
             },
             "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Upload 3D CAD blueprint",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "e5e53409-7a01-4c1a-802d-3fc9d632d465",
-                  "title": "CAD Tamparing ",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Modifying the sent CAD project",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 13,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df"
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Upload 3D CAD blueprint"
-            ],
-            "id": "6a95922e-068a-4996-a9d1-4d0492c7449a",
-            "source": {
-              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "vertices": [
-              {
-                "x": 680,
-                "y": 190
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -1560,82 +1485,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Read temperature and\ninterrupt printer",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "239bddc6-e3db-4944-aaa7-1a0185e51390",
-                  "title": "Thermal Sensor Tampering",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Intercepting and modifying information about the temperature of the printers, makes the printers not stop when temperature is too high, causing production of brittle metal.",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 9,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Read temperature and\ninterrupt printer"
-            ],
-            "id": "540e2d9e-a4ab-4f35-a7fb-52322bf158c6",
-            "source": {
-              "cell": "05861e45-985c-4c6a-9ae6-b8259b937bfd",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 3010,
-                "y": 630
-              },
-              {
-                "x": 2990,
-                "y": 660
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
@@ -1746,78 +1595,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Refill printers",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "db8664b5-4659-4d93-ae1d-31825695660e",
-                  "title": "Powder Management Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Modify powder information and requests  ",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 12,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Refill printers"
-            ],
-            "id": "15b0cb48-e7fc-4e98-ab00-784d2a23d7a7",
-            "source": {
-              "cell": "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 2830,
-                "y": 660
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
@@ -1865,409 +1642,6 @@
               "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
             },
             "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Store comparison result",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "12139290-7933-42ef-8278-743c3dc42d9c",
-                  "title": "Quality Control Tampering",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Alter the outcome of quality control process to store an invalid print as a valid one",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Store comparison result"
-            ],
-            "id": "c02eb5a3-f554-4b05-8339-cac5cbbe2aad",
-            "source": {
-              "cell": "0d407ae3-8852-4630-9e25-97e75b73a817",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "e9e03959-2841-4411-98ee-080d7671011f",
-              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Send job to an\navailable printer",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "bc987cb0-2faa-4c1e-8a27-862bc641c5fe",
-                  "title": "Modifying Project Data",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Data of project can me modified and the print will carry the modifications",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 29,
-                  "score": ""
-                },
-                {
-                  "id": "08722653-b520-4f4c-9e3f-18e102dd122b",
-                  "title": "Printer assigned to Project",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "It is possible to know which printer has which project assigned",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 31,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Send job to an\navailable printer"
-            ],
-            "id": "4c334d2d-adfc-4794-b3f7-efb25edeccec",
-            "source": {
-              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Notify new job",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
-                  "title": "API-key Leakage",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "View unencrypted communication and steal key",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 26,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Notify new job"
-            ],
-            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
-            "source": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "target": {
-              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 2030,
-                "y": 650
-              },
-              {
-                "x": 2260,
-                "y": 640
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Retrieve original project\nfor comparison",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "59657b94-e017-4bcb-b2e8-2e92af6acb5f",
-                  "title": "CAD Tampering",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Modify the requested CAD project",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 17,
-                  "score": ""
-                },
-                {
-                  "id": "2ee2f5ac-842b-434f-b948-b3f7fe907f5f",
-                  "title": "CAD Leakage",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "View confidential project information",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 23,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Retrieve original project\nfor comparison"
-            ],
-            "id": "9b4173ef-8f5d-4e9c-a91d-957233410e64",
-            "source": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
-              "port": "3bf0323c-534c-4b1b-908e-cd6d7841a14d"
-            },
-            "vertices": [
-              {
-                "x": 2770,
-                "y": 820
-              },
-              {
-                "x": 2220,
-                "y": 850
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Store CAD blueprint",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "273fddc0-153c-4b17-b4e1-5b9cc4f4ceea",
-                  "title": "CAD Tampering",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Modify the CAD project \n",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 14,
-                  "score": ""
-                },
-                {
-                  "id": "541cb1ab-5b05-464b-b215-701373fcf59c",
-                  "title": "CAD Leakage",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "View confidential project information",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 22,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 2,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Store CAD blueprint"
-            ],
-            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
-            "source": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
-              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
-            },
-            "vertices": [
-              {
-                "x": 885,
-                "y": 600
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -2341,6 +1715,166 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Upload 3D CAD blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "e5e53409-7a01-4c1a-802d-3fc9d632d465",
+                  "title": "CAD Tampering ",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Modifying the sent CAD project",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "07764144-78e3-48d5-b02c-e714d9a193df"
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Upload 3D CAD blueprint"
+            ],
+            "id": "6a95922e-068a-4996-a9d1-4d0492c7449a",
+            "source": {
+              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store CAD blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "273fddc0-153c-4b17-b4e1-5b9cc4f4ceea",
+                  "title": "CAD Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Modify the CAD project due to unencrypted communication \n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "541cb1ab-5b05-464b-b215-701373fcf59c",
+                  "title": "CAD Leakage",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information due to unencrypted communication ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Store CAD blueprint"
+            ],
+            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+            "source": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "vertices": [
+              {
+                "x": 885,
+                "y": 600
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Notify new job request",
               "description": "",
               "outOfScope": false,
@@ -2391,6 +1925,472 @@
                 "y": 600
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Notify new job",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
+                  "title": "API-key Leakage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "View unencrypted communication and steal the symmetric key",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Notify new job"
+            ],
+            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
+            "source": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "target": {
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 2030,
+                "y": 650
+              },
+              {
+                "x": 2260,
+                "y": 640
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Retrieve original project\nfor comparison",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "59657b94-e017-4bcb-b2e8-2e92af6acb5f",
+                  "title": "CAD Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Modify the requested CAD project",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                },
+                {
+                  "id": "2ee2f5ac-842b-434f-b948-b3f7fe907f5f",
+                  "title": "CAD Leakage",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+              ],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Retrieve original project\nfor comparison"
+            ],
+            "id": "9b4173ef-8f5d-4e9c-a91d-957233410e64",
+            "source": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "3bf0323c-534c-4b1b-908e-cd6d7841a14d"
+            },
+            "vertices": [
+              {
+                "x": 2770,
+                "y": 820
+              },
+              {
+                "x": 2220,
+                "y": 850
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send job to an\navailable printer",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "bc987cb0-2faa-4c1e-8a27-862bc641c5fe",
+                  "title": "Modifying Project Data",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Data of project can me modified and the print will carry the modifications",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "08722653-b520-4f4c-9e3f-18e102dd122b",
+                  "title": "Printer assigned to Project",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "It is possible to know which printer has which project assigned",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Send job to an\navailable printer"
+            ],
+            "id": "4c334d2d-adfc-4794-b3f7-efb25edeccec",
+            "source": {
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Refill printers",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "db8664b5-4659-4d93-ae1d-31825695660e",
+                  "title": "Powder Management Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Modify powder information and requests  ",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Refill printers"
+            ],
+            "id": "15b0cb48-e7fc-4e98-ab00-784d2a23d7a7",
+            "source": {
+              "cell": "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 2830,
+                "y": 660
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Read temperature and\ninterrupt printer",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "239bddc6-e3db-4944-aaa7-1a0185e51390",
+                  "title": "Thermal Sensor Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Intercepting and modifying information about the temperature of the printers, makes the printers not stop when temperature is too high, causing production of brittle metal.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Read temperature and\ninterrupt printer"
+            ],
+            "id": "540e2d9e-a4ab-4f35-a7fb-52322bf158c6",
+            "source": {
+              "cell": "05861e45-985c-4c6a-9ae6-b8259b937bfd",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 3010,
+                "y": 630
+              },
+              {
+                "x": 2990,
+                "y": 660
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store comparison result",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "12139290-7933-42ef-8278-743c3dc42d9c",
+                  "title": "Quality Control Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Alter the outcome of quality control process to store an invalid print as a valid one",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Store comparison result"
+            ],
+            "id": "c02eb5a3-f554-4b05-8339-cac5cbbe2aad",
+            "source": {
+              "cell": "0d407ae3-8852-4630-9e25-97e75b73a817",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "e9e03959-2841-4411-98ee-080d7671011f",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -4560,7 +4560,7 @@
                   "id": "31022b84-bc0d-491f-99c5-0e7ebf6c6e58",
                   "title": "G-Code Leakage",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "View confidential project information",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -4573,7 +4573,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 2,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -4704,7 +4704,7 @@
                   "id": "22e67af6-5424-474c-9108-7617e77b6734",
                   "title": "G-Code Tampering",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Tampering",
                   "description": "Modify the stored G-Code blueprint",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -4717,7 +4717,7 @@
                   "id": "1fd89f4b-fd7d-4ca3-b690-4a12e62506ed",
                   "title": "G-Code Leakage",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "View confidential project information",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -4732,8 +4732,8 @@
                 "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
               ],
               "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 1,
+                "tampering": 3,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
