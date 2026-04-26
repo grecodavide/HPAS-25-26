@@ -186,8 +186,7 @@
                 "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
                 "05861e45-985c-4c6a-9ae6-b8259b937bfd",
                 "0d407ae3-8852-4630-9e25-97e75b73a817",
-                "e9e03959-2841-4411-98ee-080d7671011f",
-                "758a0568-9e80-4fc2-9fa5-7b2de1372860"
+                "e9e03959-2841-4411-98ee-080d7671011f"
               ]
             }
           },
@@ -4049,13 +4048,6 @@
                 "denialOfService": 1,
                 "elevationOfPrivilege": 1
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -4693,10 +4685,9 @@
             "vertices": []
           },
           {
-            "angle": 30,
             "position": {
-              "x": 2390,
-              "y": 520
+              "x": 2615.75,
+              "y": 270
             },
             "size": {
               "width": 112.5,
