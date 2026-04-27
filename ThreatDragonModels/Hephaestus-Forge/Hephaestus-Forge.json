@@ -4890,76 +4890,28 @@
             }
           },
           {
-            "shape": "flow",
+            "position": {
+              "x": 480,
+              "y": 730
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
             "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
+              "text": {
+                "text": "upload quando printo o quando carico cad???????"
               }
             },
-            "width": 200,
-            "height": 100,
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "17e781f1-c427-4da7-96c4-69f39bd17b52",
             "zIndex": 32,
-            "connector": "smooth",
             "data": {
-              "type": "tm.Flow",
-              "name": "Notify new project upload",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "005c7c1b-7261-4758-b80e-1955850126db",
-                  "title": "Slicer server delaying",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "An attacker might forge or modify notifications of new uploaded prints to keep the slicer server busy without an actual request ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 49,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Notify new project uploa"
-            ],
-            "id": "a2f10db4-3387-4b34-a3ea-8b016406a5d7",
-            "source": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 1000,
-                "y": 620
-              }
-            ]
+              "type": "tm.Text",
+              "name": "upload quando printo o quando carico cad????????",
+              "hasOpenThreats": false
+            }
           }
         ]
       }
