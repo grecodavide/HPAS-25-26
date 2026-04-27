@@ -4804,7 +4804,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Retrieve/Store\ngenerated G-code blueprint",
+              "name": "Store generated G-code blueprint",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4852,7 +4852,7 @@
               }
             },
             "labels": [
-              "Retrieve/Store\ngenerated G-code blueprint"
+              "Storegenerated G-code blueprint"
             ],
             "id": "ce83d741-fee2-4227-aaa6-cc8f936bcec1",
             "source": {
