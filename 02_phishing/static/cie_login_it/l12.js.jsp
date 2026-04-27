@@ -61,7 +61,7 @@ function countdownQR(tsScadenzaQR) {
           $("#qrMsgWrapper").hide();         //nasconde qrMsgWrapper
           $("#qrGeneratorWrapper").show();   //mostra qrGeneratorWrapper
           $("#qrOverlay").show(); 
-          $("#qrOverlay span").html("Der QR Code ist <br>nicht mehr gültig"); 
+          $("#qrOverlay span").html("Il QR Code <br/> non è più valido."); 
      } else {
           var msg = " " +millisToMinutesAndSeconds( (tsScadenzaQR - Date.now() ) ) ;
           $("#spanSec").html(msg);
@@ -88,7 +88,7 @@ function checkUsernameAndPassword() {
           //username non presente
           $("#username, #usernameIcon").addClass("error");
           $("#usernameError").html("Il campo &egrave; obbligatorio");
-          $("#usernameIcon a svg use").attr("xlink:href", window.SPRITE_URL + "#it-warning");
+          $("#usernameIcon a svg use").attr("xlink:href", "/static/cie_login_it/sprite.svg#it-warning");
           return false;
      }else if( 
           ! ( 
@@ -97,10 +97,10 @@ function checkUsernameAndPassword() {
                //se lo username non corrisponde a cf, email o nun
           $("#username, #usernameIcon").addClass("error");
           $("#usernameError").html("Formato non valido");
-          $("#usernameIcon a svg use").attr("xlink:href", window.SPRITE_URL + "#it-warning");
+          $("#usernameIcon a svg use").attr("xlink:href", "/static/cie_login_it/sprite.svg#it-warning");
           return false;
      }else{
-          $("#usernameIcon a svg use").attr("xlink:href", window.SPRITE_URL + "#it-info-circle");
+          $("#usernameIcon a svg use").attr("xlink:href", "/static/cie_login_it/sprite.svg#it-info-circle");
           $("#username, #usernameIcon").removeClass("error");
           $("#usernameError").html("&nbsp;");
      }

@@ -9,8 +9,8 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-<link rel="stylesheet" href="{{url_for('static', filename='cie_waiting/bootstrap-italia.min.css')}}">
-<link rel="stylesheet" href="{{url_for('static', filename='cie_waiting/l12.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='cie_waiting_push_it/bootstrap-italia.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='cie_waiting_push_it/l12.css')}}">
 
 <link rel="apple-touch-icon" sizes="57x57" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-60x60.png">
@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/android-chrome-192x192.png">
 
-<script src="{{url_for('static', filename='cie_waiting/bootstrap-italia.bundle.min.js')}}"></script><style>
+<script src="{{url_for('static', filename='cie_waiting_push_it/bootstrap-italia.bundle.min.js')}}"></script><style>
 /* Titillium+Web:300,400,600,700 */
 
 /* latin-ext */
@@ -33,9 +33,9 @@
   font-style: normal;
   font-weight: 300;
   src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Light.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Light.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Light.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Light.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Light.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Light.ttf') }}") format('truetype');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -44,9 +44,9 @@
   font-style: normal;
   font-weight: 300;
   src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Light.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Light.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Light.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Light.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Light.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Light.ttf') }}") format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
@@ -55,9 +55,9 @@
   font-style: normal;
   font-weight: 400;
   src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Regular.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Regular.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Regular.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Regular.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Regular.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Regular.ttf') }}") format('truetype');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -66,9 +66,9 @@
   font-style: normal;
   font-weight: 400;
   src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Regular.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Regular.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Regular.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Regular.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Regular.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Regular.ttf') }}") format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
@@ -77,9 +77,9 @@
   font-style: normal;
   font-weight: 600;
   src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-SemiBold.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-SemiBold.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-SemiBold.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-SemiBold.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-SemiBold.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-SemiBold.ttf') }}") format('truetype');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -88,9 +88,9 @@
   font-style: normal;
   font-weight: 600;
   src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-SemiBold.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-SemiBold.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-SemiBold.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-SemiBold.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-SemiBold.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-SemiBold.ttf') }}") format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
@@ -99,9 +99,9 @@
   font-style: normal;
   font-weight: 700;
   src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Bold.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Bold.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Bold.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Bold.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Bold.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Bold.ttf') }}") format('truetype');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -110,9 +110,9 @@
   font-style: normal;
   font-weight: 700;
   src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Bold.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Bold.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/TitilliumWeb-Bold.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Bold.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Bold.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/TitilliumWeb-Bold.ttf') }}") format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -124,9 +124,9 @@
   font-style: normal;
   font-weight: 400;
   src: local('Lora Regular'), local('Lora-Regular'),
-  url("{{url_for('static', filename='fonts/Lora-Regular.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/Lora-Regular.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/Lora-Regular.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/Lora-Regular.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/Lora-Regular.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/Lora-Regular.ttf') }}") format('truetype');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -135,9 +135,9 @@
   font-style: normal;
   font-weight: 400;
   src: local('Lora Regular'), local('Lora-Regular'),
-  url("{{url_for('static', filename='fonts/Lora-Regular.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/Lora-Regular.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/Lora-Regular.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/Lora-Regular.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/Lora-Regular.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/Lora-Regular.ttf') }}") format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
@@ -146,9 +146,9 @@
   font-style: normal;
   font-weight: 700;
   src: local('Lora Bold'), local('Lora-Bold'),
-  url("{{url_for('static', filename='fonts/Lora-Bold.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/Lora-Bold.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/Lora-Bold.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/Lora-Bold.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/Lora-Bold.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/Lora-Bold.ttf') }}") format('truetype');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -157,9 +157,9 @@
   font-style: normal;
   font-weight: 700;
   src: local('Lora Bold'), local('Lora-Bold'),
-  url("{{url_for('static', filename='fonts/Lora-Bold.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/Lora-Bold.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/Lora-Bold.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/Lora-Bold.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/Lora-Bold.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/Lora-Bold.ttf') }}") format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -171,9 +171,9 @@
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Mono'), local('RobotoMono-Regular'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Regular.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Regular.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Regular.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Regular.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Regular.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Regular.ttf') }}") format('truetype');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -182,9 +182,9 @@
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Mono'), local('RobotoMono-Regular'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Regular.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Regular.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Regular.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Regular.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Regular.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Regular.ttf') }}") format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
@@ -193,9 +193,9 @@
   font-style: normal;
   font-weight: 700;
   src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Bold.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Bold.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Bold.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Bold.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Bold.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Bold.ttf') }}") format('truetype');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -204,15 +204,15 @@
   font-style: normal;
   font-weight: 700;
   src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Bold.woff2')}}") format('woff2'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Bold.woff')}}") format('woff'),
-  url("{{url_for('static', filename='fonts/RobotoMono-Bold.ttf')}}") format('truetype');
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Bold.woff2') }}") format('woff2'),
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Bold.woff') }}") format('woff'),
+  url("{{ url_for('static', filename = 'fonts/RobotoMono-Bold.ttf') }}") format('truetype');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 </style>
-<script src="{{url_for('static', filename='cie_waiting/l12.js.jsp')}}"></script>
+<script src="{{url_for('static', filename='cie_waiting_push_it/l12.js.jsp')}}"></script>
 
-<script src="{{url_for('static', filename='cie_waiting/is.js')}}"></script>
+<script src="{{url_for('static', filename='cie_waiting_push_it/is.js')}}"></script>
 
 
 	</head>
@@ -224,7 +224,7 @@
 
 			<div class="row it-header-slim-wrapper-content ">
 				<div class="col">
-					<img src="{{url_for('static', filename='cie_waiting/ministero@2x.png')}}" alt="Ministero dell&#39;Interno">
+					<img src="{{url_for('static', filename='cie_waiting_push_it/ministero')}}@2x.png" alt="Ministero dell&#39;Interno">
 				</div>
 				
 				<div class="col-1 text-right">
@@ -240,7 +240,7 @@
 				<a class="nav-link dropdown-toggle" href="https://idserver.servizicie.interno.gov.it/idp/login/livello2#" role="button" id="eccLangNavDropdown" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
 					<span class="sr-only">Selezione lingua: lingua selezionata</span>
 					<span> ITA </span>
-					<svg class="icon-expand  icon icon-xs"><use href="{{url_for('static', filename='cie_waiting/sprite.svg')}}#it-expand"></use></svg>
+					<svg class="icon-expand  icon icon-xs"><use href="{{url_for('static', filename='cie_waiting_push_it/sprite.svg')}}#it-expand"></use></svg>
 				</a>
 
 				<div class="dropdown-menu" role="region" aria-labelledby="eccLangNavDropdown">
@@ -263,7 +263,7 @@
 				</div>
 				
 				<div class="col-4 col-lg-1 text-right">
-					<img src="{{url_for('static', filename='cie_waiting/CIE.png')}}" alt="Carta d&#39;identita&#39; elettronica">
+					<img src="{{url_for('static', filename='cie_waiting_push_it/CIE.png')}}" alt="Carta d&#39;identita&#39; elettronica">
 				</div>
 			</div>
 					
@@ -324,7 +324,7 @@
 				
 			</div>
 			<div class="col-12 col-lg-4 text-center mb-4 mb-lg-0"> <!-- col-8 col-lg-4 pl-lg-4 -->
-				<img class="img-fluid" src="{{url_for('static', filename='cie_waiting/push.png')}}" alt="Notifica push" id="pushImg"><!-- my-5 my-lg-0-->
+				<img class="img-fluid" src="{{url_for('static', filename='cie_waiting_push_it/push.png')}}" alt="Notifica push" id="pushImg"><!-- my-5 my-lg-0-->
 			</div>
 		</div>
 		
@@ -377,12 +377,12 @@
 		
 		<div class="row d-none d-md-block">
 			<div class="col">
-				<p class="c2">Inquadra il QR Code con l'App CieID.&nbsp;<strong><a href="https://idserver.servizicie.interno.gov.it/idp/login/sessionClosure" title="Vai al QR code.">Vai al QR code.</a></strong></p>
+				<p class="c2">Inquadra il QR Code con l'App CieID.&nbsp;<strong><a href="https://idserver.servizicie.interno.gov.it/idp/login/sessionClosure" title="Vai al QR code">Vai al QR code</a></strong></p>
 			</div>
 		</div>
 		<div class="row d-md-none">
 			<div class="col pt-4">
-				<p class="c2"><strong><a href="https://idserver.servizicie.interno.gov.it/idp/login/sessionClosure" id="cancelAndGoQr" title="Annulla e vai al QR code">Annulla.</a></strong></p>
+				<p class="c2"><strong><a href="https://idserver.servizicie.interno.gov.it/idp/login/sessionClosure" id="cancelAndGoQr" title="Annulla e vai al QR code">Annulla</a></strong></p>
 			</div>
 		</div>	
 		
@@ -453,8 +453,8 @@
 							<p class="mb-3 opacity">progetto di</p>
 						</div>
 						<div class="col">
-							<img src="{{url_for('static', filename='cie_waiting/ministero_white.png')}}" alt="Ministero dell&#39;Interno">
-							<img src="{{url_for('static', filename='cie_waiting/ipzs.png')}}" alt="Istituto Poligrafico e Zecca dello Stato Italiano" class="mt-2">
+							<img src="{{url_for('static', filename='cie_waiting_push_it/ministero_white.png')}}" alt="Ministero dell&#39;Interno">
+							<img src="{{url_for('static', filename='cie_waiting_push_it/ipzs.png')}}" alt="Istituto Poligrafico e Zecca dello Stato Italiano" class="mt-2">
 						</div>
 					</div>
 				</div>
@@ -464,7 +464,7 @@
 						<div class="mb-3"><strong>CieID App</strong></div>
 						<div class="row">
 							<div class="col-3">
-								<img src="{{url_for('static', filename='cie_waiting/cieid.png')}}" class="img-fluid cieid" alt="Logo App CieID">
+								<img src="{{url_for('static', filename='cie_waiting_push_it/cieid.png')}}" class="img-fluid cieid" alt="Logo App CieID">
 							</div>
 							<div class="col">
 								<p class="mb-1">
@@ -477,10 +477,10 @@
 				<div class="col-12 col-lg-4 my-auto stores d-none d-sm-flex">
 					<div class="row">
 						<div class="col text-right">
-                            <a href="https://apps.apple.com/it/app/cieid/id1504644677" title="Scarica l&#39;app dallo Store Apple" target="_blank"><img src="{{url_for('static', filename='cie_waiting/appstore@2x.png')}}" class="img-fluid" alt="App Store"></a>
+							<a href="https://apps.apple.com/it/app/cieid/id1504644677" title="Scarica l&#39;app dallo Store Apple" target="_blank"><img src="{{url_for('static', filename='cie_waiting_push_it/appstore')}}@2x.png" class="img-fluid" alt="App Store"></a>
 						</div>
 						<div class="col">
-							<a href="https://play.google.com/store/apps/details?id=it.ipzs.cieid&amp;hl=it" title="Scarica l&#39;app dal Play Store Google" target="_blank"><img src="{{url_for('static', filename='cie_waiting/googleplay@2x.png')}}" class="img-fluid" alt="Google Play"></a>
+							<a href="https://play.google.com/store/apps/details?id=it.ipzs.cieid&amp;hl=it" title="Scarica l&#39;app dal Play Store Google" target="_blank"><img src="{{url_for('static', filename='cie_waiting_push_it/googleplay')}}@2x.png" class="img-fluid" alt="Google Play"></a>
 						</div>
 					</div>
 				</div>
