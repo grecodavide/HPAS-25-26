@@ -9,6 +9,5 @@ class State(dict[str, str]):
 
     def add(self, req: Request, fields: list[str]):
         for field in fields:
-            value = req.form[field]
-            assert type(value) == str
+            value = req.form.get(field, "")
             self[field] = value
