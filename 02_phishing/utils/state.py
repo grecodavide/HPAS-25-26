@@ -1,24 +1,14 @@
-from typing import override
 from flask import Request
 
-class State:
-    username: str = ""
-    password: str = ""
-    wrong_credentials: bool = False
+class State(dict[str, str]):
+    wrong_credentials: bool
 
-    @override
-    def __repr__(self):
-        return "=======================\nUsername: {username}, password: {password}. They are {correct}\n=======================".format(
-                username = self.username,
-                password = self.password,
-                correct = "WRONG" if self.wrong_credentials else "CORRECT"
-        )
+    def __init__(self):
+        super(State, self).__init__()
+        self.wrong_credentials = False
 
-    def assign(self, req: Request):
-        assert type(req.form["username"]) == str
-        assert type(req.form["password"]) == str
-
-        self.username = req.form["username"]
-        self.password = req.form["password"]
-
-
+    def add(self, req: Request, fields: list[str]):
+        for field in fields:
+            value = req.form[field]
+            assert type(value) == str
+            self[field] = value
