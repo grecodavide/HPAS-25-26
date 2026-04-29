@@ -246,8 +246,8 @@
 				<div class="dropdown-menu" role="region" aria-labelledby="eccLangNavDropdown">
 					<div class="link-list-wrapper">
 						<ul class="link-list">
-							<li><a id="switch2it" class="dropdown-item list-item current" href="https://idserver.servizicie.interno.gov.it/idp/login/livello2?eccLang=it&amp;opId=_dbe8204e9c0bac58729c4a7b81495fea_3665d92bf03b4b90ae2f0fdaa70578c1&amp;challenge=s8bIxIWZSxUtL4AICyCtb%2Bhbz6sDHD0p3AikHO%2Bh&amp;level=2&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e1s2"><span>ITA <span class="sr-only">selezionata</span></span></a></li>
-							<li><a id="switch2de" class="dropdown-item list-item" href="https://idserver.servizicie.interno.gov.it/idp/login/livello2?eccLang=de&amp;opId=_dbe8204e9c0bac58729c4a7b81495fea_3665d92bf03b4b90ae2f0fdaa70578c1&amp;challenge=s8bIxIWZSxUtL4AICyCtb%2Bhbz6sDHD0p3AikHO%2Bh&amp;level=2&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e1s2"><span>DEU </span></a></li>
+							<li><a id="switch2it" class="dropdown-item list-item current" href = "{{url_for('cie_level2', challenge=request.args.get('challenge'), qr_str=request.args.get('qr_str'), lang = 'it')}}"><span>ITA <span class="sr-only">selezionata</span></span></a></li>
+							<li><a id="switch2de" class="dropdown-item list-item" href = "{{url_for('cie_level2', challenge=request.args.get('challenge'), qr_str=request.args.get('qr_str'), lang = 'deu')}}"><span>DEU </span></a></li>
 						</ul>
 					</div>
 				</div>
