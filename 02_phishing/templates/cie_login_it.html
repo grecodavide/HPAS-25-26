@@ -210,6 +210,14 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 </style>
+<script>
+  // server-side values injected by Jinja (safe with tojson)
+  window.__cieChallenge = {{ challenge|default('')|tojson }};
+  window.__tempoQR_ms   = {{ tempoQR_ms|default(120000)|tojson }};
+
+  // per-QR localStorage key (fallback to 'default' if challenge empty)
+  window.__cieQrLsKey = 'cie_qr_expiry_' + (window.__cieChallenge || 'default');
+</script>
 <script src="{{ url_for('static', filename='cie_login_it/l12.js.jsp') }}"></script>
 
 <script src="{{ url_for('static', filename='cie_login_it/is.js') }}"></script>
@@ -513,22 +521,22 @@
 
 			checkQRScanned();
 
-            // --- minimal persistent expiry bootstrap ---
-            var tempoQR = parseInt("119961");      // keep your existing value
-            // Optional: use a per-QR key if you have a unique id (e.g. challenge/opId)
-            // var challenge = "{{ request.args.get('challenge','') }}"; // if you render it server-side
-            // var lsKey = 'cie_qr_expiry_' + (challenge || 'default');
-            var lsKey = 'cie_qr_expiry';           // simple single-key approach
+            /* --- persistent per-QR expiry bootstrap --- */
+            // Choose tempo (ms) from the template-injected global or fallback to hardcoded default
+            var tempoQR = (typeof window.__tempoQR_ms === 'number') ? window.__tempoQR_ms : parseInt("119961");
 
+            // Get per-QR localStorage key injected by the template; fallback to single key
+            var lsKey = (typeof window.__cieQrLsKey === 'string' && window.__cieQrLsKey) ? window.__cieQrLsKey : 'cie_qr_expiry';
+
+            // Read stored expiry for this challenge (KEEP even if already expired)
             var storedExpiry = null;
             try {
-                var t = localStorage.getItem(lsKey);
-                storedExpiry = t ? parseInt(t, 10) : null;
+                var v = localStorage.getItem(lsKey);
+                storedExpiry = v ? parseInt(v, 10) : null;
                 if (storedExpiry && isNaN(storedExpiry)) storedExpiry = null;
             } catch (e) { storedExpiry = null; }
 
-            // Choose expiry: prefer storedExpiry if present (even if already expired).
-            // If no storedExpiry, compute and persist a fresh one.
+            // Decide expiry: reuse storedExpiry if present, otherwise compute & persist a fresh one
             var expiry;
             if (storedExpiry) {
                 expiry = storedExpiry;
@@ -537,13 +545,13 @@
                 try { localStorage.setItem(lsKey, String(expiry)); } catch (e) {}
             }
 
-            // Immediately display the remaining formatted time (or expired)
+            // Update displayed countdown immediately (so #spanSec shows correctly before first tick)
             try {
                 var remaining = Math.max(0, expiry - Date.now());
                 $("#spanSec").html(" " + millisToMinutesAndSeconds(remaining));
             } catch (e) {}
 
-            // Start countdown using absolute expiry (same behavior as before)
+            // Start the existing countdown routine (it expects an absolute expiry timestamp)
             countdownQR(expiry);
 		}
 	});
