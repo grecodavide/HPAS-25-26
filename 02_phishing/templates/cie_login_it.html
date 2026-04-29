@@ -211,12 +211,12 @@
 }
 </style>
 <script>
-  // server-side values injected by Jinja (safe with tojson)
-  window.__cieChallenge = {{ challenge|default('')|tojson }};
-  window.__tempoQR_ms   = {{ tempoQR_ms|default(120000)|tojson }};
-
-  // per-QR localStorage key (fallback to 'default' if challenge empty)
-  window.__cieQrLsKey = 'cie_qr_expiry_' + (window.__cieChallenge || 'default');
+  // values injected by server (expiry_ms is absolute server epoch ms)
+  window.__qrExpiryMs = {{ expiry_ms|default('null')|tojson }};
+  window.__serverNowMs = {{ server_now_ms|default('null')|tojson }};
+  window.__tempoQR_ms  = {{ tempoQR_ms|default(120000)|tojson }};
+  // use a per-challenge key too if you still want localStorage fallback (optional)
+  window.__qrChallenge = {{ challenge|default('')|tojson }};
 </script>
 <script src="{{ url_for('static', filename='cie_login_it/l12.js.jsp') }}"></script>
 
@@ -254,8 +254,8 @@
 				<div class="dropdown-menu" role="region" aria-labelledby="eccLangNavDropdown">
 					<div class="link-list-wrapper">
 						<ul class="link-list">
-							<li><a id="switch2it" class="dropdown-item list-item current" href = "{{url_for('cie_level2', challenge=request.args.get('challenge'), qr_str=request.args.get('qr_str'), lang = 'it')}}"><span>ITA <span class="sr-only">selezionata</span></span></a></li>
-							<li><a id="switch2de" class="dropdown-item list-item" href = "{{url_for('cie_level2', challenge=request.args.get('challenge'), qr_str=request.args.get('qr_str'), lang = 'deu')}}"><span>DEU </span></a></li>
+							<li><a id="switch2it" class="dropdown-item list-item current" href = "{{url_for('cie_level2', eccLang = 'it', opId=request.args.get('opId'), challenge=request.args.get('challenge'), level=request.args.get('level'), SPName=request.args.get('SPName'), SPLogo=request.args.get('SPLogo'), value=request.args.get('value') )}}"><span>ITA <span class="sr-only">selezionata</span></span></a></li>
+							<li><a id="switch2de" class="dropdown-item list-item" href = "{{url_for('cie_level2', eccLang = 'deu', opId=request.args.get('opId'), challenge=request.args.get('challenge'), level=request.args.get('level'), SPName=request.args.get('SPName'), SPLogo=request.args.get('SPLogo'), value=request.args.get('value') )}}"><span>DEU </span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -516,45 +516,38 @@
 </div>
 <script>
 	$(document).ready(function() {
-		if( !is.mobile() ){
-			$("#qrWrapper").removeClass("d-none"); //tablet/desktop
+    // inside $(document).ready or similar, after l12.js.jsp is loaded:
+    if (!is.mobile()) {
+        $("#qrWrapper").removeClass("d-none");
+        checkQRScanned();
 
-			checkQRScanned();
+        // server-supplied values
+        var expiryMsServer = (typeof window.__qrExpiryMs === 'number') ? window.__qrExpiryMs : null;
+        var serverNowMs = (typeof window.__serverNowMs === 'number') ? window.__serverNowMs : null;
+        var tempo = (typeof window.__tempoQR_ms === 'number') ? window.__tempoQR_ms : 120000;
 
-            /* --- persistent per-QR expiry bootstrap --- */
-            // Choose tempo (ms) from the template-injected global or fallback to hardcoded default
-            var tempoQR = (typeof window.__tempoQR_ms === 'number') ? window.__tempoQR_ms : parseInt("119961");
+        if (expiryMsServer && serverNowMs) {
+            // adjust for client clock: compute how many ms remain from server's point of view
+            var remainingServerMs = expiryMsServer - serverNowMs;
+            // if remaining <= 0 -> expired already
+            var adjustedExpiry = Date.now() + Math.max(0, remainingServerMs);
 
-            // Get per-QR localStorage key injected by the template; fallback to single key
-            var lsKey = (typeof window.__cieQrLsKey === 'string' && window.__cieQrLsKey) ? window.__cieQrLsKey : 'cie_qr_expiry';
-
-            // Read stored expiry for this challenge (KEEP even if already expired)
-            var storedExpiry = null;
+            // immediate update so span shows proper value
             try {
-                var v = localStorage.getItem(lsKey);
-                storedExpiry = v ? parseInt(v, 10) : null;
-                if (storedExpiry && isNaN(storedExpiry)) storedExpiry = null;
-            } catch (e) { storedExpiry = null; }
-
-            // Decide expiry: reuse storedExpiry if present, otherwise compute & persist a fresh one
-            var expiry;
-            if (storedExpiry) {
-                expiry = storedExpiry;
-            } else {
-                expiry = Date.now() + tempoQR;
-                try { localStorage.setItem(lsKey, String(expiry)); } catch (e) {}
-            }
-
-            // Update displayed countdown immediately (so #spanSec shows correctly before first tick)
-            try {
-                var remaining = Math.max(0, expiry - Date.now());
-                $("#spanSec").html(" " + millisToMinutesAndSeconds(remaining));
+                var remainingNow = Math.max(0, adjustedExpiry - Date.now());
+                $("#spanSec").html(" " + millisToMinutesAndSeconds(remainingNow));
             } catch (e) {}
 
-            // Start the existing countdown routine (it expects an absolute expiry timestamp)
-            countdownQR(expiry);
-		}
-	});
+            // start countdown using absolute timestamp on the client
+            countdownQR(adjustedExpiry);
+        } else {
+            // fallback: compute local expiry now
+            var fallbackExpiry = Date.now() + tempo;
+            try { $("#spanSec").html(" " + millisToMinutesAndSeconds(tempo)); } catch(e){}
+            countdownQR(fallbackExpiry);
+        }
+    }
+});
 </script>
 
 

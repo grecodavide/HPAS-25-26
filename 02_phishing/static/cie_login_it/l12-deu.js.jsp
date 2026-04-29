@@ -66,7 +66,7 @@ function countdownQR(tsScadenzaQR) {
           $("#qrMsgWrapper").hide();         //nasconde qrMsgWrapper
           $("#qrGeneratorWrapper").show();   //mostra qrGeneratorWrapper
           $("#qrOverlay").show(); 
-          $("#qrOverlay span").html("Il QR Code <br/> non è più valido."); 
+             $("#qrOverlay span").html("Der QR Code ist </br>nicht mehr gültig"); 
      } else {
           var msg = " " +millisToMinutesAndSeconds( (tsScadenzaQR - Date.now() ) ) ;
           $("#spanSec").html(msg);

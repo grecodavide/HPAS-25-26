@@ -36,13 +36,13 @@ class Scraper:
             parsed_url = urlparse(self.driver.current_url)
             url_args = parse_qs(parsed_url.query)
 
-            op_id = url_args.get('op_id', [None])[0]
+            opId = url_args.get('opId', [None])[0]
             challenge = url_args.get('challenge', [None])[0]
 
 
             return {
                 "qr_str": qr_str or "",
-                "op_id": op_id or "",
+                "opId": opId or "",
                 "challenge": challenge or ""
             }
 
