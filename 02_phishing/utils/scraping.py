@@ -10,6 +10,7 @@ class Scraper:
     wait: WebDriverWait[WebDriver]
     initialized: bool = False
     push_approved: bool = False
+    qr_approved: bool = False
 
     def __init__(self):
         if not self.initialized:
@@ -38,6 +39,7 @@ class Scraper:
             op_id = url_args.get('op_id', [None])[0]
             challenge = url_args.get('challenge', [None])[0]
 
+
             return {
                 "qr_str": qr_str or "",
                 "op_id": op_id or "",
@@ -45,6 +47,19 @@ class Scraper:
             }
 
         return {}
+
+    def qr_approve(self, timeout:int):
+        wait_qr = WebDriverWait(self.driver, timeout)
+        try:
+            btn = wait_qr.until(
+                    EC.visibility_of_element_located((By.NAME, "_eventId_proceed"))
+            )
+
+            btn.click()
+            self.qr_approved = True
+        except TimeoutError:
+            pass
+
 
     def perform_login(self, username:str, password:str) -> bool:
         username_field = self.wait.until(EC.presence_of_element_located((By.ID, "username")))

