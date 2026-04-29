@@ -13,6 +13,7 @@ function checkPushConfirmed() {
           cache: false,
           success: function(data ) {
                     if(data.status != 'WAIT'){
+                         
                          window.location.href = "/idp/login/livello1e2postpush";
                     }
                }
@@ -87,7 +88,7 @@ function checkUsernameAndPassword() {
           //username non presente
           $("#username, #usernameIcon").addClass("error");
           $("#usernameError").html("Il campo &egrave; obbligatorio");
-          $("#usernameIcon a svg use").attr("xlink:href", "/static/cie_login_it/sprite.svg#it-warning");
+          $("#usernameIcon a svg use").attr("xlink:href", "/idp/images/l12/sprite.svg#it-warning");
           return false;
      }else if( 
           ! ( 
@@ -96,10 +97,10 @@ function checkUsernameAndPassword() {
                //se lo username non corrisponde a cf, email o nun
           $("#username, #usernameIcon").addClass("error");
           $("#usernameError").html("Formato non valido");
-          $("#usernameIcon a svg use").attr("xlink:href", "/static/cie_login_it/sprite.svg#it-warning");
+          $("#usernameIcon a svg use").attr("xlink:href", "/idp/images/l12/sprite.svg#it-warning");
           return false;
      }else{
-          $("#usernameIcon a svg use").attr("xlink:href", "/static/cie_login_it/sprite.svg#it-info-circle");
+          $("#usernameIcon a svg use").attr("xlink:href", "/idp/images/l12/sprite.svg#it-info-circle");
           $("#username, #usernameIcon").removeClass("error");
           $("#usernameError").html("&nbsp;");
      }
