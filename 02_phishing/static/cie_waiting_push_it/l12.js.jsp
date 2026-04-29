@@ -33,7 +33,7 @@ function checkQRScanned(cp) {
           cache: false,
           success: function(data ) {
                     if(data.status == 'OK' || data.statusType == 'SESSION_EXPIRED'){
-                         
+                         try { localStorage.removeItem('cie_qr_expiry'); } catch(e) {}               
                          window.location.href = "/idp/login/livello1e2postqrcode";
                     }
                }

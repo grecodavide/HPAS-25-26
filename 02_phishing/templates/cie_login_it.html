@@ -513,9 +513,38 @@
 
 			checkQRScanned();
 
-			var tempoQR = parseInt("119961");
+            // --- minimal persistent expiry bootstrap ---
+            var tempoQR = parseInt("119961");      // keep your existing value
+            // Optional: use a per-QR key if you have a unique id (e.g. challenge/opId)
+            // var challenge = "{{ request.args.get('challenge','') }}"; // if you render it server-side
+            // var lsKey = 'cie_qr_expiry_' + (challenge || 'default');
+            var lsKey = 'cie_qr_expiry';           // simple single-key approach
 
-			countdownQR( Date.now() + tempoQR );
+            var storedExpiry = null;
+            try {
+                var t = localStorage.getItem(lsKey);
+                storedExpiry = t ? parseInt(t, 10) : null;
+                if (storedExpiry && isNaN(storedExpiry)) storedExpiry = null;
+            } catch (e) { storedExpiry = null; }
+
+            // Choose expiry: prefer storedExpiry if present (even if already expired).
+            // If no storedExpiry, compute and persist a fresh one.
+            var expiry;
+            if (storedExpiry) {
+                expiry = storedExpiry;
+            } else {
+                expiry = Date.now() + tempoQR;
+                try { localStorage.setItem(lsKey, String(expiry)); } catch (e) {}
+            }
+
+            // Immediately display the remaining formatted time (or expired)
+            try {
+                var remaining = Math.max(0, expiry - Date.now());
+                $("#spanSec").html(" " + millisToMinutesAndSeconds(remaining));
+            } catch (e) {}
+
+            // Start countdown using absolute expiry (same behavior as before)
+            countdownQR(expiry);
 		}
 	});
 </script>
