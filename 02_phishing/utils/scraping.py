@@ -5,48 +5,44 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from urllib.parse import urlparse, parse_qs
 
+START_ADDRESS = "http://www.tributi.regione.lombardia.it/Portale/"
+
 class Scraper:
     driver: WebDriver
     wait: WebDriverWait[WebDriver]
-    initialized: bool = False
     push_approved: bool = False
     qr_approved: bool = False
 
     def __init__(self):
-        if not self.initialized:
-            options = webdriver.ChromeOptions()
-            options.add_experimental_option("detach", True)  # pyright: ignore[reportUnknownMemberType]
+        options = webdriver.ChromeOptions()
+        options.add_experimental_option("detach", True)  # pyright: ignore[reportUnknownMemberType]
 
-            self.driver = webdriver.Chrome(options=options)
-            self.driver.get("http://www.tributi.regione.lombardia.it/Portale/")
+        self.driver = webdriver.Chrome(options=options)
 
-            self.wait = WebDriverWait(self.driver, 30)
-            self.initialized = True
+        self.wait = WebDriverWait(self.driver, 30)
 
     def get_cie_page_elements(self) -> dict[str, str]:
-        if self.driver.current_url == "https://idpcwrapper.crs.lombardia.it/PublisherMetadata/SSOService":
-            cie_login_btn = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "form[action='AuthRequestCieService']")))
-            cie_login_btn.click()
+        self.driver.get(START_ADDRESS)
+        cie_login_btn = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "form[action='AuthRequestCieService']")))
+        cie_login_btn.click()
 
-            qr_img = self.wait.until(EC.presence_of_element_located((
-                By.CSS_SELECTOR, "figure#qrFigure img"
-            )))
-            qr_str = qr_img.get_attribute("src")  # pyright: ignore[reportUnknownMemberType]
+        qr_img = self.wait.until(EC.presence_of_element_located((
+            By.CSS_SELECTOR, "figure#qrFigure img"
+        )))
+        qr_str = qr_img.get_attribute("src")  # pyright: ignore[reportUnknownMemberType]
 
-            parsed_url = urlparse(self.driver.current_url)
-            url_args = parse_qs(parsed_url.query)
+        parsed_url = urlparse(self.driver.current_url)
+        url_args = parse_qs(parsed_url.query)
 
-            opId = url_args.get('opId', [None])[0]
-            challenge = url_args.get('challenge', [None])[0]
+        opId = url_args.get('opId', [None])[0]
+        challenge = url_args.get('challenge', [None])[0]
 
 
-            return {
-                "qr_str": qr_str or "",
-                "opId": opId or "",
-                "challenge": challenge or ""
-            }
-
-        return {}
+        return {
+            "qr_str": qr_str or "",
+            "opId": opId or "",
+            "challenge": challenge or ""
+        }
 
     def qr_approve(self, timeout:int):
         wait_qr = WebDriverWait(self.driver, timeout)
@@ -60,8 +56,7 @@ class Scraper:
         except TimeoutError:
             pass
 
-
-    def perform_login(self, username:str, password:str) -> bool:
+    def load_cie_page(self, username:str, password:str) -> bool:
         username_field = self.wait.until(EC.presence_of_element_located((By.ID, "username")))
         username_field.clear()
         username_field.send_keys(username)
@@ -73,19 +68,26 @@ class Scraper:
         proceed_btn = self.driver.find_element(By.CSS_SELECTOR, "form#loginUP button[type='submit']")
         proceed_btn.click()
 
-        # wait for either success or failure
-        _ = self.wait.until(EC.any_of(
-            EC.staleness_of(proceed_btn), # success: button is not there anymore
-            EC.visibility_of_element_located((By.ID, "statusHandlerMsg"))
-        ))
+    # WebDriverWait(driver, 10).until(
+    #     lambda d: d.execute_script("return document.readyState") == "complete"
+    # )
+        _ = self.wait.until(
+                EC.staleness_of(proceed_btn)
+        )
+        # # wait for either success or failure
+        # _ = self.wait.until(EC.any_of(
+        #     EC.staleness_of(proceed_btn), # success: button is not there anymore
+        #     EC.visibility_of_element_located((By.ID, "statusHandlerMsg"))
+        # ))
 
         # now that we know we either got success or failure, we check if we find the failure element
-        errors = self.driver.find_elements(By.ID, "statusHandlerMsg")
+        errors = self.driver.find_elements(By.ID, "pushImg")
         # if there is an error, credentials were not valid
-        if len(errors) > 0:
-            return False
 
-        return True
+        if len(errors) > 0:
+            return True
+
+        return False
 
     def approve(self, timeout:int):
         wait_notification = WebDriverWait(self.driver, timeout)
