@@ -18,11 +18,14 @@ class Scraper:
         options.add_experimental_option("detach", True)  # pyright: ignore[reportUnknownMemberType]
 
         self.driver = webdriver.Chrome(options=options)
+        self.driver.get(START_ADDRESS)
 
         self.wait = WebDriverWait(self.driver, 30)
 
     def get_cie_page_elements(self) -> dict[str, str]:
-        self.driver.get(START_ADDRESS)
+        if not self.driver.current_url == "https://idpcwrapper.crs.lombardia.it/PublisherMetadata/SSOService":
+            self.driver.get(START_ADDRESS)
+
         cie_login_btn = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "form[action='AuthRequestCieService']")))
         cie_login_btn.click()
 
