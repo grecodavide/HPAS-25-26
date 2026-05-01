@@ -71,21 +71,10 @@ class Scraper:
         proceed_btn = self.driver.find_element(By.CSS_SELECTOR, "form#loginUP button[type='submit']")
         proceed_btn.click()
 
-    # WebDriverWait(driver, 10).until(
-    #     lambda d: d.execute_script("return document.readyState") == "complete"
-    # )
         _ = self.wait.until(
                 EC.staleness_of(proceed_btn)
         )
-        # # wait for either success or failure
-        # _ = self.wait.until(EC.any_of(
-        #     EC.staleness_of(proceed_btn), # success: button is not there anymore
-        #     EC.visibility_of_element_located((By.ID, "statusHandlerMsg"))
-        # ))
-
-        # now that we know we either got success or failure, we check if we find the failure element
         errors = self.driver.find_elements(By.ID, "pushImg")
-        # if there is an error, credentials were not valid
 
         if len(errors) > 0:
             return True
@@ -100,7 +89,7 @@ class Scraper:
                     EC.visibility_of_element_located((By.NAME, "_eventId_proceed"))
             )
 
-            btn.click()
             self.push_approved = True
+            btn.click()
         except TimeoutError:
             print("User did not approve push notification!")
