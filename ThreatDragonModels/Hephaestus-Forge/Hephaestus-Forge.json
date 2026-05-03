@@ -726,7 +726,7 @@
                   "severity": "Critical",
                   "type": "Elevation of privilege",
                   "description": "If an attacker manages to gain admin access via a vulnerability on the portal or via compromising an admin account he can manage accounts and the level of privilege they have, private information, and much more",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Ensure multi factor authentication or admin access possible only if directly connected to the server in the factory building",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 46,
@@ -739,7 +739,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 1,
                 "denialOfService": 1,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -1686,91 +1686,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Store CAD blueprint",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "273fddc0-153c-4b17-b4e1-5b9cc4f4ceea",
-                  "title": "CAD Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Modify the CAD project due to unencrypted communication \n",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 14,
-                  "score": ""
-                },
-                {
-                  "id": "541cb1ab-5b05-464b-b215-701373fcf59c",
-                  "title": "CAD Leakage",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "View confidential project information due to unencrypted communication ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 22,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 3,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Store CAD blueprint"
-            ],
-            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
-            "source": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
-              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
-            },
-            "vertices": [
-              {
-                "x": 885,
-                "y": 600
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Notify new job request",
               "description": "",
               "outOfScope": false,
@@ -2417,12 +2332,6 @@
               "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
               "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
             },
-            "vertices": [
-              {
-                "x": 680,
-                "y": 190
-              }
-            ],
             "tools": {
               "items": [
                 "boundary",
@@ -2432,7 +2341,13 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 190
+              }
+            ]
           },
           {
             "position": {
@@ -4848,6 +4763,13 @@
               "type": "tm.Text",
               "name": "upload quando printo o quando carico cad????????",
               "hasOpenThreats": false
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -4936,6 +4858,91 @@
               {
                 "x": 1120,
                 "y": 660
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 34,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store CAD blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "273fddc0-153c-4b17-b4e1-5b9cc4f4ceea",
+                  "title": "CAD Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Modify the CAD project due to unencrypted communication \n",
+                  "mitigation": "Encrypted Communication",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "541cb1ab-5b05-464b-b215-701373fcf59c",
+                  "title": "CAD Leakage",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information due to unencrypted communication ",
+                  "mitigation": "Encrypted Communication",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 4,
+                "informationDisclosure": 4,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Store CAD blueprint"
+            ],
+            "id": "db6df6ce-358a-493d-bc78-61da4b50c6a0",
+            "source": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "vertices": [
+              {
+                "x": 885,
+                "y": 600
               }
             ]
           }
