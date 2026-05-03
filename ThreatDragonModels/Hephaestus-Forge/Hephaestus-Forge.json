@@ -1,5 +1,5 @@
 {
-  "version": "2.6.0",
+  "version": "2.6.1",
   "summary": {
     "title": "Hephaestus-Forge",
     "owner": "",
@@ -15,7 +15,7 @@
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
-        "version": "2.6.0",
+        "version": "2.6.1",
         "cells": [
           {
             "position": {
@@ -59,8 +59,8 @@
           },
           {
             "position": {
-              "x": 810,
-              "y": -209.99999999999693
+              "x": 740,
+              "y": -1570
             },
             "size": {
               "width": 1380,
@@ -81,31 +81,8 @@
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "crossingFlows": [
-                "e3dfe961-ab5d-4133-9318-2ac967304d87",
-                "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
-                "171d4fb3-00ea-419b-a0fc-b89366651bf2",
-                "ecf614ad-c12d-4d76-b610-f269004fc800",
-                "53eaab29-0f43-44b3-97d2-e90eb724ff02",
-                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
-                "6a95922e-068a-4996-a9d1-4d0492c7449a",
-                "858bd404-c078-4628-8050-0ffc626bd5cd",
-                "9b4173ef-8f5d-4e9c-a91d-957233410e64",
-                "ce83d741-fee2-4227-aaa6-cc8f936bcec1"
-              ],
-              "containedElements": [
-                "787facce-af58-4b84-a130-ed55f1059062",
-                "339778d6-5a04-419c-b43c-d54724d667cc",
-                "36477c30-516b-4532-93b2-46e257af9c86",
-                "886f6ab7-af18-44b2-9ac5-c06902bfea90",
-                "355df31d-8e50-4808-ba07-018aa1c26cb4",
-                "228251b2-fde0-4529-9689-77c2351d79bd",
-                "d773119f-03d8-409b-b2ac-179b03a25308",
-                "93549b34-6949-41d1-9a26-9ad85aeba9a2",
-                "4e80676c-1e57-4d18-bb2f-136d3d231a6e",
-                "1600005d-f985-43f8-9594-878fc2f588ad",
-                "92a46ff8-403f-4576-ba88-4bd9ecd95321"
-              ]
+              "crossingFlows": [],
+              "containedElements": []
             }
           },
           {
@@ -152,8 +129,8 @@
           },
           {
             "position": {
-              "x": 750,
-              "y": -259.99999999999693
+              "x": 760,
+              "y": 1060
             },
             "size": {
               "width": 3060,
@@ -174,38 +151,8 @@
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "crossingFlows": [
-                "e3dfe961-ab5d-4133-9318-2ac967304d87",
-                "519b9dcc-1b2f-4042-82ff-6573f10a1d96",
-                "171d4fb3-00ea-419b-a0fc-b89366651bf2",
-                "ecf614ad-c12d-4d76-b610-f269004fc800",
-                "53eaab29-0f43-44b3-97d2-e90eb724ff02",
-                "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
-                "6a95922e-068a-4996-a9d1-4d0492c7449a"
-              ],
-              "containedElements": [
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062",
-                "339778d6-5a04-419c-b43c-d54724d667cc",
-                "36477c30-516b-4532-93b2-46e257af9c86",
-                "886f6ab7-af18-44b2-9ac5-c06902bfea90",
-                "355df31d-8e50-4808-ba07-018aa1c26cb4",
-                "228251b2-fde0-4529-9689-77c2351d79bd",
-                "d773119f-03d8-409b-b2ac-179b03a25308",
-                "93549b34-6949-41d1-9a26-9ad85aeba9a2",
-                "4e80676c-1e57-4d18-bb2f-136d3d231a6e",
-                "1600005d-f985-43f8-9594-878fc2f588ad",
-                "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-                "ad1fbdc5-c0ab-4ce2-a849-2926ad3c2a5b",
-                "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-                "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-                "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
-                "05861e45-985c-4c6a-9ae6-b8259b937bfd",
-                "0d407ae3-8852-4630-9e25-97e75b73a817",
-                "e9e03959-2841-4411-98ee-080d7671011f",
-                "758a0568-9e80-4fc2-9fa5-7b2de1372860",
-                "ef9e1505-443c-46d4-a5f1-b63e8093b676"
-              ]
+              "crossingFlows": [],
+              "containedElements": []
             }
           },
           {
@@ -875,9 +822,7 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+                "8e70c9de-660f-434e-80a9-0463edaf37e8"
               ]
             },
             "labels": [
@@ -931,9 +876,7 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+                "8e70c9de-660f-434e-80a9-0463edaf37e8"
               ]
             },
             "labels": [
@@ -987,9 +930,7 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+                "8e70c9de-660f-434e-80a9-0463edaf37e8"
               ]
             },
             "labels": [
@@ -1546,9 +1487,7 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+                "8e70c9de-660f-434e-80a9-0463edaf37e8"
               ]
             },
             "labels": [
@@ -1602,9 +1541,7 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+                "8e70c9de-660f-434e-80a9-0463edaf37e8"
               ]
             },
             "labels": [
@@ -1711,9 +1648,7 @@
               "threats": [],
               "trustBoundaryIds": [
                 "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "787facce-af58-4b84-a130-ed55f1059062",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+                "787facce-af58-4b84-a130-ed55f1059062"
               ]
             },
             "labels": [
@@ -1777,9 +1712,7 @@
                 }
               ],
               "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+                "8e70c9de-660f-434e-80a9-0463edaf37e8"
               ],
               "threatFrequency": {
                 "tampering": 3,
@@ -2009,9 +1942,7 @@
                   "score": ""
                 }
               ],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df"
-              ],
+              "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
                 "informationDisclosure": 2,
@@ -2193,9 +2124,7 @@
                   "score": ""
                 }
               ],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df"
-              ],
+              "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 3,
                 "informationDisclosure": 2,
@@ -4842,9 +4771,7 @@
                   "score": ""
                 }
               ],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df"
-              ],
+              "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 3,
                 "informationDisclosure": 2,
@@ -4905,12 +4832,58 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "17e781f1-c427-4da7-96c4-69f39bd17b52",
             "zIndex": 32,
+            "id": "17e781f1-c427-4da7-96c4-69f39bd17b52",
             "data": {
               "type": "tm.Text",
               "name": "upload quando printo o quando carico cad????????",
               "hasOpenThreats": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 33,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "4ada8c0c-3306-4985-8573-80ccc3c69077",
+            "source": {
+              "x": 932,
+              "y": 530
+            },
+            "target": {
+              "x": 1030,
+              "y": 630
             }
           }
         ]
