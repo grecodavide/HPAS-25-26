@@ -277,7 +277,7 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker may impersonate being a new contractor / a different branch of an existing contractor ",
-                  "mitigation": "",
+                  "mitigation": "Enforcing identity verification before registering a new client and allowing him to send job requests",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
@@ -285,7 +285,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 3,
                 "repudiation": 0
               }
             }
@@ -558,7 +558,7 @@
                   "severity": "Low",
                   "type": "Repudiation",
                   "description": "If web portal not well implemented, may expose some information to non authorized actors",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Develop a well engineered web portal that only shows proper information to the client",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 28,
@@ -571,7 +571,7 @@
                   "severity": "Low",
                   "type": "Spoofing",
                   "description": "If the contractor disables safety features or uses outdated browser versions it may be vulnerable to CSRF",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Deny access if old browser is used",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 45,
@@ -579,9 +579,9 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 5,
+                "spoofing": 6,
                 "tampering": 2,
-                "repudiation": 1,
+                "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
