@@ -1686,80 +1686,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Upload 3D CAD blueprint",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "e5e53409-7a01-4c1a-802d-3fc9d632d465",
-                  "title": "CAD Tampering ",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Tampering",
-                  "description": "Modifying the sent CAD project",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 13,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8"
-              ],
-              "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Upload 3D CAD blueprint"
-            ],
-            "id": "6a95922e-068a-4996-a9d1-4d0492c7449a",
-            "source": {
-              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "vertices": [
-              {
-                "x": 680,
-                "y": 190
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Store CAD blueprint",
               "description": "",
               "outOfScope": false,
@@ -2423,6 +2349,90 @@
               "name": null
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Upload 3D CAD blueprint",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "e5e53409-7a01-4c1a-802d-3fc9d632d465",
+                  "title": "CAD Tampering ",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Modifying the sent CAD project",
+                  "mitigation": "The communication is assumed to be encrypted, if somebody tampers with the message is improbable that arrives in a valid format, thus enforce that the file is valid before accepting it",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8"
+              ],
+              "threatFrequency": {
+                "tampering": 4,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Upload 3D CAD blueprint"
+            ],
+            "id": "6a95922e-068a-4996-a9d1-4d0492c7449a",
+            "source": {
+              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 190
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
