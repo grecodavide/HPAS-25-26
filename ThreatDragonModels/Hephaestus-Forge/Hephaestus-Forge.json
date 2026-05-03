@@ -4860,7 +4860,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "new CAD uploaded",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4874,16 +4874,36 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "new CAD uploaded "
             ],
             "id": "4ada8c0c-3306-4985-8573-80ccc3c69077",
             "source": {
-              "x": 932,
-              "y": 530
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
             },
             "target": {
-              "x": 1030,
-              "y": 630
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 970,
+                "y": 580
+              },
+              {
+                "x": 1120,
+                "y": 660
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           }
         ]
