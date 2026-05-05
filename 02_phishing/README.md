@@ -12,9 +12,12 @@ pip install -r requirements.txt
 
 Finally:
 ```sh
-flask run # to just see
-flask --debug run # to work on (reload works)
+flask run         [firefox]  # to just see
+flask --debug run [firefox]  # to work on (reload works)
 ```
+
+If the `firefox` argument is passed, the scraper will use firefox to perform the actual login.
+Note that firefox does not support `detach` option, so when the server gets shut down, the browser session will be closed.
 
 # Paths changes
 ## In templates
@@ -25,26 +28,3 @@ In css we just remove paths and keep names, if all in the same folder (`<resourc
 
 ## In js
 In js we just put the relative path after rendering (`/static/<folder>/<resource>`)
-
-# Flow of events
-## Login with credentials
-1. User enters the website
-2. he clicks on "login with CIE"
-3. he is redirected to `do_login`
-4. server clicks on "login with CIE", getting the actual HTML
-5. user gets redirected to `cie_login`
-6. he enters his credentials
-7. he clicks "Procedi"
-8. he is redirected to `receive`
-9. server fills in user credentials
-10. server clicks "Procedi"
-11. server processses the answer: if it is positive, redirects user to `cie_waiting_push`, otherwise redirects user to `cie_wrong_credentials`, where the behavior is the same of point 8 but with a slightly different HTML
-.... (TO BE DEFINED)
-
-## Login with QR
-1. User enters the website
-2. he clicks on "login with CIE"
-3. he is redirected to `do_login`
-4. server clicks on "login with CIE", getting the actual HTML
-5. user gets redirected to `cie_login`, which will contain the QR and challenge from the actual HTML received in point 4.
-6. he scans the qr
