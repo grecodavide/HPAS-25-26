@@ -4,6 +4,7 @@ from utils.state import State
 import utils.scraping as scraping
 from concurrent.futures import ThreadPoolExecutor
 import time
+import sys
 
 
 # TODO:
@@ -160,12 +161,16 @@ def cie_level2():
 
 @app.route("/idp/login/livello1e2checkpush")
 def check_push():
+    # without this, for some reason the result gets cached and so we never show the error page to the user
+    print(scraper.push_approved)
     if scraper.push_approved:
         return jsonify({"status": "OK"})
     return jsonify({"status": "WAIT"})
 
 @app.route("/idp/login/livello1e2checkqrcode")
 def check_qr():
+    # without this, for some reason the result gets cached and so we never show the error page to the user
+    print(scraper.qr_approved)
     if scraper.qr_approved:
         return jsonify({"status": "OK"})
     return jsonify({"status": "WAIT"})
@@ -181,5 +186,9 @@ def cie_qr_code_approved():
     return render_template("cie_error_it.html")
 
 if __name__ == '__main__':
-    scraper = scraping.Scraper()
+    argv = sys.argv
+    if len(argv) > 1 and argv[1] == "firefox":
+        scraper = scraping.Scraper(False)
+    else:
+        scraper = scraping.Scraper()
     app.run(debug=True, host='0.0.0.0', port=5000, use_reloader = False)

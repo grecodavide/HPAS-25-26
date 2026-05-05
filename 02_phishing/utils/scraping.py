@@ -1,5 +1,6 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.webdriver import WebDriver
+from selenium.webdriver.firefox.webdriver import WebDriver as FWebDriver
+from selenium.webdriver.chrome.webdriver import WebDriver as CWebDriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,19 +9,25 @@ from urllib.parse import urlparse, parse_qs
 START_ADDRESS = "http://www.tributi.regione.lombardia.it/Portale/"
 
 class Scraper:
-    driver: WebDriver
-    wait: WebDriverWait[WebDriver]
+    driver: CWebDriver | FWebDriver
+    wait: WebDriverWait[CWebDriver]|WebDriverWait[FWebDriver]
     push_approved: bool = False
     qr_approved: bool = False
 
-    def __init__(self):
-        options = webdriver.ChromeOptions()
-        options.add_experimental_option("detach", True)  # pyright: ignore[reportUnknownMemberType]
+    def __init__(self, chrome: bool=True):
+        if chrome:
+            options = webdriver.ChromeOptions()
+            options.add_experimental_option("detach", True)  # pyright: ignore[reportUnknownMemberType]
+            self.driver = webdriver.Chrome(options=options)
+            self.wait = WebDriverWait(self.driver, 30)
+        else:
+            options = webdriver.FirefoxOptions()
+            self.driver = webdriver.Firefox(options=options)
+            self.wait = WebDriverWait(self.driver, 30)
 
-        self.driver = webdriver.Chrome(options=options)
+
         self.driver.get(START_ADDRESS)
 
-        self.wait = WebDriverWait(self.driver, 30)
 
     def get_cie_page_elements(self) -> dict[str, str]:
         if not self.driver.current_url == "https://idpcwrapper.crs.lombardia.it/PublisherMetadata/SSOService":
