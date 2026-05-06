@@ -25,7 +25,6 @@ class Scraper:
             self.driver = webdriver.Firefox(options=options)
             self.wait = WebDriverWait(self.driver, 30)
 
-
         self.driver.get(START_ADDRESS)
 
 
@@ -89,14 +88,18 @@ class Scraper:
         return False
 
     def approve(self, timeout:int):
+        print("Start approved")
         wait_notification = WebDriverWait(self.driver, timeout)
 
         try:
+            print("Waiting")
             btn = wait_notification.until(
                     EC.visibility_of_element_located((By.NAME, "_eventId_proceed"))
             )
 
+            print("======================================\n\nButton found!")
             self.push_approved = True
             btn.click()
+            print("Approved")
         except TimeoutError:
             print("User did not approve push notification!")

@@ -6,6 +6,9 @@ from concurrent.futures import ThreadPoolExecutor
 import time
 import sys
 
+# TODO: reload page should generate new session
+# richiedi nuovo same
+
 app = Flask(__name__)
 app.secret_key = "HPAS"
 
@@ -27,14 +30,6 @@ def todo():
 
 state = State()
 scraper: scraping.Scraper
-
-# QR code functioning:
-# when we press "login with CIE", we get redirected to a login page
-# with some parameters, one of them being the challenge. With this
-# challenge the website generates the QR code (qr source is @ line
-# 490 in login_cie.html). Perhaps the best course of action is to 
-# simply do the login and pass that field as argument to login_cie,
-# so that it can display the correct QR code
 
 @app.route('/')
 def landing_page():
