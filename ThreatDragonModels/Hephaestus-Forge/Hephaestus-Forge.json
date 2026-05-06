@@ -201,7 +201,6 @@
                 "05861e45-985c-4c6a-9ae6-b8259b937bfd",
                 "0d407ae3-8852-4630-9e25-97e75b73a817",
                 "e9e03959-2841-4411-98ee-080d7671011f",
-                "758a0568-9e80-4fc2-9fa5-7b2de1372860",
                 "ef9e1505-443c-46d4-a5f1-b63e8093b676"
               ]
             }
@@ -4473,30 +4472,6 @@
               "port": "ec1627d8-055f-4570-8fa6-b8f54e91840f"
             },
             "vertices": []
-          },
-          {
-            "position": {
-              "x": 2615.75,
-              "y": 270
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Model Switch (Network of shop floor)? to add ARP spoofing..."
-              }
-            },
-            "visible": true,
-            "shape": "td-text-block",
-            "zIndex": 28,
-            "id": "758a0568-9e80-4fc2-9fa5-7b2de1372860",
-            "data": {
-              "type": "tm.Text",
-              "name": "Model Switch (Network of shop floor)? to add ARP spoofing...\n",
-              "hasOpenThreats": false
-            }
           },
           {
             "shape": "flow",
