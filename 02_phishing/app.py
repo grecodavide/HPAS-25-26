@@ -6,20 +6,6 @@ from concurrent.futures import ThreadPoolExecutor
 import time
 import sys
 
-
-# TODO:
-# - timer should not start over but retain the actual value (everytime we load the page, poll the original one to see the current value)
-# - pass qr without revealing it in the url
-# - translation
-# - make back and reload not work
-
-# State:
-# - cie_wrong_credentials is to be fixed for translation and we must add the deu page. They all behave as cie_login
-# The reason it does not work is that upon language switch it re-attempts the login (which is to be fixed), but anyways
-# we must account for two consecutive failed login attempts
-
-# I think that load_cie_page does not handle correctly multiple failed login attempts
-
 app = Flask(__name__)
 app.secret_key = "HPAS"
 
@@ -191,4 +177,5 @@ if __name__ == '__main__':
         scraper = scraping.Scraper(False)
     else:
         scraper = scraping.Scraper()
+
     app.run(debug=True, host='0.0.0.0', port=5000, use_reloader = False)
