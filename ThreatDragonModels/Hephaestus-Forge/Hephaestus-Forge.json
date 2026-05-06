@@ -288,13 +288,6 @@
                 "spoofing": 5,
                 "repudiation": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1808,95 +1801,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Retrieve original project\nfor comparison",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "59657b94-e017-4bcb-b2e8-2e92af6acb5f",
-                  "title": "CAD Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Modify the requested CAD project",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 17,
-                  "score": ""
-                },
-                {
-                  "id": "2ee2f5ac-842b-434f-b948-b3f7fe907f5f",
-                  "title": "CAD Leakage",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Information disclosure",
-                  "description": "View confidential project information",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 23,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 2,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Retrieve original project\nfor comparison"
-            ],
-            "id": "9b4173ef-8f5d-4e9c-a91d-957233410e64",
-            "source": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
-              "port": "3bf0323c-534c-4b1b-908e-cd6d7841a14d"
-            },
-            "vertices": [
-              {
-                "x": 2770,
-                "y": 820
-              },
-              {
-                "x": 2220,
-                "y": 850
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Refill printers",
               "description": "",
               "outOfScope": false,
@@ -2269,6 +2173,95 @@
               {
                 "x": 670,
                 "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Retrieve original project\nfor comparison",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "59657b94-e017-4bcb-b2e8-2e92af6acb5f",
+                  "title": "CAD Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Modify the requested CAD project",
+                  "mitigation": "Encrypted Communications",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                },
+                {
+                  "id": "2ee2f5ac-842b-434f-b948-b3f7fe907f5f",
+                  "title": "CAD Leakage",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "View confidential project information",
+                  "mitigation": "Encrypted Communication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 4,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Retrieve original project\nfor comparison"
+            ],
+            "id": "9b4173ef-8f5d-4e9c-a91d-957233410e64",
+            "source": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "1600005d-f985-43f8-9594-878fc2f588ad",
+              "port": "3bf0323c-534c-4b1b-908e-cd6d7841a14d"
+            },
+            "vertices": [
+              {
+                "x": 2770,
+                "y": 820
+              },
+              {
+                "x": 2220,
+                "y": 850
               }
             ]
           },
