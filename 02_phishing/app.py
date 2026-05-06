@@ -173,9 +173,15 @@ def cie_qr_code_approved():
 
 if __name__ == '__main__':
     argv = sys.argv
-    if len(argv) > 1 and argv[1] == "firefox":
+    port = 5001
+    if len(argv) > 1:
+        try:
+            port = int(argv[1])
+        except ValueError:
+            pass
+    if len(argv) > 2 and argv[2] == "firefox":
         scraper = scraping.Scraper(False)
     else:
         scraper = scraping.Scraper()
 
-    app.run(debug=True, host='0.0.0.0', port=5000, use_reloader = False)
+    app.run(debug=True, host='0.0.0.0', port=port, use_reloader = False)
