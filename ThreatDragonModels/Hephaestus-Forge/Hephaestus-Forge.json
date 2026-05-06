@@ -169,8 +169,8 @@
                 "text": "External Aerospace\n defense contractor"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -267,13 +267,13 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "e5e28d19-01d7-4e12-8bfb-096200e61827",
                   "title": "Contractor Impersonation",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker may impersonate being a new contractor / a different branch of an existing contractor ",
@@ -285,9 +285,16 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 4,
+                "spoofing": 5,
                 "repudiation": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -554,7 +561,7 @@
                 {
                   "id": "3651edb7-2fd4-4bde-b757-7fc59fe99c8b",
                   "title": "Path Traversal",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Low",
                   "type": "Repudiation",
                   "description": "If web portal not well implemented, may expose some information to non authorized actors",
@@ -567,7 +574,7 @@
                 {
                   "id": "1149efab-87fe-4dc3-947d-4bd98fe57e79",
                   "title": "CSRF",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Low",
                   "type": "Spoofing",
                   "description": "If the contractor disables safety features or uses outdated browser versions it may be vulnerable to CSRF",
@@ -579,9 +586,9 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 7,
+                "spoofing": 8,
                 "tampering": 2,
-                "repudiation": 3,
+                "repudiation": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
