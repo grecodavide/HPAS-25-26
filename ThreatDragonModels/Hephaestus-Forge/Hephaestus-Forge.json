@@ -1621,175 +1621,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Notify new job",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
-                  "title": "API-key Leakage",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "View unencrypted communication and steal the symmetric key",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 26,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 2,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Notify new job"
-            ],
-            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
-            "source": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "target": {
-              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 2030,
-                "y": 650
-              },
-              {
-                "x": 2260,
-                "y": 640
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Send job to an\navailable printer",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "bc987cb0-2faa-4c1e-8a27-862bc641c5fe",
-                  "title": "Modifying Project Data",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Data of project can me modified and the print will carry the modifications",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 29,
-                  "score": ""
-                },
-                {
-                  "id": "08722653-b520-4f4c-9e3f-18e102dd122b",
-                  "title": "Printer assigned to Project",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Information disclosure",
-                  "description": "It is possible to know which printer has which project assigned",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 31,
-                  "score": ""
-                },
-                {
-                  "id": "7008ab13-4520-44f8-bc20-18acb5d71df2",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Denial of service",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 47,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 2,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Send job to an\navailable printer"
-            ],
-            "id": "4c334d2d-adfc-4794-b3f7-efb25edeccec",
-            "source": {
-              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": "block"
                 },
                 "strokeDasharray": null
@@ -2186,6 +2017,82 @@
                   "name": "block"
                 },
                 "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Notify new job",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
+                  "title": "API-key Leakage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "View unencrypted communication and steal the symmetric key",
+                  "mitigation": "Do not use embedded API keys and enforce cyclical changes to ensure security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Notify new job"
+            ],
+            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
+            "source": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "target": {
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 2030,
+                "y": 650
+              },
+              {
+                "x": 2260,
+                "y": 640
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
                   "name": "block"
                 },
                 "strokeDasharray": null
@@ -2264,6 +2171,86 @@
                 "y": 850
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send job to an\navailable printer",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "bc987cb0-2faa-4c1e-8a27-862bc641c5fe",
+                  "title": "Modifying Project Data",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Data of project can me modified and the print will carry the modifications",
+                  "mitigation": "Encrypted Communication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "08722653-b520-4f4c-9e3f-18e102dd122b",
+                  "title": "Printer assigned to Project",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "It is possible to know which printer has which project assigned",
+                  "mitigation": "Encrypted Communication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Send job to an\navailable printer"
+            ],
+            "id": "4c334d2d-adfc-4794-b3f7-efb25edeccec",
+            "source": {
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -3407,13 +3394,6 @@
                 "denialOfService": 1,
                 "elevationOfPrivilege": 1
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -3665,7 +3645,7 @@
                   "severity": "Medium",
                   "type": "Denial of service",
                   "description": "An attacker connected to the ethernet network can overload the MES thus slowing down/halting production",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Ensure authentication protocols and limit the access to the MES to only the authorized users",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 38,
@@ -3678,7 +3658,7 @@
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Impersonating the MES and scheduling prints to the various printers due to unauthenticated unencrypted communication",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Ensure authentication and encrypted communications to grant authenticity of the source of information and avoid any spoofing possibilities",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 48,
@@ -3686,11 +3666,11 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -4443,7 +4423,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Due to unencrypted communication an attacker could alter a G-Code project before it reaches the MES, thus making it an invalid print.",
-                  "mitigation": "",
+                  "mitigation": "Encrypted Communication ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
@@ -4456,7 +4436,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "View confidential project information",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Encrypted Communication ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 25,
@@ -4465,8 +4445,8 @@
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 2,
+                "tampering": 3,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             },
@@ -4599,7 +4579,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Modify the stored G-Code blueprint",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Encrypted Communication ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 16,
@@ -4612,7 +4592,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "View confidential project information",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Encrypted Communication ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 24,
@@ -4621,8 +4601,8 @@
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 2,
+                "tampering": 4,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             },
@@ -4662,37 +4642,6 @@
               "type": "tm.Text",
               "name": "Theats su DB???",
               "hasOpenThreats": false
-            }
-          },
-          {
-            "position": {
-              "x": 480,
-              "y": 730
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "upload quando printo o quando carico cad???????"
-              }
-            },
-            "visible": true,
-            "shape": "td-text-block",
-            "zIndex": 32,
-            "id": "17e781f1-c427-4da7-96c4-69f39bd17b52",
-            "data": {
-              "type": "tm.Text",
-              "name": "upload quando printo o quando carico cad????????",
-              "hasOpenThreats": false
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
