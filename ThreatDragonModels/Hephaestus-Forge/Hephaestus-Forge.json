@@ -1621,276 +1621,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Refill printers",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "db8664b5-4659-4d93-ae1d-31825695660e",
-                  "title": "Powder Management Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Modify powder information and requests  ",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 12,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Refill printers"
-            ],
-            "id": "15b0cb48-e7fc-4e98-ab00-784d2a23d7a7",
-            "source": {
-              "cell": "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 2830,
-                "y": 660
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Read temperature and\ninterrupt printer",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "239bddc6-e3db-4944-aaa7-1a0185e51390",
-                  "title": "Thermal Sensor Tampering",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Intercepting and modifying information about the temperature of the printers, makes the printers not stop when temperature is too high, causing production of brittle metal.",
-                  "mitigation": "",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 9,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 3,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Read temperature and\ninterrupt printer"
-            ],
-            "id": "540e2d9e-a4ab-4f35-a7fb-52322bf158c6",
-            "source": {
-              "cell": "05861e45-985c-4c6a-9ae6-b8259b937bfd",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 3010,
-                "y": 630
-              },
-              {
-                "x": 2990,
-                "y": 660
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Store comparison result",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "12139290-7933-42ef-8278-743c3dc42d9c",
-                  "title": "Quality Control Tampering",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "Alter the outcome of quality control process to store an invalid print as a valid one",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Store comparison result"
-            ],
-            "id": "c02eb5a3-f554-4b05-8339-cac5cbbe2aad",
-            "source": {
-              "cell": "0d407ae3-8852-4630-9e25-97e75b73a817",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "e9e03959-2841-4411-98ee-080d7671011f",
-              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": ""
                 },
                 "strokeDasharray": null
@@ -2249,6 +1979,281 @@
             "target": {
               "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
               "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Refill printers",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "db8664b5-4659-4d93-ae1d-31825695660e",
+                  "title": "Powder Management Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Modify powder information and requests  ",
+                  "mitigation": "Encrypted Communication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Refill printers"
+            ],
+            "id": "15b0cb48-e7fc-4e98-ab00-784d2a23d7a7",
+            "source": {
+              "cell": "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 2830,
+                "y": 660
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Read temperature and\ninterrupt printer",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "239bddc6-e3db-4944-aaa7-1a0185e51390",
+                  "title": "Thermal Sensor Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Intercepting and modifying information about the temperature of the printers, makes the printers not stop when temperature is too high, causing production of brittle metal.",
+                  "mitigation": "Encrypted Communication",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 4,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Read temperature and\ninterrupt printer"
+            ],
+            "id": "540e2d9e-a4ab-4f35-a7fb-52322bf158c6",
+            "source": {
+              "cell": "05861e45-985c-4c6a-9ae6-b8259b937bfd",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 3010,
+                "y": 630
+              },
+              {
+                "x": 2990,
+                "y": 660
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store comparison result",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "12139290-7933-42ef-8278-743c3dc42d9c",
+                  "title": "Quality Control Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Alter the outcome of quality control process to store an invalid print as a valid one",
+                  "mitigation": "Encrypted Communication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Store comparison result"
+            ],
+            "id": "c02eb5a3-f554-4b05-8339-cac5cbbe2aad",
+            "source": {
+              "cell": "0d407ae3-8852-4630-9e25-97e75b73a817",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "e9e03959-2841-4411-98ee-080d7671011f",
+              "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             },
             "vertices": []
           },
@@ -3800,7 +3805,7 @@
                   "severity": "Critical",
                   "type": "Denial of service",
                   "description": "The printers have old OS systems that have known vulnerabilities that might be exploited",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Update the machines either via implementing a new software compatible with newer OS versions or via substituting the printers as a whole",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 34,
@@ -3813,7 +3818,7 @@
                   "severity": "Critical",
                   "type": "Elevation of privilege",
                   "description": "due to the old windows XP OS, some known vulnerabilities can be exploited to gain root privileges and compromise the printer or other systems",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Update the machines either via implementing a new software compatible with newer OS versions or via substituting the printers as a whole",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 43,
@@ -3825,8 +3830,8 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
-                "elevationOfPrivilege": 1
+                "denialOfService": 2,
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -3955,7 +3960,7 @@
                   "severity": "Medium",
                   "type": "Denial of service",
                   "description": "Attackers can target the resupply system and either stop the resupply or completely dump the powder stock",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "ensure the automatic hoppers are not connected to the network, but only to the printer which directly communicates with it sharing information on the powder level",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 37,
@@ -3967,7 +3972,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
@@ -4097,7 +4102,7 @@
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Sending forged packets with wrong information about the temperature of the printers, makes the printers not stop when temperature is too high, causing production of brittle metal.",
-                  "mitigation": "",
+                  "mitigation": "ensure direct/authenticated communication with the printers",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
@@ -4110,7 +4115,7 @@
                   "severity": "High",
                   "type": "Tampering",
                   "description": "an attacker can modify the readings of the sensors, sending the crafted ones not making the printer realize of the high temperature",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Encrypted Communication ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 40,
@@ -4123,7 +4128,7 @@
                   "severity": "Medium",
                   "type": "Denial of service",
                   "description": "Disrupting the sensors by sending commands to interfere with the correct functioning, ex: turning off the sensors prematurely",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Do not allow sending commands to the sensors directly, deny access to the sensors",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 41,
@@ -4131,11 +4136,11 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
-                "tampering": 1,
+                "spoofing": 3,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 0
               }
             }
