@@ -586,13 +586,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -729,7 +722,7 @@
                 {
                   "id": "b33dbff7-a922-44ab-a1ad-ff5c8e723b8f",
                   "title": "Obtaining admin access",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Critical",
                   "type": "Elevation of privilege",
                   "description": "If an attacker manages to gain admin access via a vulnerability on the portal or via compromising an admin account he can manage accounts and the level of privilege they have, private information, and much more",
@@ -746,7 +739,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 1,
                 "denialOfService": 1,
-                "elevationOfPrivilege": 3
+                "elevationOfPrivilege": 4
               }
             },
             "tools": {
@@ -4859,8 +4852,8 @@
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 4,
-                "informationDisclosure": 4,
+                "tampering": 6,
+                "informationDisclosure": 6,
                 "denialOfService": 0
               }
             },
