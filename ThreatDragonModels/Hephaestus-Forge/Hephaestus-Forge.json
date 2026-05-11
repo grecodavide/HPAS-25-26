@@ -1,5 +1,5 @@
 {
-  "version": "2.6.1",
+  "version": "2.6.2",
   "summary": {
     "title": "Hephaestus-Forge",
     "owner": "",
@@ -15,7 +15,7 @@
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
-        "version": "2.6.1",
+        "version": "2.6.2",
         "cells": [
           {
             "position": {
@@ -3393,6 +3393,19 @@
                   "new": false,
                   "number": 44,
                   "score": ""
+                },
+                {
+                  "id": "78b794c3-7c3f-4629-896b-501fcbdf3655",
+                  "title": "CAD-embedded Malware",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "If an attacker manages to encapsulate a malware or malicious code in the CAD file, when the Slicer Server goes to execute it, the malware might exploit a vulnerability and infect the Slicer Server.\nIf the slicer server gets infected the attacker might get remote access to it and many attack possibilities open up (infecting other components, compromising the CAD transformation procedure, leaking confidential information)",
+                  "mitigation": "Previously open the CAD files on a VM to detect malwares or viruses, or perform a check with some malware detection tools",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 52,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -3401,8 +3414,15 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 1,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 2
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -4888,6 +4908,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 51
+    "threatTop": 52
   }
 }
