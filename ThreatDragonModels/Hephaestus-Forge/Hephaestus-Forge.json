@@ -3413,16 +3413,9 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
-                "elevationOfPrivilege": 3
+                "denialOfService": 4,
+                "elevationOfPrivilege": 5
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -4824,6 +4817,10 @@
               {
                 "x": 885,
                 "y": 600
+              },
+              {
+                "x": 1030,
+                "y": 740
               }
             ]
           },
