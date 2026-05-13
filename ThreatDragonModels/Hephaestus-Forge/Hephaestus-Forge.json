@@ -335,7 +335,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 5,
+                "spoofing": 7,
                 "repudiation": 0
               }
             }
@@ -580,9 +580,9 @@
                   "title": "Contractor Info Leakage",
                   "status": "Open",
                   "severity": "Medium",
-                  "type": "Tampering",
+                  "type": "Information disclosure",
                   "description": "Compromised device may be exploited by attacker for info gathering",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Forbid website access for browsers not up-to-date, and foster awareness in clients.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 19,
@@ -595,7 +595,7 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "An attacker may manage to hijack user sessions (may schedule unwanted / incorrect prints).",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Ensure packets' signature (hashing, timestamps...) are in place, enforce short session's validity windows.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 27,
@@ -629,13 +629,20 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 8,
+                "spoofing": 9,
                 "tampering": 2,
                 "repudiation": 4,
-                "informationDisclosure": 0,
+                "informationDisclosure": 2,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
