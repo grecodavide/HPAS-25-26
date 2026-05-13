@@ -1681,82 +1681,6 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Notify new job",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
-                  "title": "API-key Leakage",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "View unencrypted communication and steal the symmetric key",
-                  "mitigation": "Do not use embedded API keys and enforce cyclical changes to ensure security",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 26,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 3,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Notify new job"
-            ],
-            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
-            "source": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "target": {
-              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 2030,
-                "y": 650
-              },
-              {
-                "x": 2260,
-                "y": 640
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
                   "name": "block"
                 },
                 "strokeDasharray": null
@@ -1833,158 +1757,6 @@
               {
                 "x": 2220,
                 "y": 850
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Send job to an\navailable printer",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "bc987cb0-2faa-4c1e-8a27-862bc641c5fe",
-                  "title": "Modifying Project Data",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Data of project can me modified and the print will carry the modifications",
-                  "mitigation": "Encrypted Communication ",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 29,
-                  "score": ""
-                },
-                {
-                  "id": "08722653-b520-4f4c-9e3f-18e102dd122b",
-                  "title": "Printer assigned to Project",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Information disclosure",
-                  "description": "It is possible to know which printer has which project assigned",
-                  "mitigation": "Encrypted Communication ",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 31,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 3,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Send job to an\navailable printer"
-            ],
-            "id": "4c334d2d-adfc-4794-b3f7-efb25edeccec",
-            "source": {
-              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Refill printers",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "db8664b5-4659-4d93-ae1d-31825695660e",
-                  "title": "Powder Management Tampering",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Modify powder information and requests  ",
-                  "mitigation": "Encrypted Communication ",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 12,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Refill printers"
-            ],
-            "id": "15b0cb48-e7fc-4e98-ab00-784d2a23d7a7",
-            "source": {
-              "cell": "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 2830,
-                "y": 660
               }
             ]
           },
@@ -2258,8 +2030,168 @@
               {
                 "x": 1080,
                 "y": 570
+              },
+              {
+                "x": 1450,
+                "y": 630
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Notify new job",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "b0d851ec-8487-4571-9425-683d7a222f0b",
+                  "title": "API-key Leakage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "View unencrypted communication and steal the symmetric key",
+                  "mitigation": "Do not use embedded API keys and enforce cyclical changes to ensure security",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Notify new job"
+            ],
+            "id": "858bd404-c078-4628-8050-0ffc626bd5cd",
+            "source": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "target": {
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 2030,
+                "y": 650
+              },
+              {
+                "x": 2260,
+                "y": 640
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send job to an\navailable printer",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "bc987cb0-2faa-4c1e-8a27-862bc641c5fe",
+                  "title": "Modifying Project Data",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Data of project can me modified and the print will carry the modifications",
+                  "mitigation": "Encrypted Communication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "08722653-b520-4f4c-9e3f-18e102dd122b",
+                  "title": "Printer assigned to Project",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "It is possible to know which printer has which project assigned",
+                  "mitigation": "Encrypted Communication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Send job to an\navailable printer"
+            ],
+            "id": "4c334d2d-adfc-4794-b3f7-efb25edeccec",
+            "source": {
+              "cell": "b0358275-3e99-4e9c-a7fc-4debbd293d38",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -4730,6 +4662,10 @@
               {
                 "x": 1120,
                 "y": 660
+              },
+              {
+                "x": 1310,
+                "y": 685
               }
             ]
           },
@@ -4897,6 +4833,78 @@
               {
                 "x": 680,
                 "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 36,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Refill printers",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "db8664b5-4659-4d93-ae1d-31825695660e",
+                  "title": "Powder Management Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Modify powder information and requests  ",
+                  "mitigation": "Encrypted Communication ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Refill printers"
+            ],
+            "id": "15b0cb48-e7fc-4e98-ab00-784d2a23d7a7",
+            "source": {
+              "cell": "6bcba6f1-4e33-4d48-8a36-31ac843a9202",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "3f2c4f7f-0974-4910-a97c-d5c9bc8fb236",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 2830,
+                "y": 660
               }
             ]
           }
