@@ -605,7 +605,7 @@
                   "id": "3651edb7-2fd4-4bde-b757-7fc59fe99c8b",
                   "title": "Path Traversal",
                   "status": "Open",
-                  "severity": "Low",
+                  "severity": "High",
                   "type": "Repudiation",
                   "description": "If web portal not well implemented, may expose some information to non authorized actors",
                   "mitigation": "Develop a well engineered web portal that only shows proper information to the client",
@@ -618,10 +618,10 @@
                   "id": "1149efab-87fe-4dc3-947d-4bd98fe57e79",
                   "title": "CSRF",
                   "status": "Open",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "type": "Spoofing",
-                  "description": "If the contractor disables safety features or uses outdated browser versions it may be vulnerable to CSRF",
-                  "mitigation": "Deny access if old browser is used",
+                  "description": "If the contractor disables safety features or uses outdated browser versions it may be vulnerable to CSRF (Cross Site Request Forgery).",
+                  "mitigation": "Deny access if old browser is used; sanitisation of input.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 45,
@@ -629,20 +629,13 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 9,
+                "spoofing": 11,
                 "tampering": 2,
-                "repudiation": 4,
+                "repudiation": 5,
                 "informationDisclosure": 2,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -767,10 +760,10 @@
                   "id": "5e23a8d0-49d3-4490-96f8-e231f21b0acf",
                   "title": "Portal Overload",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Denial of service",
                   "description": "By spamming automated requests to the portal, it might be overloaded with too many requests thus making the portal unreachable for legitimate users",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Load balancing.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 42,
@@ -795,7 +788,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 1,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 4
               }
             }
@@ -4873,7 +4866,7 @@
                   "severity": "Low",
                   "type": "Tampering",
                   "description": "Modifying the sent CAD project",
-                  "mitigation": "The communication is assumed to be encrypted, if somebody tampers with the message is improbable that arrives in a valid format, thus enforce that the file is valid before accepting it",
+                  "mitigation": "The communication is assumed to be encrypted, if somebody tampers with the message is improbable that it arrives in a valid format, thus enforce that the file is valid before accepting it.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 13,
@@ -4886,7 +4879,7 @@
                 "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
               ],
               "threatFrequency": {
-                "tampering": 6,
+                "tampering": 7,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
