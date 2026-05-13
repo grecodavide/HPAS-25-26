@@ -87,8 +87,8 @@
                 "171d4fb3-00ea-419b-a0fc-b89366651bf2",
                 "ecf614ad-c12d-4d76-b610-f269004fc800",
                 "0058a5ca-d5ef-45ca-a112-025d932e1d6b",
-                "56901286-8548-4c48-9f18-f3186cddca02",
                 "53eaab29-0f43-44b3-97d2-e90eb724ff02",
+                "56901286-8548-4c48-9f18-f3186cddca02",
                 "4ada8c0c-3306-4985-8573-80ccc3c69077",
                 "db6df6ce-358a-493d-bc78-61da4b50c6a0",
                 "6a95922e-068a-4996-a9d1-4d0492c7449a"
@@ -1692,136 +1692,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Notify new job request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "83f940d3-60dd-4cdd-8f6a-3f44124734a2",
-                  "title": "Forging Requests",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "It is possible to forge requests or modify the legitimate requests to affect the production line",
-                  "mitigation": "Encrypted Communication",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 35,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "07764144-78e3-48d5-b02c-e714d9a193df"
-              ],
-              "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "Notify new job request"
-            ],
-            "id": "56901286-8548-4c48-9f18-f3186cddca02",
-            "source": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
-            },
-            "target": {
-              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
-              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
-            },
-            "vertices": [
-              {
-                "x": 1080,
-                "y": 570
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Request new print",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "8e70c9de-660f-434e-80a9-0463edaf37e8",
-                "07764144-78e3-48d5-b02c-e714d9a193df",
-                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
-              ]
-            },
-            "labels": [
-              "Request new print"
-            ],
-            "id": "53eaab29-0f43-44b3-97d2-e90eb724ff02",
-            "source": {
-              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
-              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
-            },
-            "target": {
-              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
-              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
-            },
-            "vertices": [
-              {
-                "x": 670,
-                "y": 230
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Notify new job",
               "description": "",
               "outOfScope": false,
@@ -2260,6 +2130,136 @@
               "port": "fc09da27-1dd5-4261-8e10-b2f421c70716"
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request new print",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "8e70c9de-660f-434e-80a9-0463edaf37e8",
+                "07764144-78e3-48d5-b02c-e714d9a193df",
+                "a26f7f4c-f7d4-47e0-bb33-2b8013634bc5"
+              ]
+            },
+            "labels": [
+              "Request new print"
+            ],
+            "id": "53eaab29-0f43-44b3-97d2-e90eb724ff02",
+            "source": {
+              "cell": "3d92a373-689c-425b-9518-d73efc07e570",
+              "port": "c548ea30-d826-4fb3-b3fa-0afc273d3599"
+            },
+            "target": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "7191a1fd-5279-45df-b8e6-1da676fedd14"
+            },
+            "vertices": [
+              {
+                "x": 670,
+                "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Notify new job request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "83f940d3-60dd-4cdd-8f6a-3f44124734a2",
+                  "title": "Forging Requests",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "It is possible to forge requests or modify the legitimate requests to affect the production line",
+                  "mitigation": "Encrypted Communication",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "07764144-78e3-48d5-b02c-e714d9a193df"
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Notify new job request"
+            ],
+            "id": "56901286-8548-4c48-9f18-f3186cddca02",
+            "source": {
+              "cell": "339778d6-5a04-419c-b43c-d54724d667cc",
+              "port": "5a2c14bf-5c82-421c-8a0c-e44bb3e5f50a"
+            },
+            "target": {
+              "cell": "92a46ff8-403f-4576-ba88-4bd9ecd95321",
+              "port": "fdb69952-a84f-4178-8784-086ff71a361b"
+            },
+            "vertices": [
+              {
+                "x": 1080,
+                "y": 570
+              }
+            ]
           },
           {
             "position": {
@@ -3359,10 +3359,10 @@
                   "id": "cc8d7ab6-fd65-48fe-a06f-7b93b0febc8c",
                   "title": "Slicer Spoofing",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Spoofing",
                   "description": "An attacker, after leaking the API key, can communicate directly with the MES (printers) impersonating the Slicer Server and scheduling non requested jobs.",
-                  "mitigation": "No longer use hardcoded API key (TODO)",
+                  "mitigation": "No longer use hardcoded API key",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
@@ -3375,7 +3375,7 @@
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "The conversion process is resource-expensive, it is possible to forge requests and overload the slicer server to slow down significantly the production speed or to crash the server completely",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Input filtering, anomaly detection, rate limiting.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 36,
@@ -3383,12 +3383,12 @@
                 },
                 {
                   "id": "6f2aa7d2-d2d8-4e35-8dc3-5099fca964bd",
-                  "title": "Slicer Server Compromization",
+                  "title": "Slicer Server Compromised",
                   "status": "Open",
                   "severity": "Critical",
                   "type": "Elevation of privilege",
                   "description": "If a vulnerability or bug is unmitigated an attacker might exploit it to gain control of the slicer server and completely change the conversions from CAD to G-code making unnoticeable damages ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Monitoring active CVEs, keeping system up-to-date",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 44,
@@ -3409,12 +3409,12 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
-                "elevationOfPrivilege": 2
+                "denialOfService": 3,
+                "elevationOfPrivilege": 3
               }
             },
             "tools": {
@@ -4698,7 +4698,7 @@
                   "id": "88fef535-5f75-409b-b43f-62569f19401b",
                   "title": "Notification elimination",
                   "status": "Open",
-                  "severity": "High",
+                  "severity": "Medium",
                   "type": "Denial of service",
                   "description": "The notification related to the upload of the new cad is deleted and thus never converted to G-Code, so that when the print of that project is requested there is no blueprint to retrieve needing an human remote access to interact and fix the problem, slowing down the service",
                   "mitigation": "Encrypted Communication",
@@ -4714,7 +4714,7 @@
               "threatFrequency": {
                 "tampering": 2,
                 "informationDisclosure": 0,
-                "denialOfService": 2
+                "denialOfService": 3
               }
             },
             "labels": [
