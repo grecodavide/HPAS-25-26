@@ -1757,6 +1757,14 @@
               {
                 "x": 2220,
                 "y": 850
+              },
+              {
+                "x": 1970,
+                "y": 850
+              },
+              {
+                "x": 1760,
+                "y": 820
               }
             ]
           },
@@ -1875,7 +1883,7 @@
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Alter the outcome of quality control process to store an invalid print as a valid one",
-                  "mitigation": "Encrypted Communication ",
+                  "mitigation": "Encrypted Communication. Baseline human supervising.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 10,
@@ -1884,7 +1892,7 @@
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 3,
+                "tampering": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -4074,7 +4082,7 @@
                   "id": "0874ce19-1699-4a29-ad42-5abe0adcea73",
                   "title": "Sensor activity disruption",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Denial of service",
                   "description": "Disrupting the sensors by sending commands to interfere with the correct functioning, ex: turning off the sensors prematurely",
                   "mitigation": "Do not allow sending commands to the sensors directly, deny access to the sensors",
@@ -4089,7 +4097,7 @@
                 "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 2,
+                "denialOfService": 3,
                 "elevationOfPrivilege": 0
               }
             }
