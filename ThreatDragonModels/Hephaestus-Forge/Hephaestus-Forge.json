@@ -4066,19 +4066,6 @@
                   "score": ""
                 },
                 {
-                  "id": "4dec02b0-c44a-47ae-b930-295b1f04f76b",
-                  "title": "Sensor Reading Modification",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Tampering",
-                  "description": "an attacker can modify the readings of the sensors, sending the crafted ones not making the printer realize of the high temperature",
-                  "mitigation": "Encrypted Communication ",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 40,
-                  "score": ""
-                },
-                {
                   "id": "0874ce19-1699-4a29-ad42-5abe0adcea73",
                   "title": "Sensor activity disruption",
                   "status": "Open",
@@ -4094,12 +4081,19 @@
               ],
               "threatFrequency": {
                 "spoofing": 3,
-                "tampering": 2,
+                "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 3,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
