@@ -53,6 +53,30 @@ class Scraper:
             "challenge": challenge or ""
         }
 
+    def reload_cie_page_elements(self) -> dict[str, str]:
+        reload_link = self.wait.until(
+                EC.visibility_of_element_located((By.ID, "qrGeneratorWrapper"))
+        )
+        reload_link.click()
+
+        qr_img = self.wait.until(EC.presence_of_element_located((
+            By.CSS_SELECTOR, "figure#qrFigure img"
+        )))
+        qr_str = qr_img.get_attribute("src")  # pyright: ignore[reportUnknownMemberType]
+
+        parsed_url = urlparse(self.driver.current_url)
+        url_args = parse_qs(parsed_url.query)
+
+        opId = url_args.get('opId', [None])[0]
+        challenge = url_args.get('challenge', [None])[0]
+
+
+        return {
+            "qr_str": qr_str or "",
+            "opId": opId or "",
+            "challenge": challenge or ""
+        }
+
     def qr_approve(self, timeout:int):
         wait_qr = WebDriverWait(self.driver, timeout)
         try:

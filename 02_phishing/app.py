@@ -35,29 +35,6 @@ scraper: scraping.Scraper
 def landing_page():
     return render_template('landing_page.html', node = str(random.randrange(1, 7)))
 
-@app.route('/do_login/', methods = ["POST", "GET"])
-def do_login():
-    """
-    When pressing the "entra con CIE" button (@see templates/landing_page.html at line 938), we redirect here, where:
-    - we do the exact same with our scraper, retrieving the valid qr code and challenge
-    - go to /idp/login/livello2 page with these info as arguments
-    """
-    elements = scraper.get_cie_page_elements()
-
-    session["challenge"] = elements["challenge"]
-    session["qr_str"] = elements["qr_str"]
-    session["opId"] = elements["opId"]
-
-    return redirect(url_for(
-        'cie_level2',
-        opId = session["opId"],             # must show up in url, not needed
-        challenge = session["challenge"],   # must show up in url, not needed
-        level = 2,
-        SPName="https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml",
-        SPLogo="https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png",
-        value="e1s2"
-    ))
-
 # TODO: fix. Use session variables to know if we are ok or not
 
 # idea: we create in session with key the challenge, storing 
@@ -77,6 +54,59 @@ def handle_timer() -> tuple[int, int] :
         expiry_ms = int(stored)
 
     return expiry_ms, server_now_ms
+
+@app.route('/do_login/', methods = ["POST", "GET"])
+def do_login():
+    """
+    When pressing the "entra con CIE" button (@see templates/landing_page.html at line 938), we redirect here, where:
+    - we do the exact same with our scraper, retrieving the valid qr code and challenge
+    - go to /idp/login/livello2 page with these info as arguments
+    """
+    elements = scraper.get_cie_page_elements()
+
+    # if we want timers to be perfectly synced we need to start timer here, so we need to set some variable
+    # to the returned values of handle_timer(), then in handle_timer add a check: if they are defined use them, otherwise
+    # same behavior as now. Then, ALWAYS set them to None (first time we re-call that function that value must become stale)
+
+    session["challenge"] = elements["challenge"]
+    session["qr_str"] = elements["qr_str"]
+    session["opId"] = elements["opId"]
+
+
+    return redirect(url_for(
+        'cie_level2',
+        opId = session["opId"],             # must show up in url, not needed
+        challenge = session["challenge"],   # must show up in url, not needed
+        level = 2,
+        SPName="https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml",
+        SPLogo="https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png",
+        value="e1s2"
+    ))
+
+
+@app.route('/do_reload/', methods = ["POST", "GET"])
+def do_reload():
+    """
+    When pressing the "entra con CIE" button (@see templates/landing_page.html at line 938), we redirect here, where:
+    - we do the exact same with our scraper, retrieving the valid qr code and challenge
+    - go to /idp/login/livello2 page with these info as arguments
+    """
+    elements = scraper.reload_cie_page_elements()
+
+    session["challenge"] = elements["challenge"]
+    session["qr_str"] = elements["qr_str"]
+    session["opId"] = elements["opId"]
+
+
+    return redirect(url_for(
+        'cie_level2',
+        opId = session["opId"],             # must show up in url, not needed
+        challenge = session["challenge"],   # must show up in url, not needed
+        level = 2,
+        SPName="https%3A%2F%2Fidpcwrapper.crs.lombardia.it%2Fmetadata%2Fsp-metadata-cie.xml",
+        SPLogo="https%3A%2F%2Fidserver.servizicie.interno.gov.it%2Fidp%2Fimages%2Fcielogo.png",
+        value="e1s2"
+    ))
 
 def handle_login(lang: str):
     page = f"cie_login_{lang}.html"
